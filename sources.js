@@ -23,10 +23,8 @@
         {
           "id": "inta",
           "title": "GeoINTA - Instituto Nacional de Tecnología Agropecuaria",
-          "wms": "http://geointa.inta.gov.ar/geoserver/wms",
-          "wfs": "http://geointa.inta.gov.ar/geoserver/wfs",
-          "csw": "", /*como tiene que quedar cuando no existe el servicio*/
-          "catalog":"",
+          "wms": "http://geointa.inta.gov.ar/geoserver/wms?",
+          "wfs": "http://geointa.inta.gov.ar/geoserver/wfs?",
           "viewer":"http://visor.geointa.inta.gob.ar"
         }
       ]
@@ -36,10 +34,9 @@
         {
           "id": "ambiente",
           "title": "IDE Ambiental",
-          "wms": "http://geo2.ambiente.gob.ar/geoserver/ows?service=wms&version=1.3.0&request=GetCapabilities",
-          "wfs": "http://geo2.ambiente.gob.ar/geoserver/ows?service=wfs&version=2.0.0&request=GetCapabilities",
-          "csw": " ",
-          "catalog":"",
+          "wms": "http://geo2.ambiente.gob.ar/geoserver/wms?",
+          "wfs": "http://geo2.ambiente.gob.ar/geoserver/wfs?",
+
           "viewer":"http://mapas.ambiente.gob.ar/"
         },
         {
