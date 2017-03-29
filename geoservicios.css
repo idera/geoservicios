@@ -1,0 +1,75 @@
+/* ----------------------------------------------*/
+/* TABLAS IDERA
+/* ----------------------------------------------*/
+/* CSS Document Tablas Portal IDERA*/
+.Table_titular {
+	font-size: medium;
+	font-style: normal;
+	color: #FFF;
+	font-weight: bold;
+	padding: 15px;
+	background-color: #333333;
+}
+.Table_title_row {
+	font-size: medium;
+	font-style: normal;
+	line-height: normal;
+	font-weight: normal;
+	color: #FFF;
+	background-color: #0e72b5;
+	padding-left: 15px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+.filas_oscuras {
+	font-size: small;
+	font-style: normal;
+	color: #000;
+	line-height: 1.5;
+	word-spacing: inherit;
+	background-color: #C6D9FD;
+	vertical-align: top;
+	text-align: justify;
+	white-space: normal;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	list-style-position: outside;
+	list-style-image: none;
+	list-style-type: square;
+
+}
+.filas_claras {
+	font-size: small;
+	font-style: normal;
+	color: #000;
+	line-height: 1.5;
+	word-spacing: inherit;
+	background-color: #E7EFFE;
+	vertical-align: top;
+	text-align: justify;
+	white-space: normal;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	list-style-position: outside;
+	list-style-image: none;
+	list-style-type: square;
+	font-size: small;
+	font-style: normal;
+}
+.pie_tabla {
+	font-size: small;
+	font-style: normal;
+	font-weight: normal;
+	color: #FFF;
+	background-color: #666666;
+	background-repeat: no-repeat;
+	background-position: right bottom;
+	background-image: url(http://www.idera.gob.ar/images/CSS/esquinita.jpg);
+	padding-top: 2px;
+	padding-bottom: 2px;
+	padding-left: 15px;
+}

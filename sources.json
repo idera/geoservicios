@@ -75,13 +75,13 @@
       "id": "conae_modis",
       "jurisd": "nacional",
       "title": "CENIZAS (NPP y MODIS)",
-      "wms": "http://geoservicios.conae.gov.ar/geoserver/Cenizas/wms?",
+      "wms": "http://geoservicios.conae.gov.ar/geoserver/Cenizas/wms?"
     },
     {
       "id": "conae_focos",
       "jurisd": "nacional",
       "title": "Focos de Calor (MODIS) - CONAE",
-      "wms": "http://focosdecalor.conae.gov.ar/geoserver/FocosDeCalor/wms?",
+      "wms": "http://focosdecalor.conae.gov.ar/geoserver/FocosDeCalor/wms?"
     },
     {
       "id": "conae_caearte",
@@ -184,7 +184,7 @@
       "id": "bahra",
       "jurisd": "nacional",
       "title": "BAHRA",
-      "wfs": "http://www.bahra.gob.ar/geoserver/bahra/wfs?",
+      "wfs": "http://www.bahra.gob.ar/geoserver/bahra/wfs?"
     }
   ],
   "Misiones": [
@@ -219,7 +219,7 @@
     {
       "id": "malvinas",
       "jurisd": "local",
-      "title": "Municipiode Malvinas Argentinas",
+      "title": "Municipio de Malvinas Argentinas",
       "viewer":"http://mapas.malvinasargentinas.gov.ar/visor/map_default.phtml"
     },
     {
