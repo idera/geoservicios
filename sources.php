@@ -3,6 +3,8 @@
 $jsources = file_get_contents('sources.json');
 $sources = json_decode($jsources, true);
 
+$jSources = json_encode($sources, JSON_UNESCAPED_UNICODE);
+
 // parametro format: plain|html|qgis js???????json???
 $format = $_GET['format'];
 $type = $_GET['type'];
@@ -42,7 +44,9 @@ function getRowOrganismo($nodo) {
 	//cierro organismo
 	echo '</tr>';
 }
-
+if ($format == 'json'){
+    echo $jSources;
+}
 
 // Responder peticion plana (cron)
 if ($format == 'plain') {
@@ -66,6 +70,8 @@ if ($format == 'plain') {
 		}
 	}
 }
+
+
 
 //Responder peticion HTML
 else if ($format =='html'){
