@@ -1,4 +1,8 @@
 <?php
+// Configuracion de debug
+$debug = false;
+if (!$debug){ error_reporting(0);}
+
 // Abrir archivo de sources
 $jsources = file_get_contents('sources.json');
 $sources = json_decode($jsources, true);

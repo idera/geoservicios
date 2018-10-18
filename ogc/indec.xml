@@ -1,0 +1,2891 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE WMT_MS_Capabilities SYSTEM "http://geoservicios.indec.gov.ar:80/geoserver/schemas/wms/1.1.1/WMS_MS_Capabilities.dtd">
+<WMT_MS_Capabilities version="1.1.1" updateSequence="1944">
+  <Service>
+    <Name>OGC:WMS</Name>
+    <Title>INDEC - WMS</Title>
+    <Abstract>Servicios WMS de INDEC.&#13;
+A compliant implementation of WMS plus most of the SLD extension (dynamic styling). Can also generate PDF, SVG, KML, GeoRSS</Abstract>
+    <KeywordList>
+      <Keyword>WFS</Keyword>
+      <Keyword>WMS</Keyword>
+      <Keyword>GEOSERVER</Keyword>
+    </KeywordList>
+    <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.indec.gob.ar"/>
+    <ContactInformation>
+      <ContactPersonPrimary>
+        <ContactPerson>Manuel Retamozo</ContactPerson>
+        <ContactOrganization>SIG - INDEC</ContactOrganization>
+      </ContactPersonPrimary>
+      <ContactPosition>Consultor</ContactPosition>
+      <ContactAddress>
+        <AddressType>Work</AddressType>
+        <Address>Av. Presidente Julio A. Roca 609.</Address>
+        <City>Ciudad Autonoma de Buenos Aires</City>
+        <StateOrProvince>Capital Federal</StateOrProvince>
+        <PostCode>C1067ABB</PostCode>
+        <Country>Argentina</Country>
+      </ContactAddress>
+      <ContactVoiceTelephone>54 11 4349-9200</ContactVoiceTelephone>
+      <ContactFacsimileTelephone/>
+      <ContactElectronicMailAddress>mreta@indec.mecon.gov.ar</ContactElectronicMailAddress>
+    </ContactInformation>
+    <Fees>NONE</Fees>
+    <AccessConstraints>NONE</AccessConstraints>
+  </Service>
+  <Capability>
+    <Request>
+      <GetCapabilities>
+        <Format>application/vnd.ogc.wms_xml</Format>
+        <DCPType>
+          <HTTP>
+            <Get>
+              <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar:80/geoserver/wms?SERVICE=WMS&amp;"/>
+            </Get>
+            <Post>
+              <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar:80/geoserver/wms?SERVICE=WMS&amp;"/>
+            </Post>
+          </HTTP>
+        </DCPType>
+      </GetCapabilities>
+      <GetMap>
+        <Format>image/png</Format>
+        <Format>application/atom xml</Format>
+        <Format>application/atom+xml</Format>
+        <Format>application/openlayers</Format>
+        <Format>application/pdf</Format>
+        <Format>application/rss xml</Format>
+        <Format>application/rss+xml</Format>
+        <Format>application/vnd.google-earth.kml</Format>
+        <Format>application/vnd.google-earth.kml xml</Format>
+        <Format>application/vnd.google-earth.kml+xml</Format>
+        <Format>application/vnd.google-earth.kml+xml;mode=networklink</Format>
+        <Format>application/vnd.google-earth.kmz</Format>
+        <Format>application/vnd.google-earth.kmz xml</Format>
+        <Format>application/vnd.google-earth.kmz+xml</Format>
+        <Format>application/vnd.google-earth.kmz;mode=networklink</Format>
+        <Format>atom</Format>
+        <Format>image/geotiff</Format>
+        <Format>image/geotiff8</Format>
+        <Format>image/gif</Format>
+        <Format>image/gif;subtype=animated</Format>
+        <Format>image/jpeg</Format>
+        <Format>image/png8</Format>
+        <Format>image/png; mode=8bit</Format>
+        <Format>image/svg</Format>
+        <Format>image/svg xml</Format>
+        <Format>image/svg+xml</Format>
+        <Format>image/tiff</Format>
+        <Format>image/tiff8</Format>
+        <Format>kml</Format>
+        <Format>kmz</Format>
+        <Format>openlayers</Format>
+        <Format>rss</Format>
+        <Format>text/html; subtype=openlayers</Format>
+        <DCPType>
+          <HTTP>
+            <Get>
+              <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar:80/geoserver/wms?SERVICE=WMS&amp;"/>
+            </Get>
+          </HTTP>
+        </DCPType>
+      </GetMap>
+      <GetFeatureInfo>
+        <Format>text/plain</Format>
+        <Format>application/vnd.ogc.gml</Format>
+        <Format>application/vnd.ogc.gml/3.1.1</Format>
+        <Format>text/html</Format>
+        <Format>application/json</Format>
+        <DCPType>
+          <HTTP>
+            <Get>
+              <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar:80/geoserver/wms?SERVICE=WMS&amp;"/>
+            </Get>
+            <Post>
+              <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar:80/geoserver/wms?SERVICE=WMS&amp;"/>
+            </Post>
+          </HTTP>
+        </DCPType>
+      </GetFeatureInfo>
+      <DescribeLayer>
+        <Format>application/vnd.ogc.wms_xml</Format>
+        <DCPType>
+          <HTTP>
+            <Get>
+              <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar:80/geoserver/wms?SERVICE=WMS&amp;"/>
+            </Get>
+          </HTTP>
+        </DCPType>
+      </DescribeLayer>
+      <GetLegendGraphic>
+        <Format>image/png</Format>
+        <Format>image/jpeg</Format>
+        <Format>image/gif</Format>
+        <DCPType>
+          <HTTP>
+            <Get>
+              <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar:80/geoserver/wms?SERVICE=WMS&amp;"/>
+            </Get>
+          </HTTP>
+        </DCPType>
+      </GetLegendGraphic>
+      <GetStyles>
+        <Format>application/vnd.ogc.sld+xml</Format>
+        <DCPType>
+          <HTTP>
+            <Get>
+              <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar:80/geoserver/wms?SERVICE=WMS&amp;"/>
+            </Get>
+          </HTTP>
+        </DCPType>
+      </GetStyles>
+    </Request>
+    <Exception>
+      <Format>application/vnd.ogc.se_xml</Format>
+      <Format>application/vnd.ogc.se_inimage</Format>
+    </Exception>
+    <UserDefinedSymbolization SupportSLD="1" UserLayer="1" UserStyle="1" RemoteWFS="1"/>
+    <Layer>
+      <Title>INDEC - WMS</Title>
+      <Abstract>Servicios WMS de INDEC.&#13;
+A compliant implementation of WMS plus most of the SLD extension (dynamic styling). Can also generate PDF, SVG, KML, GeoRSS</Abstract>
+      <!--Limited list of EPSG projections:-->
+      <SRS>EPSG:22182</SRS>
+      <SRS>EPSG:22183</SRS>
+      <SRS>EPSG:22184</SRS>
+      <SRS>EPSG:22185</SRS>
+      <SRS>EPSG:22186</SRS>
+      <SRS>EPSG:22187</SRS>
+      <SRS>EPSG:3857</SRS>
+      <SRS>EPSG:4326</SRS>
+      <SRS>EPSG:900913</SRS>
+      <LatLonBoundingBox minx="-89.53369253623" miny="-90.0" maxx="0.356794953346252" maxy="0.232427671551704"/>
+      <Layer queryable="1" opaque="0">
+        <Name>geocenso2010:actividad_dpto</Name>
+        <Title>Condición de actividad económica - dpto - Censo 2010 - INDEC</Title>
+        <Abstract>Comprende a la población de 14 o más años que, en el período de referencia adoptado por el Censo, estuvo ocupada, desocupada o inactiva.&#13;
+La población económicamente activa (PEA) la integran las personas que tienen una ocupación o que sin tenerla la están buscando activamente. Está compuesta por la población ocupada más la población desocupada. &#13;
+Tasa de actividad refiere al porcentaje de población económicamente activa.&#13;
+Tasa de empleo refiere al porcentaje de población ocupada.&#13;
+Tasa de desocupación refiere al porcentaje de población desocupada sobre la población económicamente activa.&#13;
+&#13;
+El valor -1 refiere a dato que no corresponde presentar debido a la naturaleza de las cosas o del cálculo.</Abstract>
+        <KeywordList>
+          <Keyword>sociedad</Keyword>
+          <Keyword>demografia</Keyword>
+          <Keyword>censo</Keyword>
+          <Keyword>poblacion</Keyword>
+          <Keyword>caracteristicas economicas</Keyword>
+          <Keyword>actividad</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <!--WKT definition of this CRS:
+GEOGCS["WGS 84", 
+  DATUM["World Geodetic System 1984", 
+    SPHEROID["WGS 84", 6378137.0, 298.257223563, AUTHORITY["EPSG","7030"]], 
+    AUTHORITY["EPSG","6326"]], 
+  PRIMEM["Greenwich", 0.0, AUTHORITY["EPSG","8901"]], 
+  UNIT["degree", 0.017453292519943295], 
+  AXIS["Geodetic longitude", EAST], 
+  AXIS["Geodetic latitude", NORTH], 
+  AUTHORITY["EPSG","4326"]]-->
+        <LatLonBoundingBox minx="-74.029853956" miny="-90.0" maxx="-25.023144837" maxy="-21.7450575415564"/>
+        <BoundingBox SRS="EPSG:4326" minx="-74.029853956" miny="-90.0" maxx="-25.023144837" maxy="-21.7450575415564"/>
+        <MetadataURL type="TC211">
+          <Format>text/xml</Format>
+          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar/geonetwork/srv/spa/xml_iso19139?id=123&amp;styleSheet="/>
+        </MetadataURL>
+        <Style>
+          <Name>actividad_dpto</Name>
+          <Title/>
+          <Abstract/>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar:80/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=actividad_dpto"/>
+          </LegendURL>
+        </Style>
+        <Style>
+          <Name>desocupacion_dpto</Name>
+          <Title/>
+          <Abstract/>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar:80/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=actividad_dpto&amp;style=desocupacion_dpto"/>
+          </LegendURL>
+        </Style>
+        <Style>
+          <Name>empleo_dpto</Name>
+          <Title/>
+          <Abstract/>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar:80/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=actividad_dpto&amp;style=empleo_dpto"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geocenso2010:actividad_pcia</Name>
+        <Title>Condición de actividad económica - pcia - Censo 2010 - INDEC</Title>
+        <Abstract>Comprende a la población de 14 o más años que, en el período de referencia adoptado por el Censo, estuvo ocupada, desocupada o inactiva.&#13;
+La población económicamente activa (PEA) la integran las personas que tienen una ocupación o que sin tenerla la están buscando activamente. Está compuesta por la población ocupada más la población desocupada. &#13;
+Tasa de actividad refiere al porcentaje de población económicamente activa.&#13;
+Tasa de empleo refiere al porcentaje de población ocupada.&#13;
+Tasa de desocupación refiere al porcentaje de población desocupada sobre la población económicamente activa.</Abstract>
+        <KeywordList>
+          <Keyword>sociedad</Keyword>
+          <Keyword>demografía</Keyword>
+          <Keyword>censo</Keyword>
+          <Keyword>poblacion</Keyword>
+          <Keyword>caracteristicas economicas</Keyword>
+          <Keyword>actividad</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <!--WKT definition of this CRS:
+GEOGCS["WGS 84", 
+  DATUM["World Geodetic System 1984", 
+    SPHEROID["WGS 84", 6378137.0, 298.257223563, AUTHORITY["EPSG","7030"]], 
+    AUTHORITY["EPSG","6326"]], 
+  PRIMEM["Greenwich", 0.0, AUTHORITY["EPSG","8901"]], 
+  UNIT["degree", 0.017453292519943295], 
+  AXIS["Geodetic longitude", EAST], 
+  AXIS["Geodetic latitude", NORTH], 
+  AUTHORITY["EPSG","4326"]]-->
+        <LatLonBoundingBox minx="-74.029853956" miny="-90.0" maxx="-25.023144837" maxy="-21.7450575415564"/>
+        <BoundingBox SRS="EPSG:4326" minx="-74.029853956" miny="-90.0" maxx="-25.023144837" maxy="-21.7450575415564"/>
+        <MetadataURL type="TC211">
+          <Format>text/xml</Format>
+          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar/geonetwork/srv/spa/xml_iso19139?id=122&amp;styleSheet="/>
+        </MetadataURL>
+        <Style>
+          <Name>actividad_pcia</Name>
+          <Title/>
+          <Abstract/>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar:80/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=actividad_pcia"/>
+          </LegendURL>
+        </Style>
+        <Style>
+          <Name>desocupacion_pcia</Name>
+          <Title/>
+          <Abstract/>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar:80/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=actividad_pcia&amp;style=desocupacion_pcia"/>
+          </LegendURL>
+        </Style>
+        <Style>
+          <Name>empleo_pcia</Name>
+          <Title/>
+          <Abstract/>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar:80/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=actividad_pcia&amp;style=empleo_pcia"/>
+          </LegendURL>
+        </Style>
+        <Style>
+          <Name>polygon</Name>
+          <Title>Default Polygon</Title>
+          <Abstract>A sample style that draws a polygon</Abstract>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar:80/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=actividad_pcia&amp;style=polygon"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geocenso2010:actividad_radio</Name>
+        <Title>Condición de actividad económica - radio - Censo 2010 - INDEC</Title>
+        <Abstract>Comprende a la población de 14 o más años que, en el período de referencia adoptado por el Censo, estuvo ocupada, desocupada o inactiva.&#13;
+La población económicamente activa (PEA) la integran las personas que tienen una ocupación o que sin tenerla la están buscando activamente. Está compuesta por la población ocupada más la población desocupada. &#13;
+Tasa de actividad refiere al porcentaje de población económicamente activa.&#13;
+Tasa de empleo refiere al porcentaje de población ocupada.&#13;
+Tasa de desocupación refiere al porcentaje de población desocupada sobre la población económicamente activa.</Abstract>
+        <KeywordList>
+          <Keyword>sociedad</Keyword>
+          <Keyword>demografia</Keyword>
+          <Keyword>censo</Keyword>
+          <Keyword>poblacion</Keyword>
+          <Keyword>caracteristicas economicas</Keyword>
+          <Keyword>actividad</Keyword>
+        </KeywordList>
+        <SRS>EPSG:22183</SRS>
+        <!--WKT definition of this CRS:
+PROJCS["POSGAR 94 / Argentina 3", 
+  GEOGCS["POSGAR 94", 
+    DATUM["Posiciones Geodesicas Argentinas 1994", 
+      SPHEROID["WGS 84", 6378137.0, 298.257223563, AUTHORITY["EPSG","7030"]], 
+      TOWGS84[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0], 
+      AUTHORITY["EPSG","6694"]], 
+    PRIMEM["Greenwich", 0.0, AUTHORITY["EPSG","8901"]], 
+    UNIT["degree", 0.017453292519943295], 
+    AXIS["Geodetic longitude", EAST], 
+    AXIS["Geodetic latitude", NORTH], 
+    AUTHORITY["EPSG","4694"]], 
+  PROJECTION["Transverse_Mercator", AUTHORITY["EPSG","9807"]], 
+  PARAMETER["central_meridian", -66.0], 
+  PARAMETER["latitude_of_origin", -90.0], 
+  PARAMETER["scale_factor", 1.0], 
+  PARAMETER["false_easting", 3500000.0], 
+  PARAMETER["false_northing", 0.0], 
+  UNIT["m", 1.0], 
+  AXIS["Easting", EAST], 
+  AXIS["Northing", NORTH], 
+  AUTHORITY["EPSG","22183"]]-->
+        <LatLonBoundingBox minx="-74.51048485015873" miny="-55.05433712665576" maxx="-47.16736823048794" maxy="-21.352828293837433"/>
+        <BoundingBox SRS="EPSG:22183" minx="2952779.5" miny="3898419.25" maxx="4740998.5" maxy="7592423.0"/>
+        <MetadataURL type="TC211">
+          <Format>text/xml</Format>
+          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar/geonetwork/srv/spa/xml_iso19139?id=124&amp;styleSheet="/>
+        </MetadataURL>
+        <Style>
+          <Name>actividad_rad</Name>
+          <Title/>
+          <Abstract/>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar:80/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=actividad_radio"/>
+          </LegendURL>
+        </Style>
+        <Style>
+          <Name>polygon</Name>
+          <Title>Default Polygon</Title>
+          <Abstract>A sample style that draws a polygon</Abstract>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar:80/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=actividad_radio&amp;style=polygon"/>
+          </LegendURL>
+        </Style>
+        <Style>
+          <Name>desocupacion_rad</Name>
+          <Title/>
+          <Abstract/>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar:80/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=actividad_radio&amp;style=desocupacion_rad"/>
+          </LegendURL>
+        </Style>
+        <Style>
+          <Name>empleo_rad</Name>
+          <Title/>
+          <Abstract/>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar:80/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=actividad_radio&amp;style=empleo_rad"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geocenso2010:analfabetismo_dpto</Name>
+        <Title>Población de 10 años y más analfabeta - dpto - Censo 2010 - INDEC</Title>
+        <Abstract>Analfabetismo refiere a la población de 10 años y más que no sabe leer ni escribir. Valores expresados en %.</Abstract>
+        <KeywordList>
+          <Keyword>sociedad</Keyword>
+          <Keyword>demografía</Keyword>
+          <Keyword>censo</Keyword>
+          <Keyword>educación</Keyword>
+          <Keyword>población</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <!--WKT definition of this CRS:
+GEOGCS["WGS 84", 
+  DATUM["World Geodetic System 1984", 
+    SPHEROID["WGS 84", 6378137.0, 298.257223563, AUTHORITY["EPSG","7030"]], 
+    AUTHORITY["EPSG","6326"]], 
+  PRIMEM["Greenwich", 0.0, AUTHORITY["EPSG","8901"]], 
+  UNIT["degree", 0.017453292519943295], 
+  AXIS["Geodetic longitude", EAST], 
+  AXIS["Geodetic latitude", NORTH], 
+  AUTHORITY["EPSG","4326"]]-->
+        <LatLonBoundingBox minx="-74.029853956" miny="-90.0" maxx="-25.023144837" maxy="-21.7450575415564"/>
+        <BoundingBox SRS="EPSG:4326" minx="-74.029853956" miny="-90.0" maxx="-25.023144837" maxy="-21.7450575415564"/>
+        <MetadataURL type="TC211">
+          <Format>text/xml</Format>
+          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar/geonetwork/srv/spa/xml_iso19139?id=107&amp;styleSheet="/>
+        </MetadataURL>
+        <Style>
+          <Name>analfabetismo_dpto</Name>
+          <Title/>
+          <Abstract/>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar:80/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=analfabetismo_dpto"/>
+          </LegendURL>
+        </Style>
+        <Style>
+          <Name>polygon</Name>
+          <Title>Default Polygon</Title>
+          <Abstract>A sample style that draws a polygon</Abstract>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar:80/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=analfabetismo_dpto&amp;style=polygon"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geocenso2010:analfabetismo_pcia</Name>
+        <Title>Población de 10 años y más analfabeta - pcia - Censo2010 - INDEC</Title>
+        <Abstract>Refiere a la población de 10 años y más que no sabe leer ni escribir. Valores expresados en %.</Abstract>
+        <KeywordList>
+          <Keyword>sociedad</Keyword>
+          <Keyword>demografía</Keyword>
+          <Keyword>censo</Keyword>
+          <Keyword>sociedad</Keyword>
+          <Keyword>población</Keyword>
+          <Keyword>educación</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <!--WKT definition of this CRS:
+GEOGCS["WGS 84", 
+  DATUM["World Geodetic System 1984", 
+    SPHEROID["WGS 84", 6378137.0, 298.257223563, AUTHORITY["EPSG","7030"]], 
+    AUTHORITY["EPSG","6326"]], 
+  PRIMEM["Greenwich", 0.0, AUTHORITY["EPSG","8901"]], 
+  UNIT["degree", 0.017453292519943295], 
+  AXIS["Geodetic longitude", EAST], 
+  AXIS["Geodetic latitude", NORTH], 
+  AUTHORITY["EPSG","4326"]]-->
+        <LatLonBoundingBox minx="-74.029853956" miny="-90.0" maxx="-25.023144837" maxy="-21.7450575415564"/>
+        <BoundingBox SRS="EPSG:4326" minx="-74.029853956" miny="-90.0" maxx="-25.023144837" maxy="-21.7450575415564"/>
+        <MetadataURL type="TC211">
+          <Format>text/xml</Format>
+          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar/geonetwork/srv/spa/xml_iso19139?id=106&amp;styleSheet="/>
+        </MetadataURL>
+        <Style>
+          <Name>analfabetismo_pcia</Name>
+          <Title/>
+          <Abstract/>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar:80/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=analfabetismo_pcia"/>
+          </LegendURL>
+        </Style>
+        <Style>
+          <Name>polygon</Name>
+          <Title>Default Polygon</Title>
+          <Abstract>A sample style that draws a polygon</Abstract>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar:80/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=analfabetismo_pcia&amp;style=polygon"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geocenso2010:datos_basicos_departamentos</Name>
+        <Title>Poblacion y datos basicos por departamento - Censo2010 - INDEC</Title>
+        <Abstract>Esta cartografía representa las divisiones político-administrativas (DPA) que componen la República Argentina (ARG) con variables básicas asociadas. Corresponde a los partidos en la provincia de Buenos Aires, las comunas en la Ciudad Autónoma de Buenos Aires y los departamentos en las demás provincias.&#13;
+&#13;
+Esta capa de polígonos fue elaborada por el Instituto Nacional de Estadística y Censos (INDEC) para el Censo Nacional de Población, Hogares y Viviendas (CNPHyV) 2010 a partir de la cartografía realizada por cada una de las Direcciones Provinciales de Estadística con el objetivo de mostrar información estadística del Censo.&#13;
+&#13;
+Los datos en valores absolutos que se presentan provienen del procesamiento a través de la base REDATAM-web utilizando las variables “Sexo”, "Condición de ocupación" y "Heladera" a fin de obtener los datos referidos a total de personas, de hogares, de viviendas particulares y particulares habitadas de los Resultados definitivos del CNPHyV 2010.</Abstract>
+        <KeywordList>
+          <Keyword>sociedad</Keyword>
+          <Keyword>demografia</Keyword>
+          <Keyword>poblacion</Keyword>
+          <Keyword>hogar</Keyword>
+          <Keyword>vivienda</Keyword>
+          <Keyword>censo</Keyword>
+          <Keyword>demarcacion</Keyword>
+          <Keyword>limites</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <!--WKT definition of this CRS:
+GEOGCS["WGS 84", 
+  DATUM["World Geodetic System 1984", 
+    SPHEROID["WGS 84", 6378137.0, 298.257223563, AUTHORITY["EPSG","7030"]], 
+    AUTHORITY["EPSG","6326"]], 
+  PRIMEM["Greenwich", 0.0, AUTHORITY["EPSG","8901"]], 
+  UNIT["degree", 0.017453292519943295], 
+  AXIS["Geodetic longitude", EAST], 
+  AXIS["Geodetic latitude", NORTH], 
+  AUTHORITY["EPSG","4326"]]-->
+        <LatLonBoundingBox minx="-74.029853956" miny="-90.0" maxx="-25.023144837" maxy="-21.7450575415564"/>
+        <BoundingBox SRS="EPSG:4326" minx="-74.029853956" miny="-90.0" maxx="-25.023144837" maxy="-21.7450575415564"/>
+        <MetadataURL type="TC211">
+          <Format>text/xml</Format>
+          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar/geonetwork/srv/spa/xml_iso19139?id=109&amp;styleSheet="/>
+        </MetadataURL>
+        <Style>
+          <Name>poblacion_dpto</Name>
+          <Title/>
+          <Abstract/>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar:80/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=datos_basicos_departamentos"/>
+          </LegendURL>
+        </Style>
+        <Style>
+          <Name>polygon</Name>
+          <Title>Default Polygon</Title>
+          <Abstract>A sample style that draws a polygon</Abstract>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar:80/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=datos_basicos_departamentos&amp;style=polygon"/>
+          </LegendURL>
+        </Style>
+        <Style>
+          <Name>departamentos</Name>
+          <Title/>
+          <Abstract/>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar:80/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=datos_basicos_departamentos&amp;style=departamentos"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geocenso2010:datos_basicos_localidad</Name>
+        <Title>Poblacion y datos basicos por localidad - Censo2010 - INDEC</Title>
+        <Abstract>Esta cartografía representa la ubicación de las localidades censales. Incluye la capital de la Nación, capitales provinciales, cabeceras de departamentos/partidos y otras localidades. &#13;
+El INDEC define la localidad censal según el criterio físico como una concentración espacial de edificios conectados entre sí por una red de calles. Este concepto estuvo implícito en todos los censos argentinos y fue explicitado a partir del censo de 1991.&#13;
+Esta capa de puntos fue elaborada a fines estadísticos con el objetivo de georreferenciar los nombres y códigos utilizados en el Censo Nacional de Población, Hogares y Viviendas (CNPHyV) 2010 por el Instituto Nacional de Estadística y Censos (INDEC).&#13;
+&#13;
+Datos asociados a la cartografía&#13;
+Total de población&#13;
+Total de hogares&#13;
+Total de viviendas particulares&#13;
+Total de viviendas particulares habitadas</Abstract>
+        <KeywordList>
+          <Keyword>sociedad</Keyword>
+          <Keyword>demografia</Keyword>
+          <Keyword>censo</Keyword>
+          <Keyword>población</Keyword>
+          <Keyword>hogar</Keyword>
+          <Keyword>vivienda</Keyword>
+        </KeywordList>
+        <SRS>EPSG:22183</SRS>
+        <!--WKT definition of this CRS:
+PROJCS["POSGAR 94 / Argentina 3", 
+  GEOGCS["POSGAR 94", 
+    DATUM["Posiciones Geodesicas Argentinas 1994", 
+      SPHEROID["WGS 84", 6378137.0, 298.257223563, AUTHORITY["EPSG","7030"]], 
+      TOWGS84[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0], 
+      AUTHORITY["EPSG","6694"]], 
+    PRIMEM["Greenwich", 0.0, AUTHORITY["EPSG","8901"]], 
+    UNIT["degree", 0.017453292519943295], 
+    AXIS["Geodetic longitude", EAST], 
+    AXIS["Geodetic latitude", NORTH], 
+    AUTHORITY["EPSG","4694"]], 
+  PROJECTION["Transverse_Mercator", AUTHORITY["EPSG","9807"]], 
+  PARAMETER["central_meridian", -66.0], 
+  PARAMETER["latitude_of_origin", -90.0], 
+  PARAMETER["scale_factor", 1.0], 
+  PARAMETER["false_easting", 3500000.0], 
+  PARAMETER["false_northing", 0.0], 
+  UNIT["m", 1.0], 
+  AXIS["Easting", EAST], 
+  AXIS["Northing", NORTH], 
+  AUTHORITY["EPSG","22183"]]-->
+        <LatLonBoundingBox minx="-73.7512033164848" miny="-54.82145551552024" maxx="-47.28276252125465" maxy="-21.447168680325102"/>
+        <BoundingBox SRS="EPSG:22183" minx="2999270.5" miny="3924134.25" maxx="4739923.5" maxy="7581829.5"/>
+        <MetadataURL type="TC211">
+          <Format>text/xml</Format>
+          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://172.26.66.215/geonetwork/srv/spa/xml_iso19139?id=115&amp;styleSheet="/>
+        </MetadataURL>
+        <Style>
+          <Name>localidades_func_admin</Name>
+          <Title>localidades</Title>
+          <Abstract/>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar:80/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=datos_basicos_localidad"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geocenso2010:datos_basicos_provincias</Name>
+        <Title>Poblacion y datos basicos por provincia - Censo2010 - INDEC</Title>
+        <Abstract>Esta cartografía representa las divisiones político-territoriales (DPT) que componen la República Argentina (ARG). Corresponde a las 23 provincias y la Ciudad Autónoma de Buenos Aires. La expresión "división político- territorial" para referirse a las jurisdicciones de primer orden fue adoptada a partir de la Disposición INDEC N° 003/88. Esta capa de polígonos fue elaborada a fines estadísticos con el objetivo de georreferenciar los nombres, códigos y límites utilizados en el Censo Nacional de Población, Hogares y Viviendas (CNPHyV) 2010 por el Instituto Nacional de Estadística y Censos (INDEC).&#13;
+&#13;
+Esta capa de polígonos fue elaborada por el Instituto Nacional de Estadística y Censos (INDEC) para el Censo Nacional de Población, Hogares y Viviendas (CNPHyV) 2010 a partir de la cartografía realizada por cada una de las Direcciones Provinciales de Estadística.&#13;
+&#13;
+Los datos en valores absolutos que se presentan provienen del procesamiento a través de la base REDATAM-web utilizando las variables “Sexo”, "Condición de ocupación" y "Heladera" a fin de obtener los datos referidos a total de personas, de hogares, de viviendas particulares y particulares habitadas de los Resultados definitivos del Censo Nacional de Población, Hogares y Viviendas 2010.</Abstract>
+        <KeywordList>
+          <Keyword>sociedad</Keyword>
+          <Keyword>demografia</Keyword>
+          <Keyword>poblacion</Keyword>
+          <Keyword>hogar</Keyword>
+          <Keyword>vivienda</Keyword>
+          <Keyword>censo</Keyword>
+          <Keyword>demarcacion</Keyword>
+          <Keyword>limites</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <!--WKT definition of this CRS:
+GEOGCS["WGS 84", 
+  DATUM["World Geodetic System 1984", 
+    SPHEROID["WGS 84", 6378137.0, 298.257223563, AUTHORITY["EPSG","7030"]], 
+    AUTHORITY["EPSG","6326"]], 
+  PRIMEM["Greenwich", 0.0, AUTHORITY["EPSG","8901"]], 
+  UNIT["degree", 0.017453292519943295], 
+  AXIS["Geodetic longitude", EAST], 
+  AXIS["Geodetic latitude", NORTH], 
+  AUTHORITY["EPSG","4326"]]-->
+        <LatLonBoundingBox minx="-74.029853956" miny="-90.0" maxx="-25.023144837" maxy="-21.7450575415564"/>
+        <BoundingBox SRS="EPSG:4326" minx="-74.029853956" miny="-90.0" maxx="-25.023144837" maxy="-21.7450575415564"/>
+        <MetadataURL type="TC211">
+          <Format>text/xml</Format>
+          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar/geonetwork/srv/spa/xml_iso19139?id=108&amp;styleSheet="/>
+        </MetadataURL>
+        <Style>
+          <Name>poblacion_pcia</Name>
+          <Title/>
+          <Abstract/>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar:80/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=datos_basicos_provincias"/>
+          </LegendURL>
+        </Style>
+        <Style>
+          <Name>provincias</Name>
+          <Title/>
+          <Abstract/>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar:80/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=datos_basicos_provincias&amp;style=provincias"/>
+          </LegendURL>
+        </Style>
+        <Style>
+          <Name>polygon</Name>
+          <Title>Default Polygon</Title>
+          <Abstract>A sample style that draws a polygon</Abstract>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar:80/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=datos_basicos_provincias&amp;style=polygon"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geocenso2010:datos_basicos_radio</Name>
+        <Title>Poblacion y datos basicos por radio - Censo 2010 - INDEC</Title>
+        <Abstract>Esta cartografía representa las divisiones de radios censales que componen la República Argentina (ARG) con información censal asociada. Los radios son unidades censales en las que se divide cada fracción censal, definidas por un espacio territorial con límites geográficos y una determinada cantidad de unidades de viviendas a relevar.&#13;
+&#13;
+Corresponden al anteúltimo nivel de la estructura censal y permiten un mejor control de la cobertura territorial, facilitan la distribución y recuperación de los materiales censales y determinan en gran parte la calidad y el buen desarrollo del operativo.&#13;
+&#13;
+Esta capa de polígonos fue elaborada por el Instituto Nacional de Estadística y Censos (INDEC) para el Censo Nacional de Población, Hogares y Viviendas (CNPHyV) 2010 a partir de la cartografía realizada por cada una de las Direcciones Provinciales de Estadística.&#13;
+&#13;
+Los datos en valores absolutos que se presentan provienen del procesamiento a través de la base REDATAM-web utilizando las variables “Sexo”, "Tipo de vivienda agrupado", "Condición de ocupación" y alguna de hogares para obtener el universo total, de los Resultados definitivos del Censo Nacional de Población, Hogares y Viviendas 2010.</Abstract>
+        <KeywordList>
+          <Keyword>sociedad</Keyword>
+          <Keyword>demarcacion</Keyword>
+          <Keyword>demografia</Keyword>
+          <Keyword>censo</Keyword>
+          <Keyword>poblacion</Keyword>
+          <Keyword>radio</Keyword>
+          <Keyword>vivienda</Keyword>
+          <Keyword>viviendas particulares</Keyword>
+          <Keyword>hogar</Keyword>
+        </KeywordList>
+        <SRS>EPSG:22183</SRS>
+        <!--WKT definition of this CRS:
+PROJCS["POSGAR 94 / Argentina 3", 
+  GEOGCS["POSGAR 94", 
+    DATUM["Posiciones Geodesicas Argentinas 1994", 
+      SPHEROID["WGS 84", 6378137.0, 298.257223563, AUTHORITY["EPSG","7030"]], 
+      TOWGS84[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0], 
+      AUTHORITY["EPSG","6694"]], 
+    PRIMEM["Greenwich", 0.0, AUTHORITY["EPSG","8901"]], 
+    UNIT["degree", 0.017453292519943295], 
+    AXIS["Geodetic longitude", EAST], 
+    AXIS["Geodetic latitude", NORTH], 
+    AUTHORITY["EPSG","4694"]], 
+  PROJECTION["Transverse_Mercator", AUTHORITY["EPSG","9807"]], 
+  PARAMETER["central_meridian", -66.0], 
+  PARAMETER["latitude_of_origin", -90.0], 
+  PARAMETER["scale_factor", 1.0], 
+  PARAMETER["false_easting", 3500000.0], 
+  PARAMETER["false_northing", 0.0], 
+  UNIT["m", 1.0], 
+  AXIS["Easting", EAST], 
+  AXIS["Northing", NORTH], 
+  AUTHORITY["EPSG","22183"]]-->
+        <LatLonBoundingBox minx="-74.51048485015873" miny="-55.05433712665576" maxx="-47.16736823048794" maxy="-21.352828293837433"/>
+        <BoundingBox SRS="EPSG:22183" minx="2952779.5" miny="3898419.25" maxx="4740998.5" maxy="7592423.0"/>
+        <MetadataURL type="TC211">
+          <Format>text/xml</Format>
+          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar/geonetwork/srv/spa/xml_iso19139?id=93&amp;styleSheet="/>
+        </MetadataURL>
+        <Style>
+          <Name>densidad_pais_por_radio</Name>
+          <Title/>
+          <Abstract/>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar:80/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=datos_basicos_radio"/>
+          </LegendURL>
+        </Style>
+        <Style>
+          <Name>polygon</Name>
+          <Title>Default Polygon</Title>
+          <Abstract>A sample style that draws a polygon</Abstract>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar:80/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=datos_basicos_radio&amp;style=polygon"/>
+          </LegendURL>
+        </Style>
+        <Style>
+          <Name>radio</Name>
+          <Title/>
+          <Abstract/>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar:80/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=datos_basicos_radio&amp;style=radio"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geocenso2010:departamentos_codigo</Name>
+        <Title>Departamentos - código censal 2010</Title>
+        <Abstract>Esta cartografía representa las divisiones político-administrativas (DPA) que componen la República Argentina (ARG). Corresponde a los partidos en la provincia de Buenos Aires, las comunas en la Ciudad Autónoma de Buenos Aires y los departamentos en las demás provincias. La expresión "división político-administrativa" para referirse a este orden fue adoptada a partir de la Disposición INDEC N° 003/88. Las unidades político-administrativas cubren en forma exhaustiva el territorio nacional y son excluyentes entre sí. Esta capa de polígonos fue elaborada a fines estadísticos con el objetivo de georreferenciar los nombres, códigos y límites utilizados en el Censo Nacional de Población, Hogares y Viviendas (CNPHyV) 2010 por el Instituto Nacional de Estadística y Censos (INDEC). Cabe señalar que para la provincia de Tierra del Fuego, Antártida e Islas del Atlántico Sur sólo se han representado las Islas Malvinas y los departamentos de Río Grande y Ushuaia.</Abstract>
+        <KeywordList>
+          <Keyword>limites</Keyword>
+          <Keyword>demarcacion</Keyword>
+          <Keyword>censo</Keyword>
+          <Keyword>codigo</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <!--WKT definition of this CRS:
+GEOGCS["WGS 84", 
+  DATUM["World Geodetic System 1984", 
+    SPHEROID["WGS 84", 6378137.0, 298.257223563, AUTHORITY["EPSG","7030"]], 
+    AUTHORITY["EPSG","6326"]], 
+  PRIMEM["Greenwich", 0.0, AUTHORITY["EPSG","8901"]], 
+  UNIT["degree", 0.017453292519943295], 
+  AXIS["Geodetic longitude", EAST], 
+  AXIS["Geodetic latitude", NORTH], 
+  AUTHORITY["EPSG","4326"]]-->
+        <LatLonBoundingBox minx="-74.029853956" miny="-90.0" maxx="-25.023144837" maxy="-21.7450575415564"/>
+        <BoundingBox SRS="EPSG:4326" minx="-74.029853956" miny="-90.0" maxx="-25.023144837" maxy="-21.7450575415564"/>
+        <MetadataURL type="TC211">
+          <Format>text/xml</Format>
+          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar/geonetwork/srv/spa/xml_iso19139?id=113&amp;styleSheet="/>
+        </MetadataURL>
+        <Style>
+          <Name>dpto_polit_admin</Name>
+          <Title>codgeo_departamentos</Title>
+          <Abstract>A sample style that draws a polygon</Abstract>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar:80/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=departamentos_codigo"/>
+          </LegendURL>
+        </Style>
+        <Style>
+          <Name>dpto_codgeo</Name>
+          <Title>codgeo_departamentos</Title>
+          <Abstract>A sample style that draws a polygon</Abstract>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar:80/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=departamentos_codigo&amp;style=dpto_codgeo"/>
+          </LegendURL>
+        </Style>
+        <Style>
+          <Name>polygon</Name>
+          <Title>Default Polygon</Title>
+          <Abstract>A sample style that draws a polygon</Abstract>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar:80/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=departamentos_codigo&amp;style=polygon"/>
+          </LegendURL>
+        </Style>
+        <Style>
+          <Name>departamentos_transparente</Name>
+          <Title/>
+          <Abstract/>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar:80/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=departamentos_codigo&amp;style=departamentos_transparente"/>
+          </LegendURL>
+        </Style>
+        <Style>
+          <Name>departamentos</Name>
+          <Title/>
+          <Abstract/>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar:80/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=departamentos_codigo&amp;style=departamentos"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>sig:envolventes</Name>
+        <Title>envolventes</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>envolventes</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <!--WKT definition of this CRS:
+GEOGCS["WGS 84", 
+  DATUM["World Geodetic System 1984", 
+    SPHEROID["WGS 84", 6378137.0, 298.257223563, AUTHORITY["EPSG","7030"]], 
+    AUTHORITY["EPSG","6326"]], 
+  PRIMEM["Greenwich", 0.0, AUTHORITY["EPSG","8901"]], 
+  UNIT["degree", 0.017453292519943295], 
+  AXIS["Geodetic longitude", EAST], 
+  AXIS["Geodetic latitude", NORTH], 
+  AUTHORITY["EPSG","4326"]]-->
+        <LatLonBoundingBox minx="-71.7157897949219" miny="-46.7179641723633" maxx="0.356794953346252" maxy="0.232427671551704"/>
+        <BoundingBox SRS="EPSG:4326" minx="-71.7157897949219" miny="-46.7179641723633" maxx="0.356794953346252" maxy="0.232427671551704"/>
+        <Style>
+          <Name>polygon</Name>
+          <Title>Default Polygon</Title>
+          <Abstract>A sample style that draws a polygon</Abstract>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar:80/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=envolventes"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geocenso2010:grandes_grupos_de_edad_dpto</Name>
+        <Title>Población por grandes grupos de edad - dpto - Censo 2010 - INDEC</Title>
+        <Abstract>Muestra la población por grandes grupos de edad (0 a 14 años; 15 a 64 años; 65 años y más).&#13;
+Discriminado por sexo, valores absolutos y porcentaje.</Abstract>
+        <KeywordList>
+          <Keyword>sociedad</Keyword>
+          <Keyword>censo</Keyword>
+          <Keyword>demografía</Keyword>
+          <Keyword>estructura de la población</Keyword>
+          <Keyword>grandes grupos de edad</Keyword>
+          <Keyword>población</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <!--WKT definition of this CRS:
+GEOGCS["WGS 84", 
+  DATUM["World Geodetic System 1984", 
+    SPHEROID["WGS 84", 6378137.0, 298.257223563, AUTHORITY["EPSG","7030"]], 
+    AUTHORITY["EPSG","6326"]], 
+  PRIMEM["Greenwich", 0.0, AUTHORITY["EPSG","8901"]], 
+  UNIT["degree", 0.017453292519943295], 
+  AXIS["Geodetic longitude", EAST], 
+  AXIS["Geodetic latitude", NORTH], 
+  AUTHORITY["EPSG","4326"]]-->
+        <LatLonBoundingBox minx="-74.029853956" miny="-90.0" maxx="-25.023144837" maxy="-21.7450575415564"/>
+        <BoundingBox SRS="EPSG:4326" minx="-74.029853956" miny="-90.0" maxx="-25.023144837" maxy="-21.7450575415564"/>
+        <MetadataURL type="TC211">
+          <Format>text/xml</Format>
+          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar/geonetwork/srv/spa/xml_iso19139?id=99&amp;styleSheet="/>
+        </MetadataURL>
+        <Style>
+          <Name>0_14_dpto</Name>
+          <Title/>
+          <Abstract/>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar:80/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=grandes_grupos_de_edad_dpto"/>
+          </LegendURL>
+        </Style>
+        <Style>
+          <Name>65_dpto</Name>
+          <Title/>
+          <Abstract/>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar:80/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=grandes_grupos_de_edad_dpto&amp;style=65_dpto"/>
+          </LegendURL>
+        </Style>
+        <Style>
+          <Name>15_64_dpto</Name>
+          <Title/>
+          <Abstract/>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar:80/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=grandes_grupos_de_edad_dpto&amp;style=15_64_dpto"/>
+          </LegendURL>
+        </Style>
+        <Style>
+          <Name>polygon</Name>
+          <Title>Default Polygon</Title>
+          <Abstract>A sample style that draws a polygon</Abstract>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar:80/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=grandes_grupos_de_edad_dpto&amp;style=polygon"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geocenso2010:grandes_grupos_de_edad_pcia</Name>
+        <Title>Población por grandes grupos de edad - pcia - Censo2010 - INDEC</Title>
+        <Abstract>Muestra la población por grandes grupos de edad (0 a 14 años; 15 a 64 años; 65 años y más).&#13;
+Discriminado por sexo, valores absolutos y porcentaje.</Abstract>
+        <KeywordList>
+          <Keyword>sociedad</Keyword>
+          <Keyword>censo</Keyword>
+          <Keyword>demografía</Keyword>
+          <Keyword>estructura de la población</Keyword>
+          <Keyword>grandes grupos de edad</Keyword>
+          <Keyword>población</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <!--WKT definition of this CRS:
+GEOGCS["WGS 84", 
+  DATUM["World Geodetic System 1984", 
+    SPHEROID["WGS 84", 6378137.0, 298.257223563, AUTHORITY["EPSG","7030"]], 
+    AUTHORITY["EPSG","6326"]], 
+  PRIMEM["Greenwich", 0.0, AUTHORITY["EPSG","8901"]], 
+  UNIT["degree", 0.017453292519943295], 
+  AXIS["Geodetic longitude", EAST], 
+  AXIS["Geodetic latitude", NORTH], 
+  AUTHORITY["EPSG","4326"]]-->
+        <LatLonBoundingBox minx="-74.029853956" miny="-90.0" maxx="-25.023144837" maxy="-21.7450575415564"/>
+        <BoundingBox SRS="EPSG:4326" minx="-74.029853956" miny="-90.0" maxx="-25.023144837" maxy="-21.7450575415564"/>
+        <MetadataURL type="TC211">
+          <Format>text/xml</Format>
+          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar/geonetwork/srv/spa/xml_iso19139?id=97&amp;styleSheet="/>
+        </MetadataURL>
+        <Style>
+          <Name>0_14_prov</Name>
+          <Title>% de población de 0 a 14 años para pcia</Title>
+          <Abstract>Estilo asignado a % de poblacion para categoria de 0 a 14 años</Abstract>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar:80/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=grandes_grupos_de_edad_pcia"/>
+          </LegendURL>
+        </Style>
+        <Style>
+          <Name>15_64_prov</Name>
+          <Title/>
+          <Abstract/>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar:80/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=grandes_grupos_de_edad_pcia&amp;style=15_64_prov"/>
+          </LegendURL>
+        </Style>
+        <Style>
+          <Name>polygon</Name>
+          <Title>Default Polygon</Title>
+          <Abstract>A sample style that draws a polygon</Abstract>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar:80/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=grandes_grupos_de_edad_pcia&amp;style=polygon"/>
+          </LegendURL>
+        </Style>
+        <Style>
+          <Name>65_prov</Name>
+          <Title>% de población de 65 años y más para pcia</Title>
+          <Abstract>Estilo asignado a % de poblacion para categoria de 65 años y más</Abstract>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar:80/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=grandes_grupos_de_edad_pcia&amp;style=65_prov"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geocenso2010:grandes_grupos_de_edad_radio</Name>
+        <Title>Población por grandes grupos de edad - dpto - Censo 2010 - INDEC</Title>
+        <Abstract>Muestra la población por grandes grupos de edad (0 a 14 años; 15 a 64 años; 65 años y más).&#13;
+Discriminado por valores absolutos y porcentaje.</Abstract>
+        <KeywordList>
+          <Keyword>censo</Keyword>
+          <Keyword>sociedad</Keyword>
+          <Keyword>demografía</Keyword>
+          <Keyword>población</Keyword>
+          <Keyword>estructura de la población</Keyword>
+          <Keyword>grupos de edad</Keyword>
+        </KeywordList>
+        <SRS>EPSG:22183</SRS>
+        <!--WKT definition of this CRS:
+PROJCS["POSGAR 94 / Argentina 3", 
+  GEOGCS["POSGAR 94", 
+    DATUM["Posiciones Geodesicas Argentinas 1994", 
+      SPHEROID["WGS 84", 6378137.0, 298.257223563, AUTHORITY["EPSG","7030"]], 
+      TOWGS84[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0], 
+      AUTHORITY["EPSG","6694"]], 
+    PRIMEM["Greenwich", 0.0, AUTHORITY["EPSG","8901"]], 
+    UNIT["degree", 0.017453292519943295], 
+    AXIS["Geodetic longitude", EAST], 
+    AXIS["Geodetic latitude", NORTH], 
+    AUTHORITY["EPSG","4694"]], 
+  PROJECTION["Transverse_Mercator", AUTHORITY["EPSG","9807"]], 
+  PARAMETER["central_meridian", -66.0], 
+  PARAMETER["latitude_of_origin", -90.0], 
+  PARAMETER["scale_factor", 1.0], 
+  PARAMETER["false_easting", 3500000.0], 
+  PARAMETER["false_northing", 0.0], 
+  UNIT["m", 1.0], 
+  AXIS["Easting", EAST], 
+  AXIS["Northing", NORTH], 
+  AUTHORITY["EPSG","22183"]]-->
+        <LatLonBoundingBox minx="-74.51048485015873" miny="-55.05433712665576" maxx="-47.16736823048794" maxy="-21.352828293837433"/>
+        <BoundingBox SRS="EPSG:22183" minx="2952779.5" miny="3898419.25" maxx="4740998.5" maxy="7592423.0"/>
+        <MetadataURL type="TC211">
+          <Format>text/xml</Format>
+          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar/geonetwork/srv/spa/xml_iso19139?id=134&amp;styleSheet="/>
+        </MetadataURL>
+        <Style>
+          <Name>edad_0_14_radio</Name>
+          <Title/>
+          <Abstract/>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar:80/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=grandes_grupos_de_edad_radio"/>
+          </LegendURL>
+        </Style>
+        <Style>
+          <Name>edad_65_mas_radio</Name>
+          <Title/>
+          <Abstract/>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar:80/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=grandes_grupos_de_edad_radio&amp;style=edad_65_mas_radio"/>
+          </LegendURL>
+        </Style>
+        <Style>
+          <Name>polygon</Name>
+          <Title>Default Polygon</Title>
+          <Abstract>A sample style that draws a polygon</Abstract>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar:80/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=grandes_grupos_de_edad_radio&amp;style=polygon"/>
+          </LegendURL>
+        </Style>
+        <Style>
+          <Name>edad_15_64_radio</Name>
+          <Title/>
+          <Abstract/>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar:80/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=grandes_grupos_de_edad_radio&amp;style=edad_15_64_radio"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geocenso2010:hacinamiento_dpto</Name>
+        <Title>Hogares en situación de hacinamiento crítico - dpto - Censo 2010 - INDEC</Title>
+        <Abstract>El hacinamiento del hogar representa el cociente entre la cantidad total de personas del hogar y la cantidad total de habitaciones o piezas de que dispone el mismo. El hacinamiento crítico refiere a la presencia de más de tres personas por cuarto.&#13;
+&#13;
+El valor -1 refiere a dato que no corresponde presentar debido a la naturaleza de las cosas o del cálculo.</Abstract>
+        <KeywordList>
+          <Keyword>sociedad</Keyword>
+          <Keyword>demografia</Keyword>
+          <Keyword>censo</Keyword>
+          <Keyword>hogar</Keyword>
+          <Keyword>condiciones de vida</Keyword>
+          <Keyword>hacinamiento</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <!--WKT definition of this CRS:
+GEOGCS["WGS 84", 
+  DATUM["World Geodetic System 1984", 
+    SPHEROID["WGS 84", 6378137.0, 298.257223563, AUTHORITY["EPSG","7030"]], 
+    AUTHORITY["EPSG","6326"]], 
+  PRIMEM["Greenwich", 0.0, AUTHORITY["EPSG","8901"]], 
+  UNIT["degree", 0.017453292519943295], 
+  AXIS["Geodetic longitude", EAST], 
+  AXIS["Geodetic latitude", NORTH], 
+  AUTHORITY["EPSG","4326"]]-->
+        <LatLonBoundingBox minx="-74.029853956" miny="-90.0" maxx="-25.023144837" maxy="-21.7450575415564"/>
+        <BoundingBox SRS="EPSG:4326" minx="-74.029853956" miny="-90.0" maxx="-25.023144837" maxy="-21.7450575415564"/>
+        <MetadataURL type="TC211">
+          <Format>text/xml</Format>
+          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar/geonetwork/srv/spa/xml_iso19139?id=120&amp;styleSheet="/>
+        </MetadataURL>
+        <Style>
+          <Name>hacinamiento_dpto</Name>
+          <Title/>
+          <Abstract/>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar:80/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=hacinamiento_dpto"/>
+          </LegendURL>
+        </Style>
+        <Style>
+          <Name>polygon</Name>
+          <Title>Default Polygon</Title>
+          <Abstract>A sample style that draws a polygon</Abstract>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar:80/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=hacinamiento_dpto&amp;style=polygon"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geocenso2010:hacinamiento_pcia</Name>
+        <Title>Hogares en situación de hacinamiento crítico - pcia - Censo 2010 - INDEC</Title>
+        <Abstract>El hacinamiento del hogar representa el cociente entre la cantidad total de personas del hogar y la cantidad total de habitaciones o piezas de que dispone el mismo. El hacinamiento crítico refiere a la presencia de más de tres personas por cuarto.</Abstract>
+        <KeywordList>
+          <Keyword>sociedad</Keyword>
+          <Keyword>demografia</Keyword>
+          <Keyword>censo</Keyword>
+          <Keyword>hogar</Keyword>
+          <Keyword>condiciones de vida</Keyword>
+          <Keyword>hacinamiento</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <!--WKT definition of this CRS:
+GEOGCS["WGS 84", 
+  DATUM["World Geodetic System 1984", 
+    SPHEROID["WGS 84", 6378137.0, 298.257223563, AUTHORITY["EPSG","7030"]], 
+    AUTHORITY["EPSG","6326"]], 
+  PRIMEM["Greenwich", 0.0, AUTHORITY["EPSG","8901"]], 
+  UNIT["degree", 0.017453292519943295], 
+  AXIS["Geodetic longitude", EAST], 
+  AXIS["Geodetic latitude", NORTH], 
+  AUTHORITY["EPSG","4326"]]-->
+        <LatLonBoundingBox minx="-74.029853956" miny="-90.0" maxx="-25.023144837" maxy="-21.7450575415564"/>
+        <BoundingBox SRS="EPSG:4326" minx="-74.029853956" miny="-90.0" maxx="-25.023144837" maxy="-21.7450575415564"/>
+        <MetadataURL type="TC211">
+          <Format>text/xml</Format>
+          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar/geonetwork/srv/spa/xml_iso19139?id=119&amp;styleSheet="/>
+        </MetadataURL>
+        <Style>
+          <Name>hacinamiento_pcia</Name>
+          <Title/>
+          <Abstract/>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar:80/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=hacinamiento_pcia"/>
+          </LegendURL>
+        </Style>
+        <Style>
+          <Name>polygon</Name>
+          <Title>Default Polygon</Title>
+          <Abstract>A sample style that draws a polygon</Abstract>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar:80/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=hacinamiento_pcia&amp;style=polygon"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geocenso2010:hacinamiento_radio</Name>
+        <Title>Hogares en situación de hacinamiento crítico - radio - Censo 2010 - INDEC</Title>
+        <Abstract>El hacinamiento del hogar representa el cociente entre la cantidad total de personas del hogar y la cantidad total de habitaciones o piezas de que dispone el mismo. El hacinamiento crítico refiere a la presencia de más de tres personas por cuarto.</Abstract>
+        <KeywordList>
+          <Keyword>sociedad</Keyword>
+          <Keyword>demografia</Keyword>
+          <Keyword>censo</Keyword>
+          <Keyword>hogar</Keyword>
+          <Keyword>condiciones de vida</Keyword>
+          <Keyword>hacinamiento</Keyword>
+        </KeywordList>
+        <SRS>EPSG:22183</SRS>
+        <!--WKT definition of this CRS:
+PROJCS["POSGAR 94 / Argentina 3", 
+  GEOGCS["POSGAR 94", 
+    DATUM["Posiciones Geodesicas Argentinas 1994", 
+      SPHEROID["WGS 84", 6378137.0, 298.257223563, AUTHORITY["EPSG","7030"]], 
+      TOWGS84[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0], 
+      AUTHORITY["EPSG","6694"]], 
+    PRIMEM["Greenwich", 0.0, AUTHORITY["EPSG","8901"]], 
+    UNIT["degree", 0.017453292519943295], 
+    AXIS["Geodetic longitude", EAST], 
+    AXIS["Geodetic latitude", NORTH], 
+    AUTHORITY["EPSG","4694"]], 
+  PROJECTION["Transverse_Mercator", AUTHORITY["EPSG","9807"]], 
+  PARAMETER["central_meridian", -66.0], 
+  PARAMETER["latitude_of_origin", -90.0], 
+  PARAMETER["scale_factor", 1.0], 
+  PARAMETER["false_easting", 3500000.0], 
+  PARAMETER["false_northing", 0.0], 
+  UNIT["m", 1.0], 
+  AXIS["Easting", EAST], 
+  AXIS["Northing", NORTH], 
+  AUTHORITY["EPSG","22183"]]-->
+        <LatLonBoundingBox minx="-74.51048485015873" miny="-55.05433712665576" maxx="-47.16736823048794" maxy="-21.352828293837433"/>
+        <BoundingBox SRS="EPSG:22183" minx="2952779.5" miny="3898419.25" maxx="4740998.5" maxy="7592423.0"/>
+        <MetadataURL type="TC211">
+          <Format>text/xml</Format>
+          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar/geonetwork/srv/spa/xml_iso19139?id=121&amp;styleSheet="/>
+        </MetadataURL>
+        <Style>
+          <Name>hacinamiento_rad</Name>
+          <Title/>
+          <Abstract/>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar:80/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=hacinamiento_radio"/>
+          </LegendURL>
+        </Style>
+        <Style>
+          <Name>polygon</Name>
+          <Title>Default Polygon</Title>
+          <Abstract>A sample style that draws a polygon</Abstract>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar:80/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=hacinamiento_radio&amp;style=polygon"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geocenso2010:hogares_con_agua_red_dpto</Name>
+        <Title>Hogares con agua de red - dpto - Censo 2010 - INDEC</Title>
+        <Abstract>Los datos que aquí se presentan provienen de la serie de cuadros H2 de los Resultados definitivos del Censo Nacional de Población, Hogares y Viviendas 2010. Valores expresados en %.&#13;
+&#13;
+El valor -1 refiere a dato que no corresponde presentar debido a la naturaleza de las cosas o del cálculo.</Abstract>
+        <KeywordList>
+          <Keyword>sociedad</Keyword>
+          <Keyword>censo</Keyword>
+          <Keyword>demografía</Keyword>
+          <Keyword>características habitacionales</Keyword>
+          <Keyword>servicios</Keyword>
+          <Keyword>hogar</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <!--WKT definition of this CRS:
+GEOGCS["WGS 84", 
+  DATUM["World Geodetic System 1984", 
+    SPHEROID["WGS 84", 6378137.0, 298.257223563, AUTHORITY["EPSG","7030"]], 
+    AUTHORITY["EPSG","6326"]], 
+  PRIMEM["Greenwich", 0.0, AUTHORITY["EPSG","8901"]], 
+  UNIT["degree", 0.017453292519943295], 
+  AXIS["Geodetic longitude", EAST], 
+  AXIS["Geodetic latitude", NORTH], 
+  AUTHORITY["EPSG","4326"]]-->
+        <LatLonBoundingBox minx="-74.029853956" miny="-90.0" maxx="-25.023144837" maxy="-21.7450575415564"/>
+        <BoundingBox SRS="EPSG:4326" minx="-74.029853956" miny="-90.0" maxx="-25.023144837" maxy="-21.7450575415564"/>
+        <MetadataURL type="TC211">
+          <Format>text/xml</Format>
+          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar/geonetwork/srv/spa/xml_iso19139?id=101&amp;styleSheet="/>
+        </MetadataURL>
+        <Style>
+          <Name>agua_red_dpto</Name>
+          <Title/>
+          <Abstract/>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar:80/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=hogares_con_agua_red_dpto"/>
+          </LegendURL>
+        </Style>
+        <Style>
+          <Name>polygon</Name>
+          <Title>Default Polygon</Title>
+          <Abstract>A sample style that draws a polygon</Abstract>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar:80/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=hogares_con_agua_red_dpto&amp;style=polygon"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geocenso2010:hogares_con_agua_red_pcia</Name>
+        <Title>Hogares con agua de red - pcia - Censo 2010 - INDEC</Title>
+        <Abstract>Los datos que aquí se presentan provienen de la serie de cuadros H2 de los Resultados definitivos del Censo Nacional de Población, Hogares y Viviendas 2010. Valores expresados en %.</Abstract>
+        <KeywordList>
+          <Keyword>sociedad</Keyword>
+          <Keyword>censo</Keyword>
+          <Keyword>demografía</Keyword>
+          <Keyword>características habitacionales</Keyword>
+          <Keyword>servicios</Keyword>
+          <Keyword>hogar</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <!--WKT definition of this CRS:
+GEOGCS["WGS 84", 
+  DATUM["World Geodetic System 1984", 
+    SPHEROID["WGS 84", 6378137.0, 298.257223563, AUTHORITY["EPSG","7030"]], 
+    AUTHORITY["EPSG","6326"]], 
+  PRIMEM["Greenwich", 0.0, AUTHORITY["EPSG","8901"]], 
+  UNIT["degree", 0.017453292519943295], 
+  AXIS["Geodetic longitude", EAST], 
+  AXIS["Geodetic latitude", NORTH], 
+  AUTHORITY["EPSG","4326"]]-->
+        <LatLonBoundingBox minx="-74.029853956" miny="-90.0" maxx="-25.023144837" maxy="-21.7450575415564"/>
+        <BoundingBox SRS="EPSG:4326" minx="-74.029853956" miny="-90.0" maxx="-25.023144837" maxy="-21.7450575415564"/>
+        <MetadataURL type="TC211">
+          <Format>text/xml</Format>
+          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar/geonetwork/srv/spa/xml_iso19139?id=64&amp;styleSheet="/>
+        </MetadataURL>
+        <Style>
+          <Name>hogar_agua_red_prov</Name>
+          <Title/>
+          <Abstract/>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar:80/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=hogares_con_agua_red_pcia"/>
+          </LegendURL>
+        </Style>
+        <Style>
+          <Name>polygon</Name>
+          <Title>Default Polygon</Title>
+          <Abstract>A sample style that draws a polygon</Abstract>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar:80/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=hogares_con_agua_red_pcia&amp;style=polygon"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geocenso2010:hogares_con_agua_red_radio</Name>
+        <Title>Hogares con agua de red - radio - Censo2010 - INDEC</Title>
+        <Abstract>Los datos en valores absolutos que aquí se presentan provienen del procesamiento a través de la base REDATAM-web utilizando la variable "Procedencia del agua para beber y cocinar" de los Resultados definitivos del Censo Nacional de Población, Hogares y Viviendas 2010. Valores expresados en %.&#13;
+&#13;
+El valor -1 refiere a dato que no corresponde presentar debido a la naturaleza de las cosas o del cálculo.</Abstract>
+        <KeywordList>
+          <Keyword>sociedad</Keyword>
+          <Keyword>demografia</Keyword>
+          <Keyword>censo</Keyword>
+          <Keyword>caracteristicas habitacionales</Keyword>
+          <Keyword>servicios</Keyword>
+        </KeywordList>
+        <SRS>EPSG:22183</SRS>
+        <!--WKT definition of this CRS:
+PROJCS["POSGAR 94 / Argentina 3", 
+  GEOGCS["POSGAR 94", 
+    DATUM["Posiciones Geodesicas Argentinas 1994", 
+      SPHEROID["WGS 84", 6378137.0, 298.257223563, AUTHORITY["EPSG","7030"]], 
+      TOWGS84[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0], 
+      AUTHORITY["EPSG","6694"]], 
+    PRIMEM["Greenwich", 0.0, AUTHORITY["EPSG","8901"]], 
+    UNIT["degree", 0.017453292519943295], 
+    AXIS["Geodetic longitude", EAST], 
+    AXIS["Geodetic latitude", NORTH], 
+    AUTHORITY["EPSG","4694"]], 
+  PROJECTION["Transverse_Mercator", AUTHORITY["EPSG","9807"]], 
+  PARAMETER["central_meridian", -66.0], 
+  PARAMETER["latitude_of_origin", -90.0], 
+  PARAMETER["scale_factor", 1.0], 
+  PARAMETER["false_easting", 3500000.0], 
+  PARAMETER["false_northing", 0.0], 
+  UNIT["m", 1.0], 
+  AXIS["Easting", EAST], 
+  AXIS["Northing", NORTH], 
+  AUTHORITY["EPSG","22183"]]-->
+        <LatLonBoundingBox minx="-74.51048485015873" miny="-55.05433712665576" maxx="-47.16736823048794" maxy="-21.352828293837433"/>
+        <BoundingBox SRS="EPSG:22183" minx="2952779.5" miny="3898419.25" maxx="4740998.5" maxy="7592423.0"/>
+        <MetadataURL type="TC211">
+          <Format>text/xml</Format>
+          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar/geonetwork/srv/spa/xml_iso19139?id=126&amp;styleSheet="/>
+        </MetadataURL>
+        <Style>
+          <Name>agua_radio</Name>
+          <Title/>
+          <Abstract/>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar:80/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=hogares_con_agua_red_radio"/>
+          </LegendURL>
+        </Style>
+        <Style>
+          <Name>polygon</Name>
+          <Title>Default Polygon</Title>
+          <Abstract>A sample style that draws a polygon</Abstract>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar:80/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=hogares_con_agua_red_radio&amp;style=polygon"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geocenso2010:hogares_con_desague_cloacal_dpto</Name>
+        <Title>Hogares con desagüe cloacal - dpto - Censo 2010 - INDEC</Title>
+        <Abstract>Los datos que aquí se presentan provienen de la serie de cuadros H2 de los Resultados definitivos del Censo Nacional de Población, Hogares y Viviendas 2010. Valores expresados en %.&#13;
+&#13;
+El valor -1 refiere a dato que no corresponde presentar debido a la naturaleza de las cosas o del cálculo.</Abstract>
+        <KeywordList>
+          <Keyword>sociedad</Keyword>
+          <Keyword>demografía</Keyword>
+          <Keyword>censo</Keyword>
+          <Keyword>características habitacionales</Keyword>
+          <Keyword>servicios</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <!--WKT definition of this CRS:
+GEOGCS["WGS 84", 
+  DATUM["World Geodetic System 1984", 
+    SPHEROID["WGS 84", 6378137.0, 298.257223563, AUTHORITY["EPSG","7030"]], 
+    AUTHORITY["EPSG","6326"]], 
+  PRIMEM["Greenwich", 0.0, AUTHORITY["EPSG","8901"]], 
+  UNIT["degree", 0.017453292519943295], 
+  AXIS["Geodetic longitude", EAST], 
+  AXIS["Geodetic latitude", NORTH], 
+  AUTHORITY["EPSG","4326"]]-->
+        <LatLonBoundingBox minx="-74.029853956" miny="-90.0" maxx="-25.023144837" maxy="-21.7450575415564"/>
+        <BoundingBox SRS="EPSG:4326" minx="-74.029853956" miny="-90.0" maxx="-25.023144837" maxy="-21.7450575415564"/>
+        <MetadataURL type="TC211">
+          <Format>text/xml</Format>
+          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar/geonetwork/srv/spa/xml_iso19139?id=70&amp;styleSheet="/>
+        </MetadataURL>
+        <Style>
+          <Name>cloaca_red_dpto</Name>
+          <Title/>
+          <Abstract/>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar:80/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=hogares_con_desague_cloacal_dpto"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geocenso2010:hogares_con_desague_cloacal_pcia</Name>
+        <Title>Hogares con desagüe cloacal - pcia - Censo 2010 - INDEC</Title>
+        <Abstract>Los datos que aquí se presentan provienen de la serie de cuadros H2 de los Resultados definitivos del Censo Nacional de Población, Hogares y Viviendas 2010, de acuerdo a la jurisdicción que corresponda.</Abstract>
+        <KeywordList>
+          <Keyword>sociedad</Keyword>
+          <Keyword>censo</Keyword>
+          <Keyword>demografía</Keyword>
+          <Keyword>características habitacionales</Keyword>
+          <Keyword>servicios</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <!--WKT definition of this CRS:
+GEOGCS["WGS 84", 
+  DATUM["World Geodetic System 1984", 
+    SPHEROID["WGS 84", 6378137.0, 298.257223563, AUTHORITY["EPSG","7030"]], 
+    AUTHORITY["EPSG","6326"]], 
+  PRIMEM["Greenwich", 0.0, AUTHORITY["EPSG","8901"]], 
+  UNIT["degree", 0.017453292519943295], 
+  AXIS["Geodetic longitude", EAST], 
+  AXIS["Geodetic latitude", NORTH], 
+  AUTHORITY["EPSG","4326"]]-->
+        <LatLonBoundingBox minx="-74.029853956" miny="-90.0" maxx="-25.023144837" maxy="-21.7450575415564"/>
+        <BoundingBox SRS="EPSG:4326" minx="-74.029853956" miny="-90.0" maxx="-25.023144837" maxy="-21.7450575415564"/>
+        <MetadataURL type="TC211">
+          <Format>text/xml</Format>
+          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar/geonetwork/srv/spa/xml_iso19139?id=69&amp;styleSheet="/>
+        </MetadataURL>
+        <Style>
+          <Name>hogares_con_desague_clocal_prov</Name>
+          <Title/>
+          <Abstract/>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar:80/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=hogares_con_desague_cloacal_pcia"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geocenso2010:hogares_con_desague_cloacal_radio</Name>
+        <Title>Hogares con desagüe cloacal - radio - Censo 2010 - INDEC</Title>
+        <Abstract>Los datos en valores absolutos que aquí se presentan provienen del procesamiento a través de la base REDATAM-web utilizando la variable "Desagüe del inodoro" de los Resultados definitivos del Censo Nacional de Población, Hogares y Viviendas 2010. Valores expresados en %.&#13;
+&#13;
+El valor -1 refiere a dato que no corresponde presentar debido a la naturaleza de las cosas o del cálculo.</Abstract>
+        <KeywordList>
+          <Keyword>sociedad</Keyword>
+          <Keyword>demografía</Keyword>
+          <Keyword>censo</Keyword>
+          <Keyword>características habitacionales</Keyword>
+          <Keyword>servicios</Keyword>
+        </KeywordList>
+        <SRS>EPSG:22183</SRS>
+        <!--WKT definition of this CRS:
+PROJCS["POSGAR 94 / Argentina 3", 
+  GEOGCS["POSGAR 94", 
+    DATUM["Posiciones Geodesicas Argentinas 1994", 
+      SPHEROID["WGS 84", 6378137.0, 298.257223563, AUTHORITY["EPSG","7030"]], 
+      TOWGS84[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0], 
+      AUTHORITY["EPSG","6694"]], 
+    PRIMEM["Greenwich", 0.0, AUTHORITY["EPSG","8901"]], 
+    UNIT["degree", 0.017453292519943295], 
+    AXIS["Geodetic longitude", EAST], 
+    AXIS["Geodetic latitude", NORTH], 
+    AUTHORITY["EPSG","4694"]], 
+  PROJECTION["Transverse_Mercator", AUTHORITY["EPSG","9807"]], 
+  PARAMETER["central_meridian", -66.0], 
+  PARAMETER["latitude_of_origin", -90.0], 
+  PARAMETER["scale_factor", 1.0], 
+  PARAMETER["false_easting", 3500000.0], 
+  PARAMETER["false_northing", 0.0], 
+  UNIT["m", 1.0], 
+  AXIS["Easting", EAST], 
+  AXIS["Northing", NORTH], 
+  AUTHORITY["EPSG","22183"]]-->
+        <LatLonBoundingBox minx="-74.51048485015873" miny="-55.05433712665576" maxx="-47.16736823048794" maxy="-21.352828293837433"/>
+        <BoundingBox SRS="EPSG:22183" minx="2952779.5" miny="3898419.25" maxx="4740998.5" maxy="7592423.0"/>
+        <MetadataURL type="TC211">
+          <Format>text/xml</Format>
+          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar/geonetwork/srv/spa/xml_iso19139?id=129&amp;styleSheet="/>
+        </MetadataURL>
+        <Style>
+          <Name>cloaca_radio</Name>
+          <Title/>
+          <Abstract/>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar:80/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=hogares_con_desague_cloacal_radio"/>
+          </LegendURL>
+        </Style>
+        <Style>
+          <Name>polygon</Name>
+          <Title>Default Polygon</Title>
+          <Abstract>A sample style that draws a polygon</Abstract>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar:80/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=hogares_con_desague_cloacal_radio&amp;style=polygon"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geocenso2010:hogares_con_gas_de_red_radio</Name>
+        <Title>Hogares con gas de red - radio - Censo2010 - INDEC</Title>
+        <Abstract>Esta cartografía representa las divisiones de radios censales que componen la República Argentina (ARG) con información asociada sobre el tipo de combustible usado para cocinar. Los radios son unidades censales en las que se divide cada fracción censal, definidas por un espacio territorial con límites geográficos y una determinada cantidad de unidades de viviendas a relevar.&#13;
+&#13;
+Esta capa de polígonos fue elaborada por el Instituto Nacional de Estadística y Censos (INDEC) para el Censo Nacional de Población, Hogares y Viviendas (CNPHyV) 2010 a partir de la cartografía realizada por cada una de las Direcciones Provinciales de Estadística.&#13;
+&#13;
+Los datos en valores absolutos que se presentan provienen del procesamiento a través de la base REDATAM-web utilizando la variable “Combustible usado principalmente para cocinar” de los Resultados definitivos del Censo Nacional de Población, Hogares y Viviendas 2010.&#13;
+&#13;
+El valor -1 refiere a dato que no corresponde presentar debido a la naturaleza de las cosas o del cálculo.</Abstract>
+        <KeywordList>
+          <Keyword>sociedad</Keyword>
+          <Keyword>demografía</Keyword>
+          <Keyword>censo</Keyword>
+          <Keyword>servicios</Keyword>
+          <Keyword>características habitacionales</Keyword>
+        </KeywordList>
+        <SRS>EPSG:22183</SRS>
+        <!--WKT definition of this CRS:
+PROJCS["POSGAR 94 / Argentina 3", 
+  GEOGCS["POSGAR 94", 
+    DATUM["Posiciones Geodesicas Argentinas 1994", 
+      SPHEROID["WGS 84", 6378137.0, 298.257223563, AUTHORITY["EPSG","7030"]], 
+      TOWGS84[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0], 
+      AUTHORITY["EPSG","6694"]], 
+    PRIMEM["Greenwich", 0.0, AUTHORITY["EPSG","8901"]], 
+    UNIT["degree", 0.017453292519943295], 
+    AXIS["Geodetic longitude", EAST], 
+    AXIS["Geodetic latitude", NORTH], 
+    AUTHORITY["EPSG","4694"]], 
+  PROJECTION["Transverse_Mercator", AUTHORITY["EPSG","9807"]], 
+  PARAMETER["central_meridian", -66.0], 
+  PARAMETER["latitude_of_origin", -90.0], 
+  PARAMETER["scale_factor", 1.0], 
+  PARAMETER["false_easting", 3500000.0], 
+  PARAMETER["false_northing", 0.0], 
+  UNIT["m", 1.0], 
+  AXIS["Easting", EAST], 
+  AXIS["Northing", NORTH], 
+  AUTHORITY["EPSG","22183"]]-->
+        <LatLonBoundingBox minx="-74.51048485015873" miny="-55.05433712665576" maxx="-47.16736823048794" maxy="-21.352828293837433"/>
+        <BoundingBox SRS="EPSG:22183" minx="2952779.5" miny="3898419.25" maxx="4740998.5" maxy="7592423.0"/>
+        <MetadataURL type="TC211">
+          <Format>text/xml</Format>
+          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar/geonetwork/srv/spa/xml_iso19139?id=131&amp;styleSheet="/>
+        </MetadataURL>
+        <Style>
+          <Name>gas_radio</Name>
+          <Title/>
+          <Abstract/>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar:80/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=hogares_con_gas_de_red_radio"/>
+          </LegendURL>
+        </Style>
+        <Style>
+          <Name>polygon</Name>
+          <Title>Default Polygon</Title>
+          <Abstract>A sample style that draws a polygon</Abstract>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar:80/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=hogares_con_gas_de_red_radio&amp;style=polygon"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geocenso2010:hogares_con_red_gas_dpto</Name>
+        <Title>Hogares con gas de red - dpto - Censo2010 - INDEC</Title>
+        <Abstract>Los datos que aquí se presentan provienen de la serie de cuadros H5 de los Resultados definitivos del Censo Nacional de Población, Hogares y Viviendas 2010. Valores expresados en %.&#13;
+&#13;
+El valor -1 refiere a dato que no corresponde presentar debido a la naturaleza de las cosas o del cálculo.</Abstract>
+        <KeywordList>
+          <Keyword>sociedad</Keyword>
+          <Keyword>características habitacionales</Keyword>
+          <Keyword>servicios</Keyword>
+          <Keyword>hogar</Keyword>
+          <Keyword>censo</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <!--WKT definition of this CRS:
+GEOGCS["WGS 84", 
+  DATUM["World Geodetic System 1984", 
+    SPHEROID["WGS 84", 6378137.0, 298.257223563, AUTHORITY["EPSG","7030"]], 
+    AUTHORITY["EPSG","6326"]], 
+  PRIMEM["Greenwich", 0.0, AUTHORITY["EPSG","8901"]], 
+  UNIT["degree", 0.017453292519943295], 
+  AXIS["Geodetic longitude", EAST], 
+  AXIS["Geodetic latitude", NORTH], 
+  AUTHORITY["EPSG","4326"]]-->
+        <LatLonBoundingBox minx="-74.029853956" miny="-90.0" maxx="-25.023144837" maxy="-21.7450575415564"/>
+        <BoundingBox SRS="EPSG:4326" minx="-74.029853956" miny="-90.0" maxx="-25.023144837" maxy="-21.7450575415564"/>
+        <MetadataURL type="TC211">
+          <Format>text/xml</Format>
+          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar/geonetwork/srv/spa/xml_iso19139?id=68&amp;styleSheet="/>
+        </MetadataURL>
+        <Style>
+          <Name>gas_dpto</Name>
+          <Title/>
+          <Abstract/>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar:80/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=hogares_con_red_gas_dpto"/>
+          </LegendURL>
+        </Style>
+        <Style>
+          <Name>polygon</Name>
+          <Title>Default Polygon</Title>
+          <Abstract>A sample style that draws a polygon</Abstract>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar:80/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=hogares_con_red_gas_dpto&amp;style=polygon"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geocenso2010:hogares_con_red_gas_pcia</Name>
+        <Title>Hogares con gas de red - pcia - Censo 2010 - INDEC</Title>
+        <Abstract>Los datos que aquí se presentan provienen de la serie de cuadros H5 de los Resultados definitivos del Censo Nacional de Población, Hogares y Viviendas 2010, de acuerdo a la jurisdicción que corresponda. Valores expresados en %.</Abstract>
+        <KeywordList>
+          <Keyword>sociedad</Keyword>
+          <Keyword>demografía</Keyword>
+          <Keyword>censo</Keyword>
+          <Keyword>características habitacionales</Keyword>
+          <Keyword>servicios</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <!--WKT definition of this CRS:
+GEOGCS["WGS 84", 
+  DATUM["World Geodetic System 1984", 
+    SPHEROID["WGS 84", 6378137.0, 298.257223563, AUTHORITY["EPSG","7030"]], 
+    AUTHORITY["EPSG","6326"]], 
+  PRIMEM["Greenwich", 0.0, AUTHORITY["EPSG","8901"]], 
+  UNIT["degree", 0.017453292519943295], 
+  AXIS["Geodetic longitude", EAST], 
+  AXIS["Geodetic latitude", NORTH], 
+  AUTHORITY["EPSG","4326"]]-->
+        <LatLonBoundingBox minx="-74.029853956" miny="-90.0" maxx="-25.023144837" maxy="-21.7450575415564"/>
+        <BoundingBox SRS="EPSG:4326" minx="-74.029853956" miny="-90.0" maxx="-25.023144837" maxy="-21.7450575415564"/>
+        <MetadataURL type="TC211">
+          <Format>text/xml</Format>
+          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar/geonetwork/srv/spa/xml_iso19139?id=66&amp;styleSheet="/>
+        </MetadataURL>
+        <Style>
+          <Name>hogares_con_red_gas_prov</Name>
+          <Title/>
+          <Abstract/>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar:80/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=hogares_con_red_gas_pcia"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geocenso2010:incalcons_dpto</Name>
+        <Title>Hogares en viviendas segun tipo de calidad constructiva - dpto - Censo 2010 - INDEC</Title>
+        <Abstract>El indicador INCALCONS se construye a partir de la calidad de los materiales con los que está construida la vivienda y las instalaciones internas a servicios básicos (agua de red y desagüe) de las que dispone. Se clasifica en:&#13;
+Calidad satisfactoria: refiere a las viviendas que disponen de materiales resistentes, sólidos y con la aislación adecuada. A su vez también disponen de cañerías dentro de la vivienda y de inodoro con descarga de agua.&#13;
+Calidad básica: no cuentan con elementos adecuados de aislación o tienen techo de chapa o fibrocemento. Al igual que el anterior, cuentan con cañerías dentro de la vivienda y de inodoro con descarga de agua.&#13;
+Calidad insuficiente: engloba a las viviendas que no cumplen ninguna de las 2 condiciones anteriores.&#13;
+&#13;
+Los datos en valores absolutos que se presentan provienen del procesamiento a través de la base REDATAM-web utilizando la variable “Calidad constructiva de la vivienda” de los Resultados definitivos del Censo Nacional de Población, Hogares y Viviendas 2010.&#13;
+&#13;
+El valor -1 refiere a dato que no corresponde presentar debido a la naturaleza de las cosas o del cálculo.</Abstract>
+        <KeywordList>
+          <Keyword>sociedad</Keyword>
+          <Keyword>censo</Keyword>
+          <Keyword>características habitacionales</Keyword>
+          <Keyword>demografía</Keyword>
+          <Keyword>hogar</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <!--WKT definition of this CRS:
+GEOGCS["WGS 84", 
+  DATUM["World Geodetic System 1984", 
+    SPHEROID["WGS 84", 6378137.0, 298.257223563, AUTHORITY["EPSG","7030"]], 
+    AUTHORITY["EPSG","6326"]], 
+  PRIMEM["Greenwich", 0.0, AUTHORITY["EPSG","8901"]], 
+  UNIT["degree", 0.017453292519943295], 
+  AXIS["Geodetic longitude", EAST], 
+  AXIS["Geodetic latitude", NORTH], 
+  AUTHORITY["EPSG","4326"]]-->
+        <LatLonBoundingBox minx="-74.029853956" miny="-90.0" maxx="-25.023144837" maxy="-21.7450575415564"/>
+        <BoundingBox SRS="EPSG:4326" minx="-74.029853956" miny="-90.0" maxx="-25.023144837" maxy="-21.7450575415564"/>
+        <MetadataURL type="TC211">
+          <Format>text/xml</Format>
+          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar/geonetwork/srv/spa/xml_iso19139?id=111&amp;styleSheet="/>
+        </MetadataURL>
+        <Style>
+          <Name>v_incalcons_x_dpto_insuficiente</Name>
+          <Title/>
+          <Abstract/>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar:80/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=incalcons_dpto"/>
+          </LegendURL>
+        </Style>
+        <Style>
+          <Name>v_incalcons_x_dpto_basico</Name>
+          <Title/>
+          <Abstract/>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar:80/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=incalcons_dpto&amp;style=v_incalcons_x_dpto_basico"/>
+          </LegendURL>
+        </Style>
+        <Style>
+          <Name>v_incalcons_x_dpto_satisfactoria</Name>
+          <Title/>
+          <Abstract/>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar:80/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=incalcons_dpto&amp;style=v_incalcons_x_dpto_satisfactoria"/>
+          </LegendURL>
+        </Style>
+        <Style>
+          <Name>polygon</Name>
+          <Title>Default Polygon</Title>
+          <Abstract>A sample style that draws a polygon</Abstract>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar:80/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=incalcons_dpto&amp;style=polygon"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geocenso2010:incalcons_pcia</Name>
+        <Title>Hogares en viviendas segun tipo de calidad constructiva - pcia - Censo 2010 - INDEC</Title>
+        <Abstract>El indicador INCALCONS se construye a partir de la calidad de los materiales con los que está construida la vivienda y las instalaciones internas a servicios básicos (agua de red y desagüe) de las que dispone. Se clasifica en:&#13;
+Calidad satisfactoria: refiere a las viviendas que disponen de materiales resistentes, sólidos y con la aislación adecuada. A su vez también disponen de cañerías dentro de la vivienda y de inodoro con descarga de agua.&#13;
+Calidad básica: no cuentan con elementos adecuados de aislación o tienen techo de chapa o fibrocemento. Al igual que el anterior, cuentan con cañerías dentro de la vivienda y de inodoro con descarga de agua.&#13;
+Calidad insuficiente: engloba a las viviendas que no cumplen ninguna de las 2 condiciones anteriores.&#13;
+&#13;
+Los datos en valores absolutos que se presentan provienen del procesamiento a través de la base REDATAM-web utilizando la variable “Calidad constructiva de la vivienda” de los Resultados definitivos del Censo Nacional de Población, Hogares y Viviendas 2010.</Abstract>
+        <KeywordList>
+          <Keyword>demografía</Keyword>
+          <Keyword>censo</Keyword>
+          <Keyword>características habitacionales</Keyword>
+          <Keyword>hogar</Keyword>
+          <Keyword>sociedad</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <!--WKT definition of this CRS:
+GEOGCS["WGS 84", 
+  DATUM["World Geodetic System 1984", 
+    SPHEROID["WGS 84", 6378137.0, 298.257223563, AUTHORITY["EPSG","7030"]], 
+    AUTHORITY["EPSG","6326"]], 
+  PRIMEM["Greenwich", 0.0, AUTHORITY["EPSG","8901"]], 
+  UNIT["degree", 0.017453292519943295], 
+  AXIS["Geodetic longitude", EAST], 
+  AXIS["Geodetic latitude", NORTH], 
+  AUTHORITY["EPSG","4326"]]-->
+        <LatLonBoundingBox minx="-74.029853956" miny="-90.0" maxx="-25.023144837" maxy="-21.7450575415564"/>
+        <BoundingBox SRS="EPSG:4326" minx="-74.029853956" miny="-90.0" maxx="-25.023144837" maxy="-21.7450575415564"/>
+        <MetadataURL type="TC211">
+          <Format>text/xml</Format>
+          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar/geonetwork/srv/spa/xml_iso19139?id=82&amp;styleSheet="/>
+        </MetadataURL>
+        <Style>
+          <Name>v_incalcons_x_pcia_insuficiente</Name>
+          <Title/>
+          <Abstract/>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar:80/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=incalcons_pcia"/>
+          </LegendURL>
+        </Style>
+        <Style>
+          <Name>v_incalcons_x_pcia_satisfactoria</Name>
+          <Title/>
+          <Abstract/>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar:80/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=incalcons_pcia&amp;style=v_incalcons_x_pcia_satisfactoria"/>
+          </LegendURL>
+        </Style>
+        <Style>
+          <Name>v_incalcons_x_pcia_basico</Name>
+          <Title/>
+          <Abstract/>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar:80/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=incalcons_pcia&amp;style=v_incalcons_x_pcia_basico"/>
+          </LegendURL>
+        </Style>
+        <Style>
+          <Name>polygon</Name>
+          <Title>Default Polygon</Title>
+          <Abstract>A sample style that draws a polygon</Abstract>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar:80/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=incalcons_pcia&amp;style=polygon"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geocenso2010:incalcons_radios</Name>
+        <Title>Hogares en viviendas segun tipo de calidad constructiva - radio - Censo 2010 - INDEC</Title>
+        <Abstract>El indicador INCALCONS se construye a partir de la calidad de los materiales con los que está construida la vivienda y las instalaciones internas a servicios básicos (agua de red y desagüe) de las que dispone. Se clasifica en:&#13;
+Calidad satisfactoria: refiere a las viviendas que disponen de materiales resistentes, sólidos y con la aislación adecuada. A su vez también disponen de cañerías dentro de la vivienda y de inodoro con descarga de agua.&#13;
+Calidad básica: no cuentan con elementos adecuados de aislación o tienen techo de chapa o fibrocemento. Al igual que el anterior, cuentan con cañerías dentro de la vivienda y de inodoro con descarga de agua.&#13;
+Calidad insuficiente: engloba a las viviendas que no cumplen ninguna de las 2 condiciones anteriores.&#13;
+&#13;
+Los datos en valores absolutos que se presentan provienen del procesamiento a través de la base REDATAM-web utilizando la variable “Calidad constructiva de la vivienda” de los Resultados definitivos del Censo Nacional de Población, Hogares y Viviendas 2010.&#13;
+&#13;
+El valor -1 refiere a dato que no corresponde presentar debido a la naturaleza de las cosas o del cálculo.</Abstract>
+        <KeywordList>
+          <Keyword>sociedad</Keyword>
+          <Keyword>censo</Keyword>
+          <Keyword>características habitacionales</Keyword>
+          <Keyword>demografia</Keyword>
+          <Keyword>hogar</Keyword>
+        </KeywordList>
+        <SRS>EPSG:22183</SRS>
+        <!--WKT definition of this CRS:
+PROJCS["POSGAR 94 / Argentina 3", 
+  GEOGCS["POSGAR 94", 
+    DATUM["Posiciones Geodesicas Argentinas 1994", 
+      SPHEROID["WGS 84", 6378137.0, 298.257223563, AUTHORITY["EPSG","7030"]], 
+      TOWGS84[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0], 
+      AUTHORITY["EPSG","6694"]], 
+    PRIMEM["Greenwich", 0.0, AUTHORITY["EPSG","8901"]], 
+    UNIT["degree", 0.017453292519943295], 
+    AXIS["Geodetic longitude", EAST], 
+    AXIS["Geodetic latitude", NORTH], 
+    AUTHORITY["EPSG","4694"]], 
+  PROJECTION["Transverse_Mercator", AUTHORITY["EPSG","9807"]], 
+  PARAMETER["central_meridian", -66.0], 
+  PARAMETER["latitude_of_origin", -90.0], 
+  PARAMETER["scale_factor", 1.0], 
+  PARAMETER["false_easting", 3500000.0], 
+  PARAMETER["false_northing", 0.0], 
+  UNIT["m", 1.0], 
+  AXIS["Easting", EAST], 
+  AXIS["Northing", NORTH], 
+  AUTHORITY["EPSG","22183"]]-->
+        <LatLonBoundingBox minx="-74.51048485015873" miny="-55.05433712665576" maxx="-47.16736823048794" maxy="-21.352828293837433"/>
+        <BoundingBox SRS="EPSG:22183" minx="2952779.5" miny="3898419.25" maxx="4740998.5" maxy="7592423.0"/>
+        <MetadataURL type="TC211">
+          <Format>text/xml</Format>
+          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar/geonetwork/srv/spa/xml_iso19139?id=130&amp;styleSheet="/>
+        </MetadataURL>
+        <Style>
+          <Name>incalcons_insuficiente_radio</Name>
+          <Title/>
+          <Abstract/>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar:80/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=incalcons_radios"/>
+          </LegendURL>
+        </Style>
+        <Style>
+          <Name>polygon</Name>
+          <Title>Default Polygon</Title>
+          <Abstract>A sample style that draws a polygon</Abstract>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar:80/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=incalcons_radios&amp;style=polygon"/>
+          </LegendURL>
+        </Style>
+        <Style>
+          <Name>incalcons_basico_radio</Name>
+          <Title/>
+          <Abstract/>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar:80/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=incalcons_radios&amp;style=incalcons_basico_radio"/>
+          </LegendURL>
+        </Style>
+        <Style>
+          <Name>incalcons_satisfactorio_radio</Name>
+          <Title/>
+          <Abstract/>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar:80/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=incalcons_radios&amp;style=incalcons_satisfactorio_radio"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geocenso2010:incalserv_dpto</Name>
+        <Title>Hogares en viviendas según calidad de conexión a servicios - dpto - Censo 2010 - INDEC</Title>
+        <Abstract>El indicador Calidad de conexión a servicios básicos (INCALSERV) refiere al tipo de instalaciones con que cuentan las viviendas para su saneamiento. Para este indicador, se utilizan las variables procedencia del agua y tipo de desagüe. Se clasifica en:&#13;
+Calidad satisfactoria: refiere a las viviendas que disponen de agua a red pública y desagüe cloacal.&#13;
+Calidad básica: describe la situación de aquellas viviendas que disponen de agua de red pública y el desagüe a pozo con cámara séptica.&#13;
+Calidad insuficiente: engloba a las viviendas que no cumplen ninguna de las 2 condiciones anteriores.&#13;
+&#13;
+Los datos en valores absolutos que se presentan provienen del procesamiento a través de la base REDATAM-web utilizando la variable “Calidad de conexiones a servicios básicos” de los Resultados definitivos del Censo Nacional de Población, Hogares y Viviendas 2010.&#13;
+&#13;
+El valor -1 refiere a dato que no corresponde presentar debido a la naturaleza de las cosas o del cálculo.</Abstract>
+        <KeywordList>
+          <Keyword>sociedad</Keyword>
+          <Keyword>demografía</Keyword>
+          <Keyword>censo</Keyword>
+          <Keyword>hogar</Keyword>
+          <Keyword>características habitacionales</Keyword>
+          <Keyword>incalserv</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <!--WKT definition of this CRS:
+GEOGCS["WGS 84", 
+  DATUM["World Geodetic System 1984", 
+    SPHEROID["WGS 84", 6378137.0, 298.257223563, AUTHORITY["EPSG","7030"]], 
+    AUTHORITY["EPSG","6326"]], 
+  PRIMEM["Greenwich", 0.0, AUTHORITY["EPSG","8901"]], 
+  UNIT["degree", 0.017453292519943295], 
+  AXIS["Geodetic longitude", EAST], 
+  AXIS["Geodetic latitude", NORTH], 
+  AUTHORITY["EPSG","4326"]]-->
+        <LatLonBoundingBox minx="-74.029853956" miny="-90.0" maxx="-25.023144837" maxy="-21.7450575415564"/>
+        <BoundingBox SRS="EPSG:4326" minx="-74.029853956" miny="-90.0" maxx="-25.023144837" maxy="-21.7450575415564"/>
+        <MetadataURL type="TC211">
+          <Format>text/xml</Format>
+          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar/geonetwork/srv/spa/xml_iso19139?id=110&amp;styleSheet="/>
+        </MetadataURL>
+        <Style>
+          <Name>incalserv_satisf_dpto</Name>
+          <Title/>
+          <Abstract/>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar:80/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=incalserv_dpto"/>
+          </LegendURL>
+        </Style>
+        <Style>
+          <Name>incalserv_insuf_dpto</Name>
+          <Title/>
+          <Abstract/>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar:80/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=incalserv_dpto&amp;style=incalserv_insuf_dpto"/>
+          </LegendURL>
+        </Style>
+        <Style>
+          <Name>incalserv_basico_dpto</Name>
+          <Title/>
+          <Abstract/>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar:80/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=incalserv_dpto&amp;style=incalserv_basico_dpto"/>
+          </LegendURL>
+        </Style>
+        <Style>
+          <Name>polygon</Name>
+          <Title>Default Polygon</Title>
+          <Abstract>A sample style that draws a polygon</Abstract>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar:80/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=incalserv_dpto&amp;style=polygon"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geocenso2010:incalserv_pcia</Name>
+        <Title>Hogares en viviendas según calidad de conexión a servicios básica - pcia - Censo 2010 - INDEC</Title>
+        <Abstract>El indicador Calidad de conexión a servicios básicos (INCALSERV) refiere al tipo de instalaciones con que cuentan las viviendas para su saneamiento. Para este indicador, se utilizan las variables procedencia del agua y tipo de desagüe. Se clasifica en:&#13;
+Calidad satisfactoria: refiere a las viviendas que disponen de agua a red pública y desagüe cloacal.&#13;
+Calidad básica: describe la situación de aquellas viviendas que disponen de agua de red pública y el desagüe a pozo con cámara séptica.&#13;
+Calidad insuficiente: engloba a las viviendas que no cumplen ninguna de las 2 condiciones anteriores.&#13;
+&#13;
+Los datos en valores absolutos que se presentan provienen del procesamiento a través de la base REDATAM-web utilizando la variable “Calidad de conexiones a servicios básicos” de los Resultados definitivos del Censo Nacional de Población, Hogares y Viviendas 2010.</Abstract>
+        <KeywordList>
+          <Keyword>sociedad</Keyword>
+          <Keyword>demografía</Keyword>
+          <Keyword>censo</Keyword>
+          <Keyword>hogar</Keyword>
+          <Keyword>características habitacionales</Keyword>
+          <Keyword>incalserv</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <!--WKT definition of this CRS:
+GEOGCS["WGS 84", 
+  DATUM["World Geodetic System 1984", 
+    SPHEROID["WGS 84", 6378137.0, 298.257223563, AUTHORITY["EPSG","7030"]], 
+    AUTHORITY["EPSG","6326"]], 
+  PRIMEM["Greenwich", 0.0, AUTHORITY["EPSG","8901"]], 
+  UNIT["degree", 0.017453292519943295], 
+  AXIS["Geodetic longitude", EAST], 
+  AXIS["Geodetic latitude", NORTH], 
+  AUTHORITY["EPSG","4326"]]-->
+        <LatLonBoundingBox minx="-74.029853956" miny="-90.0" maxx="-25.023144837" maxy="-21.7450575415564"/>
+        <BoundingBox SRS="EPSG:4326" minx="-74.029853956" miny="-90.0" maxx="-25.023144837" maxy="-21.7450575415564"/>
+        <MetadataURL type="TC211">
+          <Format>text/xml</Format>
+          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar/geonetwork/srv/spa/xml_iso19139?id=105&amp;styleSheet="/>
+        </MetadataURL>
+        <Style>
+          <Name>incalserv_satisf_prov</Name>
+          <Title/>
+          <Abstract/>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar:80/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=incalserv_pcia"/>
+          </LegendURL>
+        </Style>
+        <Style>
+          <Name>incalserv_insuf_prov</Name>
+          <Title/>
+          <Abstract/>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar:80/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=incalserv_pcia&amp;style=incalserv_insuf_prov"/>
+          </LegendURL>
+        </Style>
+        <Style>
+          <Name>polygon</Name>
+          <Title>Default Polygon</Title>
+          <Abstract>A sample style that draws a polygon</Abstract>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar:80/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=incalserv_pcia&amp;style=polygon"/>
+          </LegendURL>
+        </Style>
+        <Style>
+          <Name>incalserv_basico_prov</Name>
+          <Title/>
+          <Abstract/>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar:80/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=incalserv_pcia&amp;style=incalserv_basico_prov"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geocenso2010:incalserv_radio</Name>
+        <Title>Hogares en viviendas según calidad de conexión a servicios básica - radio - Censo 2010 - INDEC</Title>
+        <Abstract>El indicador Calidad de conexión a servicios básicos (INCALSERV) refiere al tipo de instalaciones con que cuentan las viviendas para su saneamiento. Para este indicador, se utilizan las variables procedencia del agua y tipo de desagüe. Se clasifica en:&#13;
+Calidad satisfactoria: refiere a las viviendas que disponen de agua a red pública y desagüe cloacal.&#13;
+Calidad básica: describe la situación de aquellas viviendas que disponen de agua de red pública y el desagüe a pozo con cámara séptica.&#13;
+Calidad insuficiente: engloba a las viviendas que no cumplen ninguna de las 2 condiciones anteriores.&#13;
+&#13;
+Los datos en valores absolutos que se presentan provienen del procesamiento a través de la base REDATAM-web utilizando la variable “Calidad de conexiones a servicios básicos” de los Resultados definitivos del Censo Nacional de Población, Hogares y Viviendas 2010.&#13;
+&#13;
+El valor -1 refiere a dato que no corresponde presentar debido a la naturaleza de las cosas o del cálculo.</Abstract>
+        <KeywordList>
+          <Keyword>sociedad</Keyword>
+          <Keyword>demografía</Keyword>
+          <Keyword>censo</Keyword>
+          <Keyword>hogar</Keyword>
+          <Keyword>servicios</Keyword>
+          <Keyword>características habitacionales</Keyword>
+        </KeywordList>
+        <SRS>EPSG:22183</SRS>
+        <!--WKT definition of this CRS:
+PROJCS["POSGAR 94 / Argentina 3", 
+  GEOGCS["POSGAR 94", 
+    DATUM["Posiciones Geodesicas Argentinas 1994", 
+      SPHEROID["WGS 84", 6378137.0, 298.257223563, AUTHORITY["EPSG","7030"]], 
+      TOWGS84[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0], 
+      AUTHORITY["EPSG","6694"]], 
+    PRIMEM["Greenwich", 0.0, AUTHORITY["EPSG","8901"]], 
+    UNIT["degree", 0.017453292519943295], 
+    AXIS["Geodetic longitude", EAST], 
+    AXIS["Geodetic latitude", NORTH], 
+    AUTHORITY["EPSG","4694"]], 
+  PROJECTION["Transverse_Mercator", AUTHORITY["EPSG","9807"]], 
+  PARAMETER["central_meridian", -66.0], 
+  PARAMETER["latitude_of_origin", -90.0], 
+  PARAMETER["scale_factor", 1.0], 
+  PARAMETER["false_easting", 3500000.0], 
+  PARAMETER["false_northing", 0.0], 
+  UNIT["m", 1.0], 
+  AXIS["Easting", EAST], 
+  AXIS["Northing", NORTH], 
+  AUTHORITY["EPSG","22183"]]-->
+        <LatLonBoundingBox minx="-74.51048485015873" miny="-55.05433712665576" maxx="-47.16736823048794" maxy="-21.352828293837433"/>
+        <BoundingBox SRS="EPSG:22183" minx="2952779.5" miny="3898419.25" maxx="4740998.5" maxy="7592423.0"/>
+        <MetadataURL type="TC211">
+          <Format>text/xml</Format>
+          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar/geonetwork/srv/spa/xml_iso19139?id=133&amp;styleSheet="/>
+        </MetadataURL>
+        <Style>
+          <Name>incalserv_satisf_radio</Name>
+          <Title/>
+          <Abstract/>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar:80/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=incalserv_radio"/>
+          </LegendURL>
+        </Style>
+        <Style>
+          <Name>incalserv_basico_radio</Name>
+          <Title/>
+          <Abstract/>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar:80/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=incalserv_radio&amp;style=incalserv_basico_radio"/>
+          </LegendURL>
+        </Style>
+        <Style>
+          <Name>polygon</Name>
+          <Title>Default Polygon</Title>
+          <Abstract>A sample style that draws a polygon</Abstract>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar:80/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=incalserv_radio&amp;style=polygon"/>
+          </LegendURL>
+        </Style>
+        <Style>
+          <Name>incalserv_insufi_radio</Name>
+          <Title/>
+          <Abstract/>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar:80/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=incalserv_radio&amp;style=incalserv_insufi_radio"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geocenso2010:inmat_dpto</Name>
+        <Title>Hogares por calidad de los materiales de la vivienda - dpto - Censo 2010 - INDEC</Title>
+        <Abstract>El indicador INMAT refiere a la calidad de los materiales con que están construidas las viviendas (material predominante de los pisos y techos), teniendo en cuenta la solidez, resistencia y capacidad de aislamiento, así como también su terminación. Se clasifica en:&#13;
+Calidad I: la vivienda presenta materiales resistentes y sólidos tanto en el piso como en techo; presenta cielorraso. Se consideran viviendas aceptables.&#13;
+Calidad II: la vivienda presenta materiales resistentes y sólidos tanto en el piso como en el techo. Y techos sin cielorraso o bien materiales de menor calidad en pisos. Son viviendas recuperables.&#13;
+Calidad III: la vivienda presenta materiales poco resistentes y sólidos en techo y en pisos. Son viviendas recuperables.&#13;
+Calidad IV: la vivienda presenta materiales de baja calidad en pisos y techos. Viviendas irrecuperables debido a la precariedad de sus materiales.&#13;
+&#13;
+Los datos en valores absolutos que se presentan provienen del procesamiento a través de la base REDATAM-web utilizando la variable “Calidad de los materiales” de los Resultados definitivos del Censo Nacional de Población, Hogares y Viviendas 2010.&#13;
+&#13;
+El valor -1 refiere a dato que no corresponde presentar debido a la naturaleza de las cosas o del cálculo.</Abstract>
+        <KeywordList>
+          <Keyword>sociedad</Keyword>
+          <Keyword>censo</Keyword>
+          <Keyword>características habitacionales</Keyword>
+          <Keyword>demografía</Keyword>
+          <Keyword>hogar</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <!--WKT definition of this CRS:
+GEOGCS["WGS 84", 
+  DATUM["World Geodetic System 1984", 
+    SPHEROID["WGS 84", 6378137.0, 298.257223563, AUTHORITY["EPSG","7030"]], 
+    AUTHORITY["EPSG","6326"]], 
+  PRIMEM["Greenwich", 0.0, AUTHORITY["EPSG","8901"]], 
+  UNIT["degree", 0.017453292519943295], 
+  AXIS["Geodetic longitude", EAST], 
+  AXIS["Geodetic latitude", NORTH], 
+  AUTHORITY["EPSG","4326"]]-->
+        <LatLonBoundingBox minx="-74.029853956" miny="-90.0" maxx="-25.023144837" maxy="-21.7450575415564"/>
+        <BoundingBox SRS="EPSG:4326" minx="-74.029853956" miny="-90.0" maxx="-25.023144837" maxy="-21.7450575415564"/>
+        <MetadataURL type="TC211">
+          <Format>text/xml</Format>
+          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar/geonetwork/srv/spa/xml_iso19139?id=103&amp;styleSheet="/>
+        </MetadataURL>
+        <Style>
+          <Name>inmat_x_depto_calidad1</Name>
+          <Title/>
+          <Abstract/>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar:80/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=inmat_dpto"/>
+          </LegendURL>
+        </Style>
+        <Style>
+          <Name>inmat_x_depto_calidad2</Name>
+          <Title/>
+          <Abstract/>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar:80/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=inmat_dpto&amp;style=inmat_x_depto_calidad2"/>
+          </LegendURL>
+        </Style>
+        <Style>
+          <Name>inmat_x_depto_calidad3</Name>
+          <Title/>
+          <Abstract/>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar:80/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=inmat_dpto&amp;style=inmat_x_depto_calidad3"/>
+          </LegendURL>
+        </Style>
+        <Style>
+          <Name>inmat_x_depto_calidad4</Name>
+          <Title/>
+          <Abstract/>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar:80/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=inmat_dpto&amp;style=inmat_x_depto_calidad4"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geocenso2010:inmat_pcia</Name>
+        <Title>Hogares por calidad de los materiales de la vivienda: INMAT - pcia - Censo 2010 - INDEC</Title>
+        <Abstract>El indicador INMAT refiere a la calidad de los materiales con que están construidas las viviendas (material predominante de los pisos y techos), teniendo en cuenta la solidez, resistencia y capacidad de aislamiento, así como también su terminación. Se clasifica en:&#13;
+Calidad I: la vivienda presenta materiales resistentes y sólidos tanto en el piso como en techo; presenta cielorraso. Se consideran viviendas aceptables.&#13;
+Calidad II: la vivienda presenta materiales resistentes y sólidos tanto en el piso como en el techo. Y techos sin cielorraso o bien materiales de menor calidad en pisos. Son viviendas recuperables.&#13;
+Calidad III: la vivienda presenta materiales poco resistentes y sólidos en techo y en pisos. Son viviendas recuperables.&#13;
+Calidad IV: la vivienda presenta materiales de baja calidad en pisos y techos. Viviendas irrecuperables debido a la precariedad de sus materiales. &#13;
+&#13;
+Los datos en valores absolutos que se presentan provienen del procesamiento a través de la base REDATAM-web utilizando la variable “Calidad de los materiales” de los resultados definitivos del Censo Nacional de Población, Hogares y Viviendas 2010.</Abstract>
+        <KeywordList>
+          <Keyword>sociedad</Keyword>
+          <Keyword>demografía</Keyword>
+          <Keyword>censo</Keyword>
+          <Keyword>características habitacionales</Keyword>
+          <Keyword>hogar</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <!--WKT definition of this CRS:
+GEOGCS["WGS 84", 
+  DATUM["World Geodetic System 1984", 
+    SPHEROID["WGS 84", 6378137.0, 298.257223563, AUTHORITY["EPSG","7030"]], 
+    AUTHORITY["EPSG","6326"]], 
+  PRIMEM["Greenwich", 0.0, AUTHORITY["EPSG","8901"]], 
+  UNIT["degree", 0.017453292519943295], 
+  AXIS["Geodetic longitude", EAST], 
+  AXIS["Geodetic latitude", NORTH], 
+  AUTHORITY["EPSG","4326"]]-->
+        <LatLonBoundingBox minx="-74.029853956" miny="-90.0" maxx="-25.023144837" maxy="-21.7450575415564"/>
+        <BoundingBox SRS="EPSG:4326" minx="-74.029853956" miny="-90.0" maxx="-25.023144837" maxy="-21.7450575415564"/>
+        <MetadataURL type="TC211">
+          <Format>text/xml</Format>
+          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar/geonetwork/srv/spa/xml_iso19139?id=102&amp;styleSheet="/>
+        </MetadataURL>
+        <Style>
+          <Name>inmat_x_prov_calidad1</Name>
+          <Title/>
+          <Abstract/>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar:80/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=inmat_pcia"/>
+          </LegendURL>
+        </Style>
+        <Style>
+          <Name>inmat_x_prov_calidad2</Name>
+          <Title/>
+          <Abstract/>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar:80/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=inmat_pcia&amp;style=inmat_x_prov_calidad2"/>
+          </LegendURL>
+        </Style>
+        <Style>
+          <Name>inmat_x_prov_calidad4</Name>
+          <Title/>
+          <Abstract/>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar:80/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=inmat_pcia&amp;style=inmat_x_prov_calidad4"/>
+          </LegendURL>
+        </Style>
+        <Style>
+          <Name>inmat_x_prov_calidad3</Name>
+          <Title/>
+          <Abstract/>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar:80/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=inmat_pcia&amp;style=inmat_x_prov_calidad3"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geocenso2010:inmat_radio</Name>
+        <Title>Hogares por calidad de los materiales de la vivienda: INMAT - radio - Censo 2010 - INDEC</Title>
+        <Abstract>El indicador INMAT refiere a la calidad de los materiales con que están construidas las viviendas (material predominante de los pisos y techos), teniendo en cuenta la solidez, resistencia y capacidad de aislamiento, así como también su terminación. Se clasifica en:&#13;
+Calidad I: la vivienda presenta materiales resistentes y sólidos tanto en el piso como en techo; presenta cielorraso. Se consideran viviendas aceptables.&#13;
+Calidad II: la vivienda presenta materiales resistentes y sólidos tanto en el piso como en el techo. Y techos sin cielorraso o bien materiales de menor calidad en pisos. Son viviendas recuperables.&#13;
+Calidad III: la vivienda presenta materiales poco resistentes y sólidos en techo y en pisos. Son viviendas recuperables.&#13;
+Calidad IV: la vivienda presenta materiales de baja calidad en pisos y techos. Viviendas irrecuperables debido a la precariedad de sus materiales. &#13;
+&#13;
+Los datos en valores absolutos que se presentan provienen del procesamiento a través de la base REDATAM-web utilizando la variable “Calidad de los materiales” de los resultados definitivos del Censo Nacional de Población, Hogares y Viviendas 2010.&#13;
+&#13;
+El valor -1 refiere a dato que no corresponde presentar debido a la naturaleza de las cosas o del cálculo.</Abstract>
+        <KeywordList>
+          <Keyword>sociedad</Keyword>
+          <Keyword>demografía</Keyword>
+          <Keyword>hogar</Keyword>
+          <Keyword>servicios</Keyword>
+          <Keyword>características habitacionales</Keyword>
+          <Keyword>censo</Keyword>
+        </KeywordList>
+        <SRS>EPSG:22183</SRS>
+        <!--WKT definition of this CRS:
+PROJCS["POSGAR 94 / Argentina 3", 
+  GEOGCS["POSGAR 94", 
+    DATUM["Posiciones Geodesicas Argentinas 1994", 
+      SPHEROID["WGS 84", 6378137.0, 298.257223563, AUTHORITY["EPSG","7030"]], 
+      TOWGS84[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0], 
+      AUTHORITY["EPSG","6694"]], 
+    PRIMEM["Greenwich", 0.0, AUTHORITY["EPSG","8901"]], 
+    UNIT["degree", 0.017453292519943295], 
+    AXIS["Geodetic longitude", EAST], 
+    AXIS["Geodetic latitude", NORTH], 
+    AUTHORITY["EPSG","4694"]], 
+  PROJECTION["Transverse_Mercator", AUTHORITY["EPSG","9807"]], 
+  PARAMETER["central_meridian", -66.0], 
+  PARAMETER["latitude_of_origin", -90.0], 
+  PARAMETER["scale_factor", 1.0], 
+  PARAMETER["false_easting", 3500000.0], 
+  PARAMETER["false_northing", 0.0], 
+  UNIT["m", 1.0], 
+  AXIS["Easting", EAST], 
+  AXIS["Northing", NORTH], 
+  AUTHORITY["EPSG","22183"]]-->
+        <LatLonBoundingBox minx="-74.51048485015873" miny="-55.05433712665576" maxx="-47.16736823048794" maxy="-21.352828293837433"/>
+        <BoundingBox SRS="EPSG:22183" minx="2952779.5" miny="3898419.25" maxx="4740998.5" maxy="7592423.0"/>
+        <MetadataURL type="TC211">
+          <Format>text/xml</Format>
+          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar/geonetwork/srv/spa/xml_iso19139?id=132&amp;styleSheet="/>
+        </MetadataURL>
+        <Style>
+          <Name>inmat1_radio</Name>
+          <Title/>
+          <Abstract/>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar:80/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=inmat_radio"/>
+          </LegendURL>
+        </Style>
+        <Style>
+          <Name>inmat4_radio</Name>
+          <Title/>
+          <Abstract/>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar:80/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=inmat_radio&amp;style=inmat4_radio"/>
+          </LegendURL>
+        </Style>
+        <Style>
+          <Name>inmat2_radio</Name>
+          <Title/>
+          <Abstract/>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar:80/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=inmat_radio&amp;style=inmat2_radio"/>
+          </LegendURL>
+        </Style>
+        <Style>
+          <Name>polygon</Name>
+          <Title>Default Polygon</Title>
+          <Abstract>A sample style that draws a polygon</Abstract>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar:80/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=inmat_radio&amp;style=polygon"/>
+          </LegendURL>
+        </Style>
+        <Style>
+          <Name>inmat3_radio</Name>
+          <Title/>
+          <Abstract/>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar:80/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=inmat_radio&amp;style=inmat3_radio"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geocenso2010:localidades_codigo</Name>
+        <Title>Localidades - código censal 2010</Title>
+        <Abstract>Esta cartografía representa la ubicación de las localidades censales. Incluye la capital de la Nación, capitales provinciales, cabeceras de departamentos/partidos y otras localidades. &#13;
+El INDEC define la localidad censal según el criterio físico como una concentración espacial de edificios conectados entre sí por una red de calles. Este concepto estuvo implícito en todos los censos argentinos y fue explicitado a partir del censo de 1991.&#13;
+Esta capa de puntos fue elaborada a fines estadísticos con el objetivo de georreferenciar los nombres y códigos utilizados en el Censo Nacional de Población, Hogares y Viviendas (CNPHyV) 2010 por el Instituto Nacional de Estadística y Censos (INDEC).</Abstract>
+        <KeywordList>
+          <Keyword>demarcacion</Keyword>
+          <Keyword>codigo</Keyword>
+          <Keyword>censo</Keyword>
+          <Keyword>asentamiento humano</Keyword>
+          <Keyword>localidad censal</Keyword>
+        </KeywordList>
+        <SRS>EPSG:22183</SRS>
+        <!--WKT definition of this CRS:
+PROJCS["POSGAR 94 / Argentina 3", 
+  GEOGCS["POSGAR 94", 
+    DATUM["Posiciones Geodesicas Argentinas 1994", 
+      SPHEROID["WGS 84", 6378137.0, 298.257223563, AUTHORITY["EPSG","7030"]], 
+      TOWGS84[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0], 
+      AUTHORITY["EPSG","6694"]], 
+    PRIMEM["Greenwich", 0.0, AUTHORITY["EPSG","8901"]], 
+    UNIT["degree", 0.017453292519943295], 
+    AXIS["Geodetic longitude", EAST], 
+    AXIS["Geodetic latitude", NORTH], 
+    AUTHORITY["EPSG","4694"]], 
+  PROJECTION["Transverse_Mercator", AUTHORITY["EPSG","9807"]], 
+  PARAMETER["central_meridian", -66.0], 
+  PARAMETER["latitude_of_origin", -90.0], 
+  PARAMETER["scale_factor", 1.0], 
+  PARAMETER["false_easting", 3500000.0], 
+  PARAMETER["false_northing", 0.0], 
+  UNIT["m", 1.0], 
+  AXIS["Easting", EAST], 
+  AXIS["Northing", NORTH], 
+  AUTHORITY["EPSG","22183"]]-->
+        <LatLonBoundingBox minx="-73.7512033164848" miny="-54.82145551552024" maxx="-47.28276252125465" maxy="-21.447168680325102"/>
+        <BoundingBox SRS="EPSG:22183" minx="2999270.5" miny="3924134.25" maxx="4739923.5" maxy="7581829.5"/>
+        <MetadataURL type="TC211">
+          <Format>text/xml</Format>
+          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://172.26.66.215/geonetwork/srv/spa/xml_iso19139?id=29&amp;styleSheet="/>
+        </MetadataURL>
+        <Style>
+          <Name>localidades_func_admin</Name>
+          <Title>localidades</Title>
+          <Abstract/>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar:80/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=localidades_codigo"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geocenso2010:nbi_dpto</Name>
+        <Title>Población y hogares con Necesidades Básicas Insatisfechas (NBI) - dpto - Censo2010 - INDEC</Title>
+        <Abstract>Hogares con Necesidades Básicas Insatisfechas: son aquellos que presentan al menos una de las siguientes condiciones de privación:&#13;
+NBI 1. Vivienda: es el tipo de vivienda que habitan los hogares que moran en habitaciones de inquilinato, hotel o pensión, viviendas no destinadas a fines habitacionales, viviendas precarias y otro tipo de vivienda. Se excluye a las viviendas tipo casa, departamento y rancho.						&#13;
+NBI 2. Condiciones sanitarias: incluye a los hogares que no poseen retrete.						&#13;
+NBI 3. Hacinamiento: es la relación entre la cantidad total de miembros del hogar y la cantidad de habitaciones de uso exclusivo del hogar. Operacionalmente se considera que existe hacinamiento crítico cuando en el hogar hay más de tres personas por cuarto.&#13;
+NBI 4. Asistencia escolar: hogares que tienen al menos un niño en edad escolar (6 a 12 años) que no asiste a la escuela.					&#13;
+NBI 5. Capacidad de subsistencia: incluye a los hogares que tienen cuatro o más personas por miembro ocupado y que tienen un jefe no ha completado el tercer grado de escolaridad primaria.&#13;
+&#13;
+El valor -1 refiere a dato que no corresponde presentar debido a la naturaleza de las cosas o del cálculo.</Abstract>
+        <KeywordList>
+          <Keyword>sociedad</Keyword>
+          <Keyword>demografia</Keyword>
+          <Keyword>censo</Keyword>
+          <Keyword>hogar</Keyword>
+          <Keyword>poblacion</Keyword>
+          <Keyword>condiciones de vida</Keyword>
+          <Keyword>nbi</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <!--WKT definition of this CRS:
+GEOGCS["WGS 84", 
+  DATUM["World Geodetic System 1984", 
+    SPHEROID["WGS 84", 6378137.0, 298.257223563, AUTHORITY["EPSG","7030"]], 
+    AUTHORITY["EPSG","6326"]], 
+  PRIMEM["Greenwich", 0.0, AUTHORITY["EPSG","8901"]], 
+  UNIT["degree", 0.017453292519943295], 
+  AXIS["Geodetic longitude", EAST], 
+  AXIS["Geodetic latitude", NORTH], 
+  AUTHORITY["EPSG","4326"]]-->
+        <LatLonBoundingBox minx="-74.029853956" miny="-90.0" maxx="-25.023144837" maxy="-21.7450575415564"/>
+        <BoundingBox SRS="EPSG:4326" minx="-74.029853956" miny="-90.0" maxx="-25.023144837" maxy="-21.7450575415564"/>
+        <MetadataURL type="TC211">
+          <Format>text/xml</Format>
+          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar/geonetwork/srv/spa/xml_iso19139?id=117&amp;styleSheet="/>
+        </MetadataURL>
+        <Style>
+          <Name>nbi_pob_dpto</Name>
+          <Title/>
+          <Abstract/>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar:80/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=nbi_dpto"/>
+          </LegendURL>
+        </Style>
+        <Style>
+          <Name>nbi_hog_dpto</Name>
+          <Title/>
+          <Abstract/>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar:80/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=nbi_dpto&amp;style=nbi_hog_dpto"/>
+          </LegendURL>
+        </Style>
+        <Style>
+          <Name>polygon</Name>
+          <Title>Default Polygon</Title>
+          <Abstract>A sample style that draws a polygon</Abstract>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar:80/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=nbi_dpto&amp;style=polygon"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geocenso2010:nbi_pcia</Name>
+        <Title>Población y hogares con Necesidades Básicas Insatisfechas (NBI) - pcia - Censo2010 - INDEC</Title>
+        <Abstract>Hogares con Necesidades Básicas Insatisfechas: son aquellos que presentan al menos una de las siguientes condiciones de privación:&#13;
+NBI 1. Vivienda: es el tipo de vivienda que habitan los hogares que moran en habitaciones de inquilinato, hotel o pensión, viviendas no destinadas a fines habitacionales, viviendas precarias y otro tipo de vivienda. Se excluye a las viviendas tipo casa, departamento y rancho.						&#13;
+NBI 2. Condiciones sanitarias: incluye a los hogares que no poseen retrete.						&#13;
+NBI 3. Hacinamiento: es la relación entre la cantidad total de miembros del hogar y la cantidad de habitaciones de uso exclusivo del hogar. Operacionalmente se considera que existe hacinamiento crítico cuando en el hogar hay más de tres personas por cuarto.&#13;
+NBI 4. Asistencia escolar: hogares que tienen al menos un niño en edad escolar (6 a 12 años) que no asiste a la escuela.					&#13;
+NBI 5. Capacidad de subsistencia: incluye a los hogares que tienen cuatro o más personas por miembro ocupado y que tienen un jefe no ha completado el tercer grado de escolaridad primaria.</Abstract>
+        <KeywordList>
+          <Keyword>sociedad</Keyword>
+          <Keyword>demografia</Keyword>
+          <Keyword>censo</Keyword>
+          <Keyword>hogar</Keyword>
+          <Keyword>poblacion</Keyword>
+          <Keyword>condiciones de vida</Keyword>
+          <Keyword>nbi</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <!--WKT definition of this CRS:
+GEOGCS["WGS 84", 
+  DATUM["World Geodetic System 1984", 
+    SPHEROID["WGS 84", 6378137.0, 298.257223563, AUTHORITY["EPSG","7030"]], 
+    AUTHORITY["EPSG","6326"]], 
+  PRIMEM["Greenwich", 0.0, AUTHORITY["EPSG","8901"]], 
+  UNIT["degree", 0.017453292519943295], 
+  AXIS["Geodetic longitude", EAST], 
+  AXIS["Geodetic latitude", NORTH], 
+  AUTHORITY["EPSG","4326"]]-->
+        <LatLonBoundingBox minx="-74.029853956" miny="-90.0" maxx="-25.023144837" maxy="-21.7450575415564"/>
+        <BoundingBox SRS="EPSG:4326" minx="-74.029853956" miny="-90.0" maxx="-25.023144837" maxy="-21.7450575415564"/>
+        <MetadataURL type="TC211">
+          <Format>text/xml</Format>
+          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar/geonetwork/srv/spa/xml_iso19139?id=116&amp;styleSheet="/>
+        </MetadataURL>
+        <Style>
+          <Name>nbi_pob_pcia1</Name>
+          <Title/>
+          <Abstract/>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar:80/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=nbi_pcia"/>
+          </LegendURL>
+        </Style>
+        <Style>
+          <Name>nbi_hog_prov</Name>
+          <Title/>
+          <Abstract/>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar:80/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=nbi_pcia&amp;style=nbi_hog_prov"/>
+          </LegendURL>
+        </Style>
+        <Style>
+          <Name>nbi_pob_pcia1</Name>
+          <Title/>
+          <Abstract/>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar:80/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=nbi_pcia&amp;style=nbi_pob_pcia1"/>
+          </LegendURL>
+        </Style>
+        <Style>
+          <Name>polygon</Name>
+          <Title>Default Polygon</Title>
+          <Abstract>A sample style that draws a polygon</Abstract>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar:80/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=nbi_pcia&amp;style=polygon"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geocenso2010:nbi_radio</Name>
+        <Title>Población y hogares con Necesidades Básicas Insatisfechas (NBI) - radio - Censo2010 - INDEC</Title>
+        <Abstract>Hogares con Necesidades Básicas Insatisfechas: son aquellos que presentan al menos una de las siguientes condiciones de privación:&#13;
+NBI 1. Vivienda: es el tipo de vivienda que habitan los hogares que moran en habitaciones de inquilinato, hotel o pensión, viviendas no destinadas a fines habitacionales, viviendas precarias y otro tipo de vivienda. Se excluye a las viviendas tipo casa, departamento y rancho.						&#13;
+NBI 2. Condiciones sanitarias: incluye a los hogares que no poseen retrete.						&#13;
+NBI 3. Hacinamiento: es la relación entre la cantidad total de miembros del hogar y la cantidad de habitaciones de uso exclusivo del hogar. Operacionalmente se considera que existe hacinamiento crítico cuando en el hogar hay más de tres personas por cuarto.&#13;
+NBI 4. Asistencia escolar: hogares que tienen al menos un niño en edad escolar (6 a 12 años) que no asiste a la escuela.					&#13;
+NBI 5. Capacidad de subsistencia: incluye a los hogares que tienen cuatro o más personas por miembro ocupado y que tienen un jefe no ha completado el tercer grado de escolaridad primaria.</Abstract>
+        <KeywordList>
+          <Keyword>sociedad</Keyword>
+          <Keyword>demografia</Keyword>
+          <Keyword>censo</Keyword>
+          <Keyword>hogar</Keyword>
+          <Keyword>poblacion</Keyword>
+          <Keyword>condiciones de vida</Keyword>
+          <Keyword>nbi</Keyword>
+        </KeywordList>
+        <SRS>EPSG:22183</SRS>
+        <!--WKT definition of this CRS:
+PROJCS["POSGAR 94 / Argentina 3", 
+  GEOGCS["POSGAR 94", 
+    DATUM["Posiciones Geodesicas Argentinas 1994", 
+      SPHEROID["WGS 84", 6378137.0, 298.257223563, AUTHORITY["EPSG","7030"]], 
+      TOWGS84[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0], 
+      AUTHORITY["EPSG","6694"]], 
+    PRIMEM["Greenwich", 0.0, AUTHORITY["EPSG","8901"]], 
+    UNIT["degree", 0.017453292519943295], 
+    AXIS["Geodetic longitude", EAST], 
+    AXIS["Geodetic latitude", NORTH], 
+    AUTHORITY["EPSG","4694"]], 
+  PROJECTION["Transverse_Mercator", AUTHORITY["EPSG","9807"]], 
+  PARAMETER["central_meridian", -66.0], 
+  PARAMETER["latitude_of_origin", -90.0], 
+  PARAMETER["scale_factor", 1.0], 
+  PARAMETER["false_easting", 3500000.0], 
+  PARAMETER["false_northing", 0.0], 
+  UNIT["m", 1.0], 
+  AXIS["Easting", EAST], 
+  AXIS["Northing", NORTH], 
+  AUTHORITY["EPSG","22183"]]-->
+        <LatLonBoundingBox minx="-74.51048485015873" miny="-55.05433712665576" maxx="-47.16736823048794" maxy="-21.352828293837433"/>
+        <BoundingBox SRS="EPSG:22183" minx="2952779.5" miny="3898419.25" maxx="4740998.5" maxy="7592423.0"/>
+        <MetadataURL type="TC211">
+          <Format>text/xml</Format>
+          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar/geonetwork/srv/spa/xml_iso19139?id=118&amp;styleSheet="/>
+        </MetadataURL>
+        <Style>
+          <Name>nbi_pob_rad</Name>
+          <Title/>
+          <Abstract/>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar:80/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=nbi_radio"/>
+          </LegendURL>
+        </Style>
+        <Style>
+          <Name>polygon</Name>
+          <Title>Default Polygon</Title>
+          <Abstract>A sample style that draws a polygon</Abstract>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar:80/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=nbi_radio&amp;style=polygon"/>
+          </LegendURL>
+        </Style>
+        <Style>
+          <Name>nbi_hog_rad</Name>
+          <Title/>
+          <Abstract/>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar:80/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=nbi_radio&amp;style=nbi_hog_rad"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geocenso2010:provincias_codigo</Name>
+        <Title>Provincias - código censal 2010</Title>
+        <Abstract>Esta cartografía representa las divisiones político-territoriales (DPT) que componen la República Argentina (ARG). Corresponde a las 23 provincias y la Ciudad Autónoma de Buenos Aires. La expresión "división político- territorial" para referirse a las jurisdicciones de primer orden fue adoptada a partir de la Disposición INDEC N° 003/88. Esta capa de polígonos fue elaborada a fines estadísticos con el objetivo de georreferenciar los nombres, códigos y límites utilizados en el Censo Nacional de Población, Hogares y Viviendas (CNPHyV) 2010 por el Instituto Nacional de Estadística y Censos (INDEC).</Abstract>
+        <KeywordList>
+          <Keyword>demarcacion</Keyword>
+          <Keyword>censo</Keyword>
+          <Keyword>limites</Keyword>
+          <Keyword>codigo</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <!--WKT definition of this CRS:
+GEOGCS["WGS 84", 
+  DATUM["World Geodetic System 1984", 
+    SPHEROID["WGS 84", 6378137.0, 298.257223563, AUTHORITY["EPSG","7030"]], 
+    AUTHORITY["EPSG","6326"]], 
+  PRIMEM["Greenwich", 0.0, AUTHORITY["EPSG","8901"]], 
+  UNIT["degree", 0.017453292519943295], 
+  AXIS["Geodetic longitude", EAST], 
+  AXIS["Geodetic latitude", NORTH], 
+  AUTHORITY["EPSG","4326"]]-->
+        <LatLonBoundingBox minx="-74.029853956" miny="-90.0" maxx="-25.023144837" maxy="-21.7450575415564"/>
+        <BoundingBox SRS="EPSG:4326" minx="-74.029853956" miny="-90.0" maxx="-25.023144837" maxy="-21.7450575415564"/>
+        <MetadataURL type="TC211">
+          <Format>text/xml</Format>
+          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar/geonetwork/srv/spa/xml_iso19139?id=112&amp;styleSheet="/>
+        </MetadataURL>
+        <Style>
+          <Name>pcia_polit_admin</Name>
+          <Title>codgeo_provincias</Title>
+          <Abstract>A sample style that draws a polygon</Abstract>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar:80/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=provincias_codigo"/>
+          </LegendURL>
+        </Style>
+        <Style>
+          <Name>provincias</Name>
+          <Title/>
+          <Abstract/>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar:80/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=provincias_codigo&amp;style=provincias"/>
+          </LegendURL>
+        </Style>
+        <Style>
+          <Name>polygon</Name>
+          <Title>Default Polygon</Title>
+          <Abstract>A sample style that draws a polygon</Abstract>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar:80/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=provincias_codigo&amp;style=polygon"/>
+          </LegendURL>
+        </Style>
+        <Style>
+          <Name>provincias_transparente</Name>
+          <Title/>
+          <Abstract/>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar:80/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=provincias_codigo&amp;style=provincias_transparente"/>
+          </LegendURL>
+        </Style>
+        <Style>
+          <Name>pcia_codgeo</Name>
+          <Title>codgeo_provincias</Title>
+          <Abstract>A sample style that draws a polygon</Abstract>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar:80/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=provincias_codigo&amp;style=pcia_codgeo"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geocenso2010:radios_codigo</Name>
+        <Title>Radios - código censal 2010</Title>
+        <Abstract>Esta cartografía representa las divisiones de radios censales que componen la República Argentina (ARG). Los radios son unidades censales en las que se divide cada fracción censal, definidas por un espacio territorial con límites geográficos y una determinada cantidad de unidades de viviendas a relevar.&#13;
+&#13;
+Corresponden al anteúltimo nivel de la estructura censal y permiten un mejor control de la cobertura territorial, facilitan la distribución y recuperación de los materiales censales y determinan en gran parte la calidad y el buen desarrollo del operativo.&#13;
+&#13;
+Esta capa de polígonos fue elaborada por el Instituto Nacional de Estadística y Censos (INDEC) para el Censo Nacional de Población, Hogares y Viviendas (CNPHyV) 2010 a partir de la cartografía realizada por cada una de las Direcciones Provinciales de Estadística.</Abstract>
+        <KeywordList>
+          <Keyword>censo</Keyword>
+          <Keyword>demarcacion</Keyword>
+          <Keyword>limites</Keyword>
+          <Keyword>codigo</Keyword>
+        </KeywordList>
+        <SRS>EPSG:22183</SRS>
+        <!--WKT definition of this CRS:
+PROJCS["POSGAR 94 / Argentina 3", 
+  GEOGCS["POSGAR 94", 
+    DATUM["Posiciones Geodesicas Argentinas 1994", 
+      SPHEROID["WGS 84", 6378137.0, 298.257223563, AUTHORITY["EPSG","7030"]], 
+      TOWGS84[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0], 
+      AUTHORITY["EPSG","6694"]], 
+    PRIMEM["Greenwich", 0.0, AUTHORITY["EPSG","8901"]], 
+    UNIT["degree", 0.017453292519943295], 
+    AXIS["Geodetic longitude", EAST], 
+    AXIS["Geodetic latitude", NORTH], 
+    AUTHORITY["EPSG","4694"]], 
+  PROJECTION["Transverse_Mercator", AUTHORITY["EPSG","9807"]], 
+  PARAMETER["central_meridian", -66.0], 
+  PARAMETER["latitude_of_origin", -90.0], 
+  PARAMETER["scale_factor", 1.0], 
+  PARAMETER["false_easting", 3500000.0], 
+  PARAMETER["false_northing", 0.0], 
+  UNIT["m", 1.0], 
+  AXIS["Easting", EAST], 
+  AXIS["Northing", NORTH], 
+  AUTHORITY["EPSG","22183"]]-->
+        <LatLonBoundingBox minx="-74.51048485015873" miny="-55.05433712665576" maxx="-47.16736823048794" maxy="-21.352828293837433"/>
+        <BoundingBox SRS="EPSG:22183" minx="2952779.5" miny="3898419.25" maxx="4740998.5" maxy="7592423.0"/>
+        <MetadataURL type="TC211">
+          <Format>text/xml</Format>
+          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar/geonetwork/images/xml.png"/>
+        </MetadataURL>
+        <Style>
+          <Name>radios_admin</Name>
+          <Title>radios_admin</Title>
+          <Abstract>4 colores distintos para radios simil ign</Abstract>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar:80/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=radios_codigo"/>
+          </LegendURL>
+        </Style>
+        <Style>
+          <Name>polygon</Name>
+          <Title>Default Polygon</Title>
+          <Abstract>A sample style that draws a polygon</Abstract>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar:80/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=radios_codigo&amp;style=polygon"/>
+          </LegendURL>
+        </Style>
+        <Style>
+          <Name>radios_admin</Name>
+          <Title>radios_admin</Title>
+          <Abstract>4 colores distintos para radios simil ign</Abstract>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar:80/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=radios_codigo&amp;style=radios_admin"/>
+          </LegendURL>
+        </Style>
+        <Style>
+          <Name>radio</Name>
+          <Title/>
+          <Abstract/>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar:80/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=radios_codigo&amp;style=radio"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>sig:v_departamentos</Name>
+        <Title>Departamentos</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>v_departamentos</Keyword>
+        </KeywordList>
+        <SRS>EPSG:22193</SRS>
+        <!--WKT definition of this CRS:
+PROJCS["Campo Inchauspe / Argentina 3", 
+  GEOGCS["Campo Inchauspe", 
+    DATUM["Campo Inchauspe", 
+      SPHEROID["International 1924", 6378388.0, 297.0, AUTHORITY["EPSG","7022"]], 
+      TOWGS84[-154.5, 150.7, 100.4, 0.0, 0.0, 0.0, 0.0], 
+      AUTHORITY["EPSG","6221"]], 
+    PRIMEM["Greenwich", 0.0, AUTHORITY["EPSG","8901"]], 
+    UNIT["degree", 0.017453292519943295], 
+    AXIS["Geodetic longitude", EAST], 
+    AXIS["Geodetic latitude", NORTH], 
+    AUTHORITY["EPSG","4221"]], 
+  PROJECTION["Transverse_Mercator", AUTHORITY["EPSG","9807"]], 
+  PARAMETER["central_meridian", -66.0], 
+  PARAMETER["latitude_of_origin", -90.0], 
+  PARAMETER["scale_factor", 1.0], 
+  PARAMETER["false_easting", 3500000.0], 
+  PARAMETER["false_northing", 0.0], 
+  UNIT["m", 1.0], 
+  AXIS["Easting", EAST], 
+  AXIS["Northing", NORTH], 
+  AUTHORITY["EPSG","22193"]]-->
+        <LatLonBoundingBox minx="-89.53369253623" miny="-90.0" maxx="0.0" maxy="-20.3309589959996"/>
+        <BoundingBox SRS="EPSG:22193" minx="2952779.5" miny="473.83498373791" maxx="5803951.73005512" maxy="7596595.0"/>
+        <Style>
+          <Name>polygon</Name>
+          <Title>Default Polygon</Title>
+          <Abstract>A sample style that draws a polygon</Abstract>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar:80/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=v_departamentos"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>sig:v_provincias</Name>
+        <Title>Provincias</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>v_provincias</Keyword>
+          <Keyword>features</Keyword>
+        </KeywordList>
+        <SRS>EPSG:22193</SRS>
+        <!--WKT definition of this CRS:
+PROJCS["Campo Inchauspe / Argentina 3", 
+  GEOGCS["Campo Inchauspe", 
+    DATUM["Campo Inchauspe", 
+      SPHEROID["International 1924", 6378388.0, 297.0, AUTHORITY["EPSG","7022"]], 
+      TOWGS84[-154.5, 150.7, 100.4, 0.0, 0.0, 0.0, 0.0], 
+      AUTHORITY["EPSG","6221"]], 
+    PRIMEM["Greenwich", 0.0, AUTHORITY["EPSG","8901"]], 
+    UNIT["degree", 0.017453292519943295], 
+    AXIS["Geodetic longitude", EAST], 
+    AXIS["Geodetic latitude", NORTH], 
+    AUTHORITY["EPSG","4221"]], 
+  PROJECTION["Transverse_Mercator", AUTHORITY["EPSG","9807"]], 
+  PARAMETER["central_meridian", -66.0], 
+  PARAMETER["latitude_of_origin", -90.0], 
+  PARAMETER["scale_factor", 1.0], 
+  PARAMETER["false_easting", 3500000.0], 
+  PARAMETER["false_northing", 0.0], 
+  UNIT["m", 1.0], 
+  AXIS["Easting", EAST], 
+  AXIS["Northing", NORTH], 
+  AUTHORITY["EPSG","22193"]]-->
+        <LatLonBoundingBox minx="-89.53369253623" miny="-90.0" maxx="0.0" maxy="-20.3309589959996"/>
+        <BoundingBox SRS="EPSG:22193" minx="2952779.5" miny="473.83498373791" maxx="5803951.73005512" maxy="7596595.0"/>
+        <Style>
+          <Name>polygon</Name>
+          <Title>Default Polygon</Title>
+          <Abstract>A sample style that draws a polygon</Abstract>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar:80/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=v_provincias"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>sig:vias</Name>
+        <Title>Vías de circulación - Ejes</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>vias</Keyword>
+          <Keyword>features</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <!--WKT definition of this CRS:
+GEOGCS["WGS 84", 
+  DATUM["World Geodetic System 1984", 
+    SPHEROID["WGS 84", 6378137.0, 298.257223563, AUTHORITY["EPSG","7030"]], 
+    AUTHORITY["EPSG","6326"]], 
+  PRIMEM["Greenwich", 0.0, AUTHORITY["EPSG","8901"]], 
+  UNIT["degree", 0.017453292519943295], 
+  AXIS["Geodetic longitude", EAST], 
+  AXIS["Geodetic latitude", NORTH], 
+  AUTHORITY["EPSG","4326"]]-->
+        <LatLonBoundingBox minx="-71.3589905882201" miny="-54.851119213123" maxx="-54.0278313331196" maxy="-22.0402057888421"/>
+        <BoundingBox SRS="EPSG:4326" minx="-71.3589905882201" miny="-54.851119213123" maxx="-54.0278313331196" maxy="-22.0402057888421"/>
+        <Style>
+          <Name>vias</Name>
+          <Title>Default Line</Title>
+          <Abstract>A sample style that draws a line</Abstract>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoservicios.indec.gov.ar:80/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=vias"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+    </Layer>
+  </Capability>
+</WMT_MS_Capabilities>

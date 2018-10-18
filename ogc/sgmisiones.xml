@@ -1,0 +1,699 @@
+<?xml version='1.0' encoding="latin1" standalone="no" ?>
+<!DOCTYPE WMT_MS_Capabilities SYSTEM "http://schemas.opengis.net/wms/1.1.1/WMS_MS_Capabilities.dtd"
+ [
+ <!ELEMENT VendorSpecificCapabilities EMPTY>
+ ]>  <!-- end of DOCTYPE declaration -->
+
+<WMT_MS_Capabilities version="1.1.1">
+
+<!-- MapServer version 6.4.1 OUTPUT=PNG OUTPUT=JPEG SUPPORTS=PROJ SUPPORTS=AGG SUPPORTS=FREETYPE SUPPORTS=ICONV SUPPORTS=WMS_SERVER SUPPORTS=WMS_CLIENT SUPPORTS=WFS_SERVER SUPPORTS=WFS_CLIENT SUPPORTS=WCS_SERVER SUPPORTS=FASTCGI INPUT=JPEG INPUT=OGR INPUT=GDAL INPUT=SHAPEFILE -->
+
+<Service>
+  <Name>OGC:WMS</Name>
+  <Title>WMS_MISIONES</Title>
+  <Abstract>WMS_MISIONES</Abstract>
+  <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.ide.misiones.gov.ar/cgi-bin/mapserv?MAP=/var/www/ide/htdocs/00_INFO_PORTAL_IDE/WMSMisiones.map&amp;"/>
+  <ContactInformation>
+  </ContactInformation>
+</Service>
+
+<Capability>
+  <Request>
+    <GetCapabilities>
+      <Format>application/vnd.ogc.wms_xml</Format>
+      <DCPType>
+        <HTTP>
+          <Get><OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.ide.misiones.gov.ar/cgi-bin/mapserv?MAP=/var/www/ide/htdocs/00_INFO_PORTAL_IDE/WMSMisiones.map&amp;"/></Get>
+          <Post><OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.ide.misiones.gov.ar/cgi-bin/mapserv?MAP=/var/www/ide/htdocs/00_INFO_PORTAL_IDE/WMSMisiones.map&amp;"/></Post>
+        </HTTP>
+      </DCPType>
+    </GetCapabilities>
+    <GetMap>
+      <Format>image/png</Format>
+      <Format>image/jpeg</Format>
+      <Format>image/png; mode=8bit</Format>
+      <Format>image/tiff</Format>
+      <DCPType>
+        <HTTP>
+          <Get><OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.ide.misiones.gov.ar/cgi-bin/mapserv?MAP=/var/www/ide/htdocs/00_INFO_PORTAL_IDE/WMSMisiones.map&amp;"/></Get>
+          <Post><OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.ide.misiones.gov.ar/cgi-bin/mapserv?MAP=/var/www/ide/htdocs/00_INFO_PORTAL_IDE/WMSMisiones.map&amp;"/></Post>
+        </HTTP>
+      </DCPType>
+    </GetMap>
+    <GetFeatureInfo>
+      <Format>text/html</Format>
+      <Format>application/vnd.ogc.gml</Format>
+      <Format>text/plain</Format>
+      <DCPType>
+        <HTTP>
+          <Get><OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.ide.misiones.gov.ar/cgi-bin/mapserv?MAP=/var/www/ide/htdocs/00_INFO_PORTAL_IDE/WMSMisiones.map&amp;"/></Get>
+          <Post><OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.ide.misiones.gov.ar/cgi-bin/mapserv?MAP=/var/www/ide/htdocs/00_INFO_PORTAL_IDE/WMSMisiones.map&amp;"/></Post>
+        </HTTP>
+      </DCPType>
+    </GetFeatureInfo>
+    <DescribeLayer>
+      <Format>text/xml</Format>
+      <DCPType>
+        <HTTP>
+          <Get><OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.ide.misiones.gov.ar/cgi-bin/mapserv?MAP=/var/www/ide/htdocs/00_INFO_PORTAL_IDE/WMSMisiones.map&amp;"/></Get>
+          <Post><OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.ide.misiones.gov.ar/cgi-bin/mapserv?MAP=/var/www/ide/htdocs/00_INFO_PORTAL_IDE/WMSMisiones.map&amp;"/></Post>
+        </HTTP>
+      </DCPType>
+    </DescribeLayer>
+    <GetLegendGraphic>
+      <Format>image/png</Format>
+      <Format>image/jpeg</Format>
+      <Format>image/png; mode=8bit</Format>
+      <DCPType>
+        <HTTP>
+          <Get><OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.ide.misiones.gov.ar/cgi-bin/mapserv?MAP=/var/www/ide/htdocs/00_INFO_PORTAL_IDE/WMSMisiones.map&amp;"/></Get>
+          <Post><OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.ide.misiones.gov.ar/cgi-bin/mapserv?MAP=/var/www/ide/htdocs/00_INFO_PORTAL_IDE/WMSMisiones.map&amp;"/></Post>
+        </HTTP>
+      </DCPType>
+    </GetLegendGraphic>
+    <GetStyles>
+      <Format>text/xml</Format>
+      <DCPType>
+        <HTTP>
+          <Get><OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.ide.misiones.gov.ar/cgi-bin/mapserv?MAP=/var/www/ide/htdocs/00_INFO_PORTAL_IDE/WMSMisiones.map&amp;"/></Get>
+          <Post><OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.ide.misiones.gov.ar/cgi-bin/mapserv?MAP=/var/www/ide/htdocs/00_INFO_PORTAL_IDE/WMSMisiones.map&amp;"/></Post>
+        </HTTP>
+      </DCPType>
+    </GetStyles>
+  </Request>
+  <Exception>
+    <Format>application/vnd.ogc.se_xml</Format>
+    <Format>application/vnd.ogc.se_inimage</Format>
+    <Format>application/vnd.ogc.se_blank</Format>
+  </Exception>
+  <VendorSpecificCapabilities />
+  <UserDefinedSymbolization SupportSLD="1" UserLayer="0" UserStyle="1" RemoteWFS="0"/>
+  <Layer>
+    <Name>WMS_MISIONES</Name>
+    <Title>WMS_MISIONES</Title>
+    <Abstract>WMS_MISIONES</Abstract>
+    <SRS>EPSG:900913</SRS>
+    <SRS>EPSG:4326</SRS>
+    <LatLonBoundingBox minx="-56.1" miny="-28.1" maxx="-53.6" maxy="-25.4" />
+    <BoundingBox SRS="EPSG:900913"
+                minx="-6.24502e+06" miny="-3.26159e+06" maxx="-5.96672e+06" maxy="-2.92496e+06" />
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>misiones</Name>
+        <Title>Límites Departamentales de Misiones</Title>
+        <Abstract>Límites Departamentales de Misiones</Abstract>
+        <SRS>EPSG:22187</SRS>
+        <LatLonBoundingBox minx="-56.0722" miny="-28.1705" maxx="-53.6314" maxy="-25.4836" />
+        <BoundingBox SRS="EPSG:22187"
+                    minx="7.29644e+06" miny="6.88463e+06" maxx="7.5362e+06" maxy="7.18079e+06" />
+        <Style>
+          <Name>default</Name>
+          <Title>default</Title>
+          <LegendURL width="83" height="21">
+             <Format>image/png</Format>
+             <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.ide.misiones.gov.ar/cgi-bin/mapserv?MAP=/var/www/ide/htdocs/00_INFO_PORTAL_IDE/WMSMisiones.map&amp;version=1.1.1&amp;service=WMS&amp;request=GetLegendGraphic&amp;layer=misiones&amp;format=image/png&amp;STYLE=default"/>
+          </LegendURL>
+        </Style>
+    </Layer>
+    <Layer queryable="1" opaque="0" cascaded="0">
+        <Name>municipio</Name>
+        <Title>Límites Municipales de Misiones</Title>
+        <Abstract>Límites Municipales de Misiones</Abstract>
+        <SRS>EPSG:22187</SRS>
+        <LatLonBoundingBox minx="-56.0722" miny="-28.1705" maxx="-53.6314" maxy="-25.4836" />
+        <BoundingBox SRS="EPSG:22187"
+                    minx="7.29644e+06" miny="6.88463e+06" maxx="7.5362e+06" maxy="7.18079e+06" />
+        <Style>
+          <Name>default</Name>
+          <Title>default</Title>
+          <LegendURL width="89" height="21">
+             <Format>image/png</Format>
+             <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.ide.misiones.gov.ar/cgi-bin/mapserv?MAP=/var/www/ide/htdocs/00_INFO_PORTAL_IDE/WMSMisiones.map&amp;version=1.1.1&amp;service=WMS&amp;request=GetLegendGraphic&amp;layer=municipio&amp;format=image/png&amp;STYLE=default"/>
+          </LegendURL>
+        </Style>
+    </Layer>
+    <Layer queryable="1" opaque="0" cascaded="0">
+        <Name>municipios</Name>
+        <Title>Límites Municipales de Misiones - BASE</Title>
+        <Abstract>Límites Municipales de Misiones - BASE</Abstract>
+        <SRS>EPSG:22187</SRS>
+        <LatLonBoundingBox minx="-56.0722" miny="-28.1705" maxx="-53.6314" maxy="-25.4836" />
+        <BoundingBox SRS="EPSG:22187"
+                    minx="7.29644e+06" miny="6.88463e+06" maxx="7.5362e+06" maxy="7.18079e+06" />
+        <Style>
+          <Name>default</Name>
+          <Title>default</Title>
+          <LegendURL width="95" height="21">
+             <Format>image/png</Format>
+             <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.ide.misiones.gov.ar/cgi-bin/mapserv?MAP=/var/www/ide/htdocs/00_INFO_PORTAL_IDE/WMSMisiones.map&amp;version=1.1.1&amp;service=WMS&amp;request=GetLegendGraphic&amp;layer=municipios&amp;format=image/png&amp;STYLE=default"/>
+          </LegendURL>
+        </Style>
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>hidrografia_mnes</Name>
+        <Title>Hidrografía de Misiones</Title>
+        <Abstract>Hidrografía de Misiones</Abstract>
+        <SRS>EPSG:22197</SRS>
+        <LatLonBoundingBox minx="-56.0729" miny="-28.1774" maxx="-53.6193" maxy="-25.4793" />
+        <BoundingBox SRS="EPSG:22197"
+                    minx="7.29643e+06" miny="6.88408e+06" maxx="7.53743e+06" maxy="7.18149e+06" />
+        <Style>
+          <Name>default</Name>
+          <Title>default</Title>
+          <LegendURL width="131" height="21">
+             <Format>image/png</Format>
+             <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.ide.misiones.gov.ar/cgi-bin/mapserv?MAP=/var/www/ide/htdocs/00_INFO_PORTAL_IDE/WMSMisiones.map&amp;version=1.1.1&amp;service=WMS&amp;request=GetLegendGraphic&amp;layer=hidrografia_mnes&amp;format=image/png&amp;STYLE=default"/>
+          </LegendURL>
+        </Style>
+    </Layer>
+    <Layer queryable="1" opaque="0" cascaded="0">
+        <Name>cultivo_anual_mnes</Name>
+        <Title>Cultivo Anual de Misiones</Title>
+        <Abstract>Cultivo Anual de Misiones</Abstract>
+        <SRS>EPSG:22187</SRS>
+        <LatLonBoundingBox minx="-56.04" miny="-28.1246" maxx="-53.8165" maxy="-25.495" />
+        <BoundingBox SRS="EPSG:22187"
+                    minx="7.29952e+06" miny="6.88971e+06" maxx="7.51803e+06" maxy="7.17957e+06" />
+        <Style>
+          <Name>default</Name>
+          <Title>default</Title>
+          <LegendURL width="143" height="21">
+             <Format>image/png</Format>
+             <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.ide.misiones.gov.ar/cgi-bin/mapserv?MAP=/var/www/ide/htdocs/00_INFO_PORTAL_IDE/WMSMisiones.map&amp;version=1.1.1&amp;service=WMS&amp;request=GetLegendGraphic&amp;layer=cultivo_anual_mnes&amp;format=image/png&amp;STYLE=default"/>
+          </LegendURL>
+        </Style>
+    </Layer>
+    <Layer queryable="1" opaque="0" cascaded="0">
+        <Name>estab_educativos_mnes</Name>
+        <Title>Establecimientos Educativos de Misiones</Title>
+        <Abstract>Establecimientos Educativos de la Provincia de Misiones (1629 puntos)</Abstract>
+        <SRS>EPSG:22187</SRS>
+        <LatLonBoundingBox minx="-56.0029" miny="-28.119" maxx="-53.6374" maxy="-25.5959" />
+        <BoundingBox SRS="EPSG:22187"
+                    minx="7.29877e+06" miny="6.88871e+06" maxx="7.53643e+06" maxy="7.1699e+06" />
+        <Style>
+          <Name>default</Name>
+          <Title>default</Title>
+          <LegendURL width="161" height="21">
+             <Format>image/png</Format>
+             <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.ide.misiones.gov.ar/cgi-bin/mapserv?MAP=/var/www/ide/htdocs/00_INFO_PORTAL_IDE/WMSMisiones.map&amp;version=1.1.1&amp;service=WMS&amp;request=GetLegendGraphic&amp;layer=estab_educativos_mnes&amp;format=image/png&amp;STYLE=default"/>
+          </LegendURL>
+        </Style>
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>curvas_nivel_mnes</Name>
+        <Title>Topografía de Misiones</Title>
+        <Abstract>Topografía de la Provincia de Misiones (equidistancia de 5 mts.)</Abstract>
+        <SRS>EPSG:900913</SRS>
+        <LatLonBoundingBox minx="-56.0592" miny="-28.1685" maxx="-53.6253" maxy="-25.5" />
+        <BoundingBox SRS="EPSG:900913"
+                    minx="-6.24048e+06" miny="-3.27024e+06" maxx="-5.96954e+06" maxy="-2.93728e+06" />
+        <Style>
+          <Name>default</Name>
+          <Title>default</Title>
+          <LegendURL width="137" height="21">
+             <Format>image/png</Format>
+             <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.ide.misiones.gov.ar/cgi-bin/mapserv?MAP=/var/www/ide/htdocs/00_INFO_PORTAL_IDE/WMSMisiones.map&amp;version=1.1.1&amp;service=WMS&amp;request=GetLegendGraphic&amp;layer=curvas_nivel_mnes&amp;format=image/png&amp;STYLE=default"/>
+          </LegendURL>
+        </Style>
+        <ScaleHint min="0" max="49.8902848429637" />
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>linea_electrica_7kv_mnes</Name>
+        <Title>Línea Eléctrica de 7.6 KV</Title>
+        <Abstract>Línea Eléctrica de 7.6 KV</Abstract>
+        <SRS>EPSG:22187</SRS>
+        <LatLonBoundingBox minx="-56.0402" miny="-27.9321" maxx="-53.6384" maxy="-25.4928" />
+        <BoundingBox SRS="EPSG:22187"
+                    minx="7.29914e+06" miny="6.91105e+06" maxx="7.53559e+06" maxy="7.17982e+06" />
+        <Style>
+          <Name>default</Name>
+          <Title>default</Title>
+          <LegendURL width="179" height="21">
+             <Format>image/png</Format>
+             <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.ide.misiones.gov.ar/cgi-bin/mapserv?MAP=/var/www/ide/htdocs/00_INFO_PORTAL_IDE/WMSMisiones.map&amp;version=1.1.1&amp;service=WMS&amp;request=GetLegendGraphic&amp;layer=linea_electrica_7kv_mnes&amp;format=image/png&amp;STYLE=default"/>
+          </LegendURL>
+        </Style>
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>linea_electrica_13kv_mnes</Name>
+        <Title>Línea Eléctrica de 13 KV</Title>
+        <Abstract>Línea Eléctrica de 13 KV</Abstract>
+        <SRS>EPSG:22187</SRS>
+        <LatLonBoundingBox minx="-56.0462" miny="-27.9483" maxx="-53.6335" maxy="-25.5758" />
+        <BoundingBox SRS="EPSG:22187"
+                    minx="7.29859e+06" miny="6.90925e+06" maxx="7.53607e+06" maxy="7.1706e+06" />
+        <Style>
+          <Name>default</Name>
+          <Title>default</Title>
+          <LegendURL width="185" height="21">
+             <Format>image/png</Format>
+             <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.ide.misiones.gov.ar/cgi-bin/mapserv?MAP=/var/www/ide/htdocs/00_INFO_PORTAL_IDE/WMSMisiones.map&amp;version=1.1.1&amp;service=WMS&amp;request=GetLegendGraphic&amp;layer=linea_electrica_13kv_mnes&amp;format=image/png&amp;STYLE=default"/>
+          </LegendURL>
+        </Style>
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>linea_electrica_33kv_mnes</Name>
+        <Title>Línea Eléctrica de 33 KV</Title>
+        <Abstract>Línea Eléctrica de 33 KV</Abstract>
+        <SRS>EPSG:22187</SRS>
+        <LatLonBoundingBox minx="-55.972" miny="-27.993" maxx="-53.6404" maxy="-25.5857" />
+        <BoundingBox SRS="EPSG:22187"
+                    minx="7.30597e+06" miny="6.9043e+06" maxx="7.53537e+06" maxy="7.16962e+06" />
+        <Style>
+          <Name>default</Name>
+          <Title>default</Title>
+          <LegendURL width="185" height="21">
+             <Format>image/png</Format>
+             <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.ide.misiones.gov.ar/cgi-bin/mapserv?MAP=/var/www/ide/htdocs/00_INFO_PORTAL_IDE/WMSMisiones.map&amp;version=1.1.1&amp;service=WMS&amp;request=GetLegendGraphic&amp;layer=linea_electrica_33kv_mnes&amp;format=image/png&amp;STYLE=default"/>
+          </LegendURL>
+        </Style>
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>localidades_misiones</Name>
+        <Title>Localidades, Pueblos, Colonias y Parajes</Title>
+        <Abstract>Localidades, Publos, Colonias y Parajes de la Provincia de Misiones</Abstract>
+        <SRS>EPSG:22187</SRS>
+        <LatLonBoundingBox minx="-56.0618" miny="-28.1693" maxx="-53.6426" maxy="-25.5409" />
+        <BoundingBox SRS="EPSG:22187"
+                    minx="7.29746e+06" miny="6.88477e+06" maxx="7.5351e+06" maxy="7.17446e+06" />
+        <Style>
+          <Name>default</Name>
+          <Title>default</Title>
+          <LegendURL width="155" height="21">
+             <Format>image/png</Format>
+             <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.ide.misiones.gov.ar/cgi-bin/mapserv?MAP=/var/www/ide/htdocs/00_INFO_PORTAL_IDE/WMSMisiones.map&amp;version=1.1.1&amp;service=WMS&amp;request=GetLegendGraphic&amp;layer=localidades_misiones&amp;format=image/png&amp;STYLE=default"/>
+          </LegendURL>
+        </Style>
+    </Layer>
+    <Layer queryable="1" opaque="0" cascaded="0">
+        <Name>area_natural_protegida_mnes</Name>
+        <Title>Áreas Naturales Protegidas de Misiones</Title>
+        <Abstract>Áreas Naturales Protegidas de la Provincia de Misiones</Abstract>
+        <SRS>EPSG:22197</SRS>
+        <LatLonBoundingBox minx="-56.0371" miny="-28.1212" maxx="-53.7213" maxy="-25.4804" />
+        <BoundingBox SRS="EPSG:22197"
+                    minx="7.29984e+06" miny="6.89031e+06" maxx="7.52742e+06" maxy="7.18141e+06" />
+        <Style>
+          <Name>default</Name>
+          <Title>default</Title>
+          <LegendURL width="197" height="21">
+             <Format>image/png</Format>
+             <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.ide.misiones.gov.ar/cgi-bin/mapserv?MAP=/var/www/ide/htdocs/00_INFO_PORTAL_IDE/WMSMisiones.map&amp;version=1.1.1&amp;service=WMS&amp;request=GetLegendGraphic&amp;layer=area_natural_protegida_mnes&amp;format=image/png&amp;STYLE=default"/>
+          </LegendURL>
+        </Style>
+    </Layer>
+    <Layer queryable="1" opaque="0" cascaded="0">
+        <Name>bosque_nativo_mnes</Name>
+        <Title>Bosques Nativos de Misiones</Title>
+        <Abstract>Bosques Nativos de la Provincia de Misiones</Abstract>
+        <SRS>EPSG:22187</SRS>
+        <LatLonBoundingBox minx="-56.0724" miny="-28.1705" maxx="-53.6324" maxy="-25.4836" />
+        <BoundingBox SRS="EPSG:22187"
+                    minx="7.29642e+06" miny="6.88463e+06" maxx="7.53611e+06" maxy="7.18079e+06" />
+        <Style>
+          <Name>default</Name>
+          <Title>default</Title>
+          <LegendURL width="143" height="21">
+             <Format>image/png</Format>
+             <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.ide.misiones.gov.ar/cgi-bin/mapserv?MAP=/var/www/ide/htdocs/00_INFO_PORTAL_IDE/WMSMisiones.map&amp;version=1.1.1&amp;service=WMS&amp;request=GetLegendGraphic&amp;layer=bosque_nativo_mnes&amp;format=image/png&amp;STYLE=default"/>
+          </LegendURL>
+        </Style>
+    </Layer>
+    <Layer queryable="1" opaque="0" cascaded="0">
+        <Name>citricos_mnes</Name>
+        <Title>Plantaciones de Cítricos de Misiones</Title>
+        <Abstract>Plantaciones de Cítricos de la Provincia de Misiones</Abstract>
+        <SRS>EPSG:22187</SRS>
+        <LatLonBoundingBox minx="-56.0244" miny="-28.0464" maxx="-53.881" maxy="-25.5694" />
+        <BoundingBox SRS="EPSG:22187"
+                    minx="7.30092e+06" miny="6.89838e+06" maxx="7.5117e+06" maxy="7.17135e+06" />
+        <Style>
+          <Name>default</Name>
+          <Title>default</Title>
+          <LegendURL width="113" height="21">
+             <Format>image/png</Format>
+             <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.ide.misiones.gov.ar/cgi-bin/mapserv?MAP=/var/www/ide/htdocs/00_INFO_PORTAL_IDE/WMSMisiones.map&amp;version=1.1.1&amp;service=WMS&amp;request=GetLegendGraphic&amp;layer=citricos_mnes&amp;format=image/png&amp;STYLE=default"/>
+          </LegendURL>
+        </Style>
+    </Layer>
+    <Layer queryable="1" opaque="0" cascaded="0">
+        <Name>comunidades_mbia_mnes</Name>
+        <Title>Comunidades Mbyá de Misiones</Title>
+        <Abstract>Comunidades Mbyá de la Provincia de Misiones</Abstract>
+        <SRS>EPSG:22187</SRS>
+        <LatLonBoundingBox minx="-55.6897" miny="-27.8971" maxx="-53.8074" maxy="-25.5899" />
+        <BoundingBox SRS="EPSG:22187"
+                    minx="7.33361e+06" miny="6.91493e+06" maxx="7.51897e+06" maxy="7.16952e+06" />
+        <Style>
+          <Name>default</Name>
+          <Title>default</Title>
+          <LegendURL width="161" height="21">
+             <Format>image/png</Format>
+             <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.ide.misiones.gov.ar/cgi-bin/mapserv?MAP=/var/www/ide/htdocs/00_INFO_PORTAL_IDE/WMSMisiones.map&amp;version=1.1.1&amp;service=WMS&amp;request=GetLegendGraphic&amp;layer=comunidades_mbia_mnes&amp;format=image/png&amp;STYLE=default"/>
+          </LegendURL>
+        </Style>
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>delegaciones_tierras_mnes</Name>
+        <Title>Delegaciones de Tierras de Misiones</Title>
+        <Abstract>Delegaciones de Tierras de la Provincia de Misiones</Abstract>
+        <SRS>EPSG:22187</SRS>
+        <LatLonBoundingBox minx="-55.582" miny="-27.8814" maxx="-53.6449" maxy="-25.6111" />
+        <BoundingBox SRS="EPSG:22187"
+                    minx="7.34108e+06" miny="6.91567e+06" maxx="7.53567e+06" maxy="7.16821e+06" />
+        <Style>
+          <Name>default</Name>
+          <Title>default</Title>
+          <LegendURL width="185" height="21">
+             <Format>image/png</Format>
+             <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.ide.misiones.gov.ar/cgi-bin/mapserv?MAP=/var/www/ide/htdocs/00_INFO_PORTAL_IDE/WMSMisiones.map&amp;version=1.1.1&amp;service=WMS&amp;request=GetLegendGraphic&amp;layer=delegaciones_tierras_mnes&amp;format=image/png&amp;STYLE=default"/>
+          </LegendURL>
+        </Style>
+    </Layer>
+    <Layer queryable="1" opaque="0" cascaded="0">
+        <Name>destacamentos_ecologia_mnes</Name>
+        <Title>Destacamentos de Ecología de Misiones</Title>
+        <Abstract>Destacamentos de Ecología de la Provincia de Misiones</Abstract>
+        <SRS>EPSG:22187</SRS>
+        <LatLonBoundingBox minx="-55.8912" miny="-27.9052" maxx="-53.6421" maxy="-25.6" />
+        <BoundingBox SRS="EPSG:22187"
+                    minx="7.31e+06" miny="6.91259e+06" maxx="7.53596e+06" maxy="7.16944e+06" />
+        <Style>
+          <Name>default</Name>
+          <Title>default</Title>
+          <LegendURL width="197" height="21">
+             <Format>image/png</Format>
+             <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.ide.misiones.gov.ar/cgi-bin/mapserv?MAP=/var/www/ide/htdocs/00_INFO_PORTAL_IDE/WMSMisiones.map&amp;version=1.1.1&amp;service=WMS&amp;request=GetLegendGraphic&amp;layer=destacamentos_ecologia_mnes&amp;format=image/png&amp;STYLE=default"/>
+          </LegendURL>
+        </Style>
+    </Layer>
+    <Layer queryable="1" opaque="0" cascaded="0">
+        <Name>forestacion_mnes</Name>
+        <Title>Forestación de Misiones</Title>
+        <Abstract>Plantaciones de Forestación de la Provincia de Misiones</Abstract>
+        <SRS>EPSG:22187</SRS>
+        <LatLonBoundingBox minx="-56.0586" miny="-28.1673" maxx="-53.6393" maxy="-25.4893" />
+        <BoundingBox SRS="EPSG:22187"
+                    minx="7.29777e+06" miny="6.88498e+06" maxx="7.53542e+06" maxy="7.18018e+06" />
+        <Style>
+          <Name>default</Name>
+          <Title>default</Title>
+          <LegendURL width="131" height="21">
+             <Format>image/png</Format>
+             <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.ide.misiones.gov.ar/cgi-bin/mapserv?MAP=/var/www/ide/htdocs/00_INFO_PORTAL_IDE/WMSMisiones.map&amp;version=1.1.1&amp;service=WMS&amp;request=GetLegendGraphic&amp;layer=forestacion_mnes&amp;format=image/png&amp;STYLE=default"/>
+          </LegendURL>
+        </Style>
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>forestacion_intercalada_mnes</Name>
+        <Title>Forestación y Yerba Mate de Misiones</Title>
+        <Abstract>Plantaciones de Forestación y Yerba Mate en forma intercalada de la Provincia de Misiones</Abstract>
+        <SRS>EPSG:22187</SRS>
+        <LatLonBoundingBox minx="-55.6146" miny="-27.7395" maxx="-54.5317" maxy="-26.919" />
+        <BoundingBox SRS="EPSG:22187"
+                    minx="7.34078e+06" miny="6.93228e+06" maxx="7.44719e+06" maxy="7.0223e+06" />
+        <Style>
+          <Name>default</Name>
+          <Title>default</Title>
+          <LegendURL width="203" height="21">
+             <Format>image/png</Format>
+             <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.ide.misiones.gov.ar/cgi-bin/mapserv?MAP=/var/www/ide/htdocs/00_INFO_PORTAL_IDE/WMSMisiones.map&amp;version=1.1.1&amp;service=WMS&amp;request=GetLegendGraphic&amp;layer=forestacion_intercalada_mnes&amp;format=image/png&amp;STYLE=default"/>
+          </LegendURL>
+        </Style>
+    </Layer>
+    <Layer queryable="1" opaque="0" cascaded="0">
+        <Name>te_mnes</Name>
+        <Title>Plantaciones de Té de Misiones</Title>
+        <Abstract>Plantaciones de Té de la Provincia de Misiones</Abstract>
+        <SRS>EPSG:22187</SRS>
+        <LatLonBoundingBox minx="-55.8612" miny="-28.0506" maxx="-53.9305" maxy="-25.5984" />
+        <BoundingBox SRS="EPSG:22187"
+                    minx="7.31698e+06" miny="6.89791e+06" maxx="7.50683e+06" maxy="7.16837e+06" />
+        <Style>
+          <Name>default</Name>
+          <Title>default</Title>
+          <LegendURL width="77" height="21">
+             <Format>image/png</Format>
+             <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.ide.misiones.gov.ar/cgi-bin/mapserv?MAP=/var/www/ide/htdocs/00_INFO_PORTAL_IDE/WMSMisiones.map&amp;version=1.1.1&amp;service=WMS&amp;request=GetLegendGraphic&amp;layer=te_mnes&amp;format=image/png&amp;STYLE=default"/>
+          </LegendURL>
+        </Style>
+    </Layer>
+    <Layer queryable="1" opaque="0" cascaded="0">
+        <Name>yerba_mate_mnes</Name>
+        <Title>Plantaciones de Yerba Mate de Misiones</Title>
+        <Abstract>Plantaciones de Yerba Mate de la Provincia de Misiones</Abstract>
+        <SRS>EPSG:22187</SRS>
+        <LatLonBoundingBox minx="-56.0351" miny="-28.1337" maxx="-53.8308" maxy="-25.5047" />
+        <BoundingBox SRS="EPSG:22187"
+                    minx="7.30002e+06" miny="6.8887e+06" maxx="7.51662e+06" maxy="7.17851e+06" />
+        <Style>
+          <Name>default</Name>
+          <Title>default</Title>
+          <LegendURL width="125" height="21">
+             <Format>image/png</Format>
+             <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.ide.misiones.gov.ar/cgi-bin/mapserv?MAP=/var/www/ide/htdocs/00_INFO_PORTAL_IDE/WMSMisiones.map&amp;version=1.1.1&amp;service=WMS&amp;request=GetLegendGraphic&amp;layer=yerba_mate_mnes&amp;format=image/png&amp;STYLE=default"/>
+          </LegendURL>
+        </Style>
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>conurbano_mnes</Name>
+        <Title>Zona del Conurbano de los municipios de Misiones de Misiones</Title>
+        <Abstract>Zona del Conurbano de los municipios de Misiones</Abstract>
+        <SRS>EPSG:22197</SRS>
+        <LatLonBoundingBox minx="-56.0401" miny="-28.1295" maxx="-53.6319" maxy="-25.5802" />
+        <BoundingBox SRS="EPSG:22197"
+                    minx="7.29956e+06" miny="6.88939e+06" maxx="7.5362e+06" maxy="7.17035e+06" />
+        <Style>
+          <Name>default</Name>
+          <Title>default</Title>
+          <LegendURL width="89" height="21">
+             <Format>image/png</Format>
+             <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.ide.misiones.gov.ar/cgi-bin/mapserv?MAP=/var/www/ide/htdocs/00_INFO_PORTAL_IDE/WMSMisiones.map&amp;version=1.1.1&amp;service=WMS&amp;request=GetLegendGraphic&amp;layer=conurbano_mnes&amp;format=image/png&amp;STYLE=default"/>
+          </LegendURL>
+        </Style>
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>zona_homogenea_mnes</Name>
+        <Title>Zona Agro Homogéneas</Title>
+        <Abstract>Zona Agro Homogéneas de Misiones definidas por su aptitudes de suelo, etc.</Abstract>
+        <SRS>EPSG:22187</SRS>
+        <LatLonBoundingBox minx="-56.0723" miny="-28.1705" maxx="-53.6337" maxy="-25.477" />
+        <BoundingBox SRS="EPSG:22187"
+                    minx="7.29643e+06" miny="6.88462e+06" maxx="7.53598e+06" maxy="7.18152e+06" />
+        <Style>
+          <Name>default</Name>
+          <Title>default</Title>
+          <LegendURL width="59" height="85">
+             <Format>image/png</Format>
+             <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.ide.misiones.gov.ar/cgi-bin/mapserv?MAP=/var/www/ide/htdocs/00_INFO_PORTAL_IDE/WMSMisiones.map&amp;version=1.1.1&amp;service=WMS&amp;request=GetLegendGraphic&amp;layer=zona_homogenea_mnes&amp;format=image/png&amp;STYLE=default"/>
+          </LegendURL>
+        </Style>
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>curvas_nivel_mnes_color</Name>
+        <Title>Topografía de Misiones</Title>
+        <Abstract>Topografía de la Provincia de Misiones (equidistancia de 5 mts. y 20 mts.) coloreada por elevación</Abstract>
+        <SRS>EPSG:22187</SRS>
+        <LatLonBoundingBox minx="-56.0724" miny="-28.1754" maxx="-53.6184" maxy="-25.4841" />
+        <BoundingBox SRS="EPSG:22187"
+                    minx="7.29643e+06" miny="6.88408e+06" maxx="7.53747e+06" maxy="7.18074e+06" />
+        <Style>
+          <Name>default</Name>
+          <Title>default</Title>
+          <LegendURL width="173" height="21">
+             <Format>image/png</Format>
+             <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.ide.misiones.gov.ar/cgi-bin/mapserv?MAP=/var/www/ide/htdocs/00_INFO_PORTAL_IDE/WMSMisiones.map&amp;version=1.1.1&amp;service=WMS&amp;request=GetLegendGraphic&amp;layer=curvas_nivel_mnes_color&amp;format=image/png&amp;STYLE=default"/>
+          </LegendURL>
+        </Style>
+        <ScaleHint min="0" max="37.4177136322228" />
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>rutas_nac_mnes</Name>
+        <Title>Rutas Nacionales en Misiones</Title>
+        <Abstract>Rutas Nacionales en la Provincia de Misiones</Abstract>
+        <SRS>EPSG:22177</SRS>
+        <LatLonBoundingBox minx="-56.0651" miny="-28.1622" maxx="-53.6346" maxy="-25.5766" />
+        <BoundingBox SRS="EPSG:22177"
+                    minx="7.29713e+06" miny="6.88555e+06" maxx="7.53589e+06" maxy="7.17049e+06" />
+        <Style>
+          <Name>default</Name>
+          <Title>default</Title>
+          <LegendURL width="209" height="53">
+             <Format>image/png</Format>
+             <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.ide.misiones.gov.ar/cgi-bin/mapserv?MAP=/var/www/ide/htdocs/00_INFO_PORTAL_IDE/WMSMisiones.map&amp;version=1.1.1&amp;service=WMS&amp;request=GetLegendGraphic&amp;layer=rutas_nac_mnes&amp;format=image/png&amp;STYLE=default"/>
+          </LegendURL>
+        </Style>
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>rutas_prov_prim_mnes</Name>
+        <Title>Rutas Provinciales Primarias en Misiones</Title>
+        <Abstract>Rutas Provinciales Primarias en Misiones</Abstract>
+        <SRS>EPSG:22177</SRS>
+        <LatLonBoundingBox minx="-55.7875" miny="-28.1398" maxx="-53.6948" maxy="-25.5814" />
+        <BoundingBox SRS="EPSG:22177"
+                    minx="7.32437e+06" miny="6.88803e+06" maxx="7.52998e+06" maxy="7.17035e+06" />
+        <Style>
+          <Name>default</Name>
+          <Title>default</Title>
+          <LegendURL width="281" height="53">
+             <Format>image/png</Format>
+             <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.ide.misiones.gov.ar/cgi-bin/mapserv?MAP=/var/www/ide/htdocs/00_INFO_PORTAL_IDE/WMSMisiones.map&amp;version=1.1.1&amp;service=WMS&amp;request=GetLegendGraphic&amp;layer=rutas_prov_prim_mnes&amp;format=image/png&amp;STYLE=default"/>
+          </LegendURL>
+        </Style>
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>rutas_prov_sec_mnes</Name>
+        <Title>Rutas Provinciales Secundarias en Misiones</Title>
+        <Abstract>Rutas Provinciales Secundarias en Misiones</Abstract>
+        <SRS>EPSG:22177</SRS>
+        <LatLonBoundingBox minx="-55.9857" miny="-28.1248" maxx="-53.8891" maxy="-25.9319" />
+        <BoundingBox SRS="EPSG:22177"
+                    minx="7.30486e+06" miny="6.8897e+06" maxx="7.51089e+06" maxy="7.13122e+06" />
+        <Style>
+          <Name>default</Name>
+          <Title>default</Title>
+          <LegendURL width="293" height="53">
+             <Format>image/png</Format>
+             <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.ide.misiones.gov.ar/cgi-bin/mapserv?MAP=/var/www/ide/htdocs/00_INFO_PORTAL_IDE/WMSMisiones.map&amp;version=1.1.1&amp;service=WMS&amp;request=GetLegendGraphic&amp;layer=rutas_prov_sec_mnes&amp;format=image/png&amp;STYLE=default"/>
+          </LegendURL>
+        </Style>
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>red_vial_mnes</Name>
+        <Title>Red de calles y caminos en Misiones</Title>
+        <Abstract>Red de calles y caminos en Misiones</Abstract>
+        <SRS>EPSG:22177</SRS>
+        <LatLonBoundingBox minx="-56.0624" miny="-28.1564" maxx="-53.6351" maxy="-25.485" />
+        <BoundingBox SRS="EPSG:22177"
+                    minx="7.29738e+06" miny="6.88619e+06" maxx="7.53584e+06" maxy="7.18065e+06" />
+        <Style>
+          <Name>default</Name>
+          <Title>default</Title>
+          <LegendURL width="185" height="101">
+             <Format>image/png</Format>
+             <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.ide.misiones.gov.ar/cgi-bin/mapserv?MAP=/var/www/ide/htdocs/00_INFO_PORTAL_IDE/WMSMisiones.map&amp;version=1.1.1&amp;service=WMS&amp;request=GetLegendGraphic&amp;layer=red_vial_mnes&amp;format=image/png&amp;STYLE=default"/>
+          </LegendURL>
+        </Style>
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>bibliotecas_mnes</Name>
+        <Title>Bibliotecas en la Provincia de Misiones</Title>
+        <Abstract>Bibliotecas en la Provincia de Misiones</Abstract>
+        <SRS>EPSG:22177</SRS>
+        <LatLonBoundingBox minx="-55.9793" miny="-28.0689" maxx="-53.7277" maxy="-25.9602" />
+        <BoundingBox SRS="EPSG:22177"
+                    minx="7.30539e+06" miny="6.89588e+06" maxx="7.52677e+06" maxy="7.1281e+06" />
+        <Style>
+          <Name>default</Name>
+          <Title>default</Title>
+          <LegendURL width="155" height="37">
+             <Format>image/png</Format>
+             <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.ide.misiones.gov.ar/cgi-bin/mapserv?MAP=/var/www/ide/htdocs/00_INFO_PORTAL_IDE/WMSMisiones.map&amp;version=1.1.1&amp;service=WMS&amp;request=GetLegendGraphic&amp;layer=bibliotecas_mnes&amp;format=image/png&amp;STYLE=default"/>
+          </LegendURL>
+        </Style>
+    </Layer>
+    <Layer queryable="1" opaque="0" cascaded="0">
+        <Name>informe_obras_dnv</Name>
+        <Title>Obras de la DNV en Distrito 15º en Misiones</Title>
+        <Abstract>Obras de la Dirección Nacional de Vialidad en el Distrito 15º - Provincia en Misiones</Abstract>
+        <SRS>EPSG:22177</SRS>
+        <LatLonBoundingBox minx="-56.0516" miny="-27.6387" maxx="-53.7303" maxy="-25.6693" />
+        <BoundingBox SRS="EPSG:22177"
+                    minx="7.29748e+06" miny="6.94356e+06" maxx="7.52662e+06" maxy="7.16022e+06" />
+        <Style>
+          <Name>default</Name>
+          <Title>default</Title>
+          <LegendURL width="89" height="21">
+             <Format>image/png</Format>
+             <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.ide.misiones.gov.ar/cgi-bin/mapserv?MAP=/var/www/ide/htdocs/00_INFO_PORTAL_IDE/WMSMisiones.map&amp;version=1.1.1&amp;service=WMS&amp;request=GetLegendGraphic&amp;layer=informe_obras_dnv&amp;format=image/png&amp;STYLE=default"/>
+          </LegendURL>
+        </Style>
+    </Layer>
+    <Layer queryable="1" opaque="0" cascaded="0">
+        <Name>informe_obras_dpv</Name>
+        <Title>Obras de la DPV en Misiones</Title>
+        <Abstract>Obras de la Dirección Provincial de Vialidad - Provincia en Misiones</Abstract>
+        <SRS>EPSG:22177</SRS>
+        <LatLonBoundingBox minx="-55.9449" miny="-27.6577" maxx="-53.8917" maxy="-25.7103" />
+        <BoundingBox SRS="EPSG:22177"
+                    minx="7.30805e+06" miny="6.94146e+06" maxx="7.51068e+06" maxy="7.15584e+06" />
+        <Style>
+          <Name>default</Name>
+          <Title>default</Title>
+          <LegendURL width="89" height="21">
+             <Format>image/png</Format>
+             <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.ide.misiones.gov.ar/cgi-bin/mapserv?MAP=/var/www/ide/htdocs/00_INFO_PORTAL_IDE/WMSMisiones.map&amp;version=1.1.1&amp;service=WMS&amp;request=GetLegendGraphic&amp;layer=informe_obras_dpv&amp;format=image/png&amp;STYLE=default"/>
+          </LegendURL>
+        </Style>
+    </Layer>
+    <Layer queryable="1" opaque="0" cascaded="0">
+        <Name>informe_puentes_dpv</Name>
+        <Title>Obras de puentes de la DPV en Misiones</Title>
+        <Abstract>Obras de Puentes en la Dirección Provincial de Vialidad - Provincia en Misiones</Abstract>
+        <SRS>EPSG:22177</SRS>
+        <LatLonBoundingBox minx="-55.9519" miny="-27.8646" maxx="-53.9436" maxy="-25.6984" />
+        <BoundingBox SRS="EPSG:22177"
+                    minx="7.30772e+06" miny="6.91852e+06" maxx="7.50556e+06" maxy="7.15715e+06" />
+        <Style>
+          <Name>default</Name>
+          <Title>default</Title>
+          <LegendURL width="101" height="21">
+             <Format>image/png</Format>
+             <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.ide.misiones.gov.ar/cgi-bin/mapserv?MAP=/var/www/ide/htdocs/00_INFO_PORTAL_IDE/WMSMisiones.map&amp;version=1.1.1&amp;service=WMS&amp;request=GetLegendGraphic&amp;layer=informe_puentes_dpv&amp;format=image/png&amp;STYLE=default"/>
+          </LegendURL>
+        </Style>
+    </Layer>
+    <Layer queryable="1" opaque="0" cascaded="0">
+        <Name>area_hidrovia</Name>
+        <Title>Área de Influencia de la Hidrovía Paraná-Paraguay</Title>
+        <Abstract>Área de Influencia de la Hidrovía Paraná-Paraguay</Abstract>
+        <SRS>EPSG:22177</SRS>
+        <LatLonBoundingBox minx="-67.2204" miny="-34.801" maxx="-45.949" maxy="-13.5159" />
+        <BoundingBox SRS="EPSG:22177"
+                    minx="6.27576e+06" miny="6.14945e+06" maxx="8.23997e+06" maxy="8.47884e+06" />
+        <Style>
+          <Name>default</Name>
+          <Title>default</Title>
+          <LegendURL width="125" height="21">
+             <Format>image/png</Format>
+             <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.ide.misiones.gov.ar/cgi-bin/mapserv?MAP=/var/www/ide/htdocs/00_INFO_PORTAL_IDE/WMSMisiones.map&amp;version=1.1.1&amp;service=WMS&amp;request=GetLegendGraphic&amp;layer=area_hidrovia&amp;format=image/png&amp;STYLE=default"/>
+          </LegendURL>
+        </Style>
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>ciudades_hidrovia</Name>
+        <Title>Ciudades Afectadas por la Hidrovía Paraná-Paraguay</Title>
+        <Abstract>Ciudades Afectadas por la Hidrovía Paraná-Paraguay</Abstract>
+        <SRS>EPSG:22177</SRS>
+        <LatLonBoundingBox minx="-61.6808" miny="-33.2008" maxx="-53.6158" maxy="-23.7272" />
+        <BoundingBox SRS="EPSG:22177"
+                    minx="6.78103e+06" miny="6.32694e+06" maxx="7.53582e+06" maxy="7.35906e+06" />
+        <Style>
+          <Name>default</Name>
+          <Title>default</Title>
+          <LegendURL width="143" height="21">
+             <Format>image/png</Format>
+             <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.ide.misiones.gov.ar/cgi-bin/mapserv?MAP=/var/www/ide/htdocs/00_INFO_PORTAL_IDE/WMSMisiones.map&amp;version=1.1.1&amp;service=WMS&amp;request=GetLegendGraphic&amp;layer=ciudades_hidrovia&amp;format=image/png&amp;STYLE=default"/>
+          </LegendURL>
+        </Style>
+    </Layer>
+    <Layer queryable="1" opaque="0" cascaded="0">
+        <Name>redprevio_mnes</Name>
+        <Title>Orgenismos de Prevención de Violencia en la Provincia de Misiones</Title>
+        <Abstract>Orgenismos de Prevención de Violencia en la Provincia de Misiones</Abstract>
+        <SRS>EPSG:22187</SRS>
+        <LatLonBoundingBox minx="-55.9109" miny="-27.4959" maxx="-53.736" maxy="-25.5888" />
+        <BoundingBox SRS="EPSG:22187"
+                    minx="7.31113e+06" miny="6.95938e+06" maxx="7.52609e+06" maxy="7.16935e+06" />
+        <Style>
+          <Name>default</Name>
+          <Title>default</Title>
+          <LegendURL width="143" height="21">
+             <Format>image/png</Format>
+             <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.ide.misiones.gov.ar/cgi-bin/mapserv?MAP=/var/www/ide/htdocs/00_INFO_PORTAL_IDE/WMSMisiones.map&amp;version=1.1.1&amp;service=WMS&amp;request=GetLegendGraphic&amp;layer=redprevio_mnes&amp;format=image/png&amp;STYLE=default"/>
+          </LegendURL>
+        </Style>
+    </Layer>
+  </Layer>
+</Capability>
+</WMT_MS_Capabilities>

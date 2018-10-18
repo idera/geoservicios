@@ -1,0 +1,1479 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE WMT_MS_Capabilities SYSTEM "http://wms.ign.gob.ar:8080/geoserver/schemas/wms/1.1.1/WMS_MS_Capabilities.dtd">
+<WMT_MS_Capabilities version="1.1.1" updateSequence="15403">
+  <Service>
+    <Name>OGC:WMS</Name>
+    <Title>Instituto Geográfico Nacional de la República Argentina</Title>
+    <Abstract>Servicio WMS del Instituto Geográfico Nacional de la República Argentina. Contiene capas de carácter oficial y otras capas, de carácater divulgativo. Las capas de carácter oficial están en los espacios de nombres IGN, sig250 y argentina500k. Contiene también capas temáticas implementadas como grupo de capas. Este servicio implementa estilos conforme al estándar SLD. Este servicio WMS está basado en el software Geoserver.</Abstract>
+    <KeywordList>
+      <Keyword>WFS</Keyword>
+      <Keyword>GEOSERVER</Keyword>
+      <Keyword>IGN</Keyword>
+      <Keyword>argentina</Keyword>
+    </KeywordList>
+    <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://wms.ign.gob.ar/geoserver/wms?"/>
+    <ContactInformation>
+      <ContactPersonPrimary>
+        <ContactPerson>Dirección de Información Geoespacial</ContactPerson>
+        <ContactOrganization>Instituto Geográfico Nacional de la República Argentina</ContactOrganization>
+      </ContactPersonPrimary>
+      <ContactPosition>Dirección de Información Geoespacial</ContactPosition>
+      <ContactAddress>
+        <AddressType>Trabajo</AddressType>
+        <Address>Av. Cabildo 381</Address>
+        <City>Ciudad Autónoma de Buenos Aires</City>
+        <StateOrProvince>Ciudad Autónoma de Buenos Aires</StateOrProvince>
+        <PostCode>1426</PostCode>
+        <Country>Argentina</Country>
+      </ContactAddress>
+      <ContactVoiceTelephone>(54-11) 4576-5576</ContactVoiceTelephone>
+      <ContactFacsimileTelephone>4576-5576</ContactFacsimileTelephone>
+      <ContactElectronicMailAddress>geoportal@ign.gob.ar</ContactElectronicMailAddress>
+    </ContactInformation>
+    <Fees>NONE</Fees>
+    <AccessConstraints>NONE</AccessConstraints>
+  </Service>
+  <Capability>
+    <Request>
+      <GetCapabilities>
+        <Format>application/vnd.ogc.wms_xml</Format>
+        <DCPType>
+          <HTTP>
+            <Get>
+              <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://wms.ign.gob.ar:8080/geoserver/wms?SERVICE=WMS&amp;"/>
+            </Get>
+            <Post>
+              <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://wms.ign.gob.ar:8080/geoserver/wms?SERVICE=WMS&amp;"/>
+            </Post>
+          </HTTP>
+        </DCPType>
+      </GetCapabilities>
+      <GetMap>
+        <Format>image/png</Format>
+        <Format>application/atom xml</Format>
+        <Format>application/atom+xml</Format>
+        <Format>application/openlayers</Format>
+        <Format>application/pdf</Format>
+        <Format>application/rss xml</Format>
+        <Format>application/rss+xml</Format>
+        <Format>application/vnd.google-earth.kml</Format>
+        <Format>application/vnd.google-earth.kml xml</Format>
+        <Format>application/vnd.google-earth.kml+xml</Format>
+        <Format>application/vnd.google-earth.kml+xml;mode=networklink</Format>
+        <Format>application/vnd.google-earth.kmz</Format>
+        <Format>application/vnd.google-earth.kmz xml</Format>
+        <Format>application/vnd.google-earth.kmz+xml</Format>
+        <Format>application/vnd.google-earth.kmz;mode=networklink</Format>
+        <Format>atom</Format>
+        <Format>image/geotiff</Format>
+        <Format>image/geotiff8</Format>
+        <Format>image/gif</Format>
+        <Format>image/gif;subtype=animated</Format>
+        <Format>image/jpeg</Format>
+        <Format>image/png8</Format>
+        <Format>image/png; mode=8bit</Format>
+        <Format>image/svg</Format>
+        <Format>image/svg xml</Format>
+        <Format>image/svg+xml</Format>
+        <Format>image/tiff</Format>
+        <Format>image/tiff8</Format>
+        <Format>kml</Format>
+        <Format>kmz</Format>
+        <Format>openlayers</Format>
+        <Format>rss</Format>
+        <Format>text/html; subtype=openlayers</Format>
+        <DCPType>
+          <HTTP>
+            <Get>
+              <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://wms.ign.gob.ar:8080/geoserver/wms?SERVICE=WMS&amp;"/>
+            </Get>
+          </HTTP>
+        </DCPType>
+      </GetMap>
+      <GetFeatureInfo>
+        <Format>text/plain</Format>
+        <Format>application/vnd.ogc.gml</Format>
+        <Format>text/xml</Format>
+        <Format>application/vnd.ogc.gml/3.1.1</Format>
+        <Format>text/xml; subtype=gml/3.1.1</Format>
+        <Format>text/html</Format>
+        <Format>application/json</Format>
+        <DCPType>
+          <HTTP>
+            <Get>
+              <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://wms.ign.gob.ar:8080/geoserver/wms?SERVICE=WMS&amp;"/>
+            </Get>
+            <Post>
+              <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://wms.ign.gob.ar:8080/geoserver/wms?SERVICE=WMS&amp;"/>
+            </Post>
+          </HTTP>
+        </DCPType>
+      </GetFeatureInfo>
+      <DescribeLayer>
+        <Format>application/vnd.ogc.wms_xml</Format>
+        <DCPType>
+          <HTTP>
+            <Get>
+              <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://wms.ign.gob.ar:8080/geoserver/wms?SERVICE=WMS&amp;"/>
+            </Get>
+          </HTTP>
+        </DCPType>
+      </DescribeLayer>
+      <GetLegendGraphic>
+        <Format>image/png</Format>
+        <Format>image/jpeg</Format>
+        <Format>image/gif</Format>
+        <DCPType>
+          <HTTP>
+            <Get>
+              <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://wms.ign.gob.ar:8080/geoserver/wms?SERVICE=WMS&amp;"/>
+            </Get>
+          </HTTP>
+        </DCPType>
+      </GetLegendGraphic>
+      <GetStyles>
+        <Format>application/vnd.ogc.sld+xml</Format>
+        <DCPType>
+          <HTTP>
+            <Get>
+              <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://wms.ign.gob.ar:8080/geoserver/wms?SERVICE=WMS&amp;"/>
+            </Get>
+          </HTTP>
+        </DCPType>
+      </GetStyles>
+    </Request>
+    <Exception>
+      <Format>application/vnd.ogc.se_xml</Format>
+      <Format>application/vnd.ogc.se_inimage</Format>
+      <Format>application/vnd.ogc.se_blank</Format>
+    </Exception>
+    <UserDefinedSymbolization SupportSLD="1" UserLayer="1" UserStyle="1" RemoteWFS="1"/>
+    <Layer>
+      <Title>Instituto Geográfico Nacional de la República Argentina</Title>
+      <Abstract>Servicio WMS del Instituto Geográfico Nacional de la República Argentina. Contiene capas de carácter oficial y otras capas, de carácater divulgativo. Las capas de carácter oficial están en los espacios de nombres IGN, sig250 y argentina500k. Contiene también capas temáticas implementadas como grupo de capas. Este servicio implementa estilos conforme al estándar SLD. Este servicio WMS está basado en el software Geoserver.</Abstract>
+      <!--Limited list of EPSG projections:-->
+      <SRS>EPSG:102113</SRS>
+      <SRS>EPSG:2081</SRS>
+      <SRS>EPSG:2082</SRS>
+      <SRS>EPSG:2083</SRS>
+      <SRS>EPSG:22171</SRS>
+      <SRS>EPSG:22172</SRS>
+      <SRS>EPSG:22173</SRS>
+      <SRS>EPSG:22174</SRS>
+      <SRS>EPSG:22175</SRS>
+      <SRS>EPSG:22176</SRS>
+      <SRS>EPSG:22177</SRS>
+      <SRS>EPSG:22181</SRS>
+      <SRS>EPSG:22182</SRS>
+      <SRS>EPSG:22183</SRS>
+      <SRS>EPSG:22184</SRS>
+      <SRS>EPSG:22185</SRS>
+      <SRS>EPSG:22186</SRS>
+      <SRS>EPSG:22187</SRS>
+      <SRS>EPSG:22191</SRS>
+      <SRS>EPSG:22192</SRS>
+      <SRS>EPSG:22193</SRS>
+      <SRS>EPSG:22194</SRS>
+      <SRS>EPSG:22195</SRS>
+      <SRS>EPSG:22196</SRS>
+      <SRS>EPSG:22197</SRS>
+      <SRS>EPSG:3857</SRS>
+      <SRS>EPSG:4326</SRS>
+      <SRS>EPSG:5343</SRS>
+      <SRS>EPSG:5344</SRS>
+      <SRS>EPSG:5345</SRS>
+      <SRS>EPSG:5346</SRS>
+      <SRS>EPSG:5347</SRS>
+      <SRS>EPSG:5348</SRS>
+      <SRS>EPSG:5349</SRS>
+      <SRS>EPSG:900913</SRS>
+      <LatLonBoundingBox minx="-180.00000000000006" miny="-90.01923959999999" maxx="180.0033129137219" maxy="90.00000000000006"/>
+      <Layer queryable="1">
+        <Name>vuelos_2011</Name>
+        <Title>vuelos_2011</Title>
+        <Abstract>Layer-Group type layer: vuelos_2011</Abstract>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="-65.74219589382055" miny="-29.001472934064815" maxx="-58.80000000000001" maxy="-24.0"/>
+        <BoundingBox SRS="EPSG:4326" minx="-65.74219589382055" miny="-29.001472934064815" maxx="-58.80000000000001" maxy="-24.0"/>
+      </Layer>
+      <Layer queryable="1">
+        <Name>vuelos_2015</Name>
+        <Title>vuelos_2015</Title>
+        <Abstract>Layer-Group type layer: vuelos_2015</Abstract>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="-72.26842673800002" miny="-54.81582641599999" maxx="-58.259044646999996" maxy="-34.09710693400001"/>
+        <BoundingBox SRS="EPSG:4326" minx="-72.26842673800002" miny="-54.81582641599999" maxx="-58.259044646999996" maxy="-34.09710693400001"/>
+      </Layer>
+      <Layer queryable="1">
+        <Name>vuelos_2014</Name>
+        <Title>vuelos_2014</Title>
+        <Abstract>Layer-Group type layer: vuelos_2014</Abstract>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="-71.75" miny="-43.33438133799996" maxx="-57.52539821099997" maxy="-24.15108062799995"/>
+        <BoundingBox SRS="EPSG:4326" minx="-71.75" miny="-43.33438133799996" maxx="-57.52539821099997" maxy="-24.15108062799995"/>
+      </Layer>
+      <Layer queryable="1">
+        <Name>capabaseargenmap</Name>
+        <Title>capabaseargenmap</Title>
+        <Abstract>Layer-Group type layer: capabaseargenmap</Abstract>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="-180.00000000000006" miny="-90.01923959999999" maxx="180.0033129137219" maxy="90.00000000000006"/>
+        <BoundingBox SRS="EPSG:4326" minx="-180.00000000000006" miny="-90.01923959999999" maxx="180.0033129137219" maxy="90.00000000000006"/>
+      </Layer>
+      <Layer queryable="1">
+        <Name>vuelos_2013</Name>
+        <Title>vuelos_2013</Title>
+        <Abstract>Layer-Group type layer: vuelos_2013</Abstract>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="-61.000695568698745" miny="-35.42880081530948" maxx="-57.26028130069143" maxy="-30.332795473939314"/>
+        <BoundingBox SRS="EPSG:4326" minx="-61.000695568698745" miny="-35.42880081530948" maxx="-57.26028130069143" maxy="-30.332795473939314"/>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>ign:3557-13-4-c</Name>
+        <Title>3557-13-4-c</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>WCS</Keyword>
+          <Keyword>GeoTIFF</Keyword>
+          <Keyword>3557-13-4-c</Keyword>
+        </KeywordList>
+        <SRS>EPSG:22186</SRS>
+        <LatLonBoundingBox minx="-58.25149467204552" miny="-35.00145047381327" maxx="-58.12363201986582" maxy="-34.91521596123601"/>
+        <BoundingBox SRS="EPSG:22186" minx="6385750.5" miny="6126633.75" maxx="6397319.25" maxy="6136065.25"/>
+        <Style>
+          <Name>raster</Name>
+          <Title>Raster</Title>
+          <Abstract>A sample style for rasters, good for displaying imagery</Abstract>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://wms.ign.gob.ar:8080/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=ign%3A3557-13-4-c"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>ideign:AREAS_PROTEGIDAS</Name>
+        <Title>AREAS_PROTEGIDAS</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>AREAS_PROTEGIDAS</Keyword>
+          <Keyword>Medio ambiente</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="-73.56721057599998" miny="-54.90648266699998" maxx="-53.65960693299996" maxy="-21.777951172999934"/>
+        <BoundingBox SRS="EPSG:4326" minx="-73.56721057599998" miny="-54.90648266699998" maxx="-53.65960693299996" maxy="-21.777951172999934"/>
+        <Style>
+          <Name>ideign:ideign_areas_protegidas</Name>
+          <Title>Ejidos Urbanos</Title>
+          <Abstract>Ejidos Urbanos</Abstract>
+          <LegendURL width="147" height="40">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://wms.ign.gob.ar:8080/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=ideign%3AAREAS_PROTEGIDAS"/>
+          </LegendURL>
+        </Style>
+        <ScaleHint min="0.0" max="1.0E7"/>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>ideign:CENTROS_POBLADOS</Name>
+        <Title>CENTROS_POBLADOS</Title>
+        <Abstract>Son puntos que representan los principales centros urbanos de la República Argentina a escala 1:250.000, independientemente de la situación de habitabilidad. De esta forma quedan así representados, ciudades, pueblos, etc. con un criterio cartográfico de uso general. &#13;
+&#13;
+No se incluyen los ejidos urbanos en esta cobertura, por merecer un tratamiento como polígono. &#13;
+&#13;
+Para los casos en que se dispone de la cantidad de habitantes, se incluirá esta información según los valores del censo de población del año 1991.</Abstract>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>CENTROS_POBLADOS</Keyword>
+          <Keyword>Sociedad</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="-72.89162670899998" miny="-77.874008855" maxx="-34.62656010500001" maxy="-21.81729254800001"/>
+        <BoundingBox SRS="EPSG:4326" minx="-72.89162670899998" miny="-77.874008855" maxx="-34.62656010500001" maxy="-21.81729254800001"/>
+        <Style>
+          <Name>point</Name>
+          <Title>Default point</Title>
+          <Abstract>A sample style that just prints out a 6px wide red square</Abstract>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://wms.ign.gob.ar:8080/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=ideign%3ACENTROS_POBLADOS"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>ideign:COBERTURAS_DEL_SUELO</Name>
+        <Title>COBERTURAS_DEL_SUELO</Title>
+        <Abstract>Son polígonos que representan objetos geográficos que se relacionan con el suelo (capa superior de la superficie terrestre) y sus relaciones con el entorno, sin tener en cuenta su composición, estructura, textura o aptitud pecuaria. Quedan representados en la cartografía a escala 1:250.000.</Abstract>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>COBERTURAS_DEL_SUELO</Keyword>
+          <Keyword>Información geocientífica</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="-74.04703694900002" miny="-90.01923959999999" maxx="-25.016248178000012" maxy="-21.925310371000023"/>
+        <BoundingBox SRS="EPSG:4326" minx="-74.04703694900002" miny="-90.01923959999999" maxx="-25.016248178000012" maxy="-21.925310371000023"/>
+        <Style>
+          <Name>ideign:ideign_coberturas_suelo</Name>
+          <Title>Default polygon style</Title>
+          <Abstract>A sample style that just draws out a solid gray interior with a black 1px outline</Abstract>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://wms.ign.gob.ar:8080/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=ideign%3ACOBERTURAS_DEL_SUELO"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>ideign:COBERTURA_CARTAS_ESCALA_100000</Name>
+        <Title>COBERTURA_CARTAS_ESCALA_100000</Title>
+        <Abstract>Polígonos que representan la cobertura de las cartas topográficas a escala 1:100.000</Abstract>
+        <KeywordList>
+          <Keyword>COBERTURA_CARTAS_ESCALA_100000</Keyword>
+          <Keyword>features</Keyword>
+          <Keyword>Ubicación</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="-73.5" miny="-55.333333332999985" maxx="-53.5" maxy="-21.666666667000015"/>
+        <BoundingBox SRS="EPSG:4326" minx="-73.5" miny="-55.333333332999985" maxx="-53.5" maxy="-21.666666667000015"/>
+        <Style>
+          <Name>ideign:ideign_cobertura_cartas_100000</Name>
+          <Title>Default polygon style</Title>
+          <Abstract>A sample style that just draws out a solid gray interior with a black 1px outline</Abstract>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://wms.ign.gob.ar:8080/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=ideign%3ACOBERTURA_CARTAS_ESCALA_100000"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>ideign:COBERTURA_CARTAS_ESCALA_250000</Name>
+        <Title>COBERTURA_CARTAS_ESCALA_250000</Title>
+        <Abstract>Polígonos que representan la cobertura de las cartas topográficas a escala 1:250.000</Abstract>
+        <KeywordList>
+          <Keyword>COBERTURA_CARTAS_ESCALA_250000</Keyword>
+          <Keyword>features</Keyword>
+          <Keyword>Ubicación</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="-73.5" miny="-56.0" maxx="-52.5" maxy="-21.0"/>
+        <BoundingBox SRS="EPSG:4326" minx="-73.5" miny="-56.0" maxx="-52.5" maxy="-21.0"/>
+        <Style>
+          <Name>ideign:ideign_cobertura_carta_250000</Name>
+          <Title>Default polygon style</Title>
+          <Abstract>A sample style that just draws out a solid gray interior with a black 1px outline</Abstract>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://wms.ign.gob.ar:8080/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=ideign%3ACOBERTURA_CARTAS_ESCALA_250000"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>ideign:COBERTURA_CARTAS_ESCALA_50000</Name>
+        <Title>COBERTURA_CARTAS_ESCALA_50000</Title>
+        <Abstract>Polígonos que representan la cobertura de las cartas topográficas a escala 1:50.000</Abstract>
+        <KeywordList>
+          <Keyword>COBERTURA_CARTAS_ESCALA_50000</Keyword>
+          <Keyword>features</Keyword>
+          <Keyword>Ubicación</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="-73.5" miny="-55.166666667000015" maxx="-53.5" maxy="-21.666666667000015"/>
+        <BoundingBox SRS="EPSG:4326" minx="-73.5" miny="-55.166666667000015" maxx="-53.5" maxy="-21.666666667000015"/>
+        <Style>
+          <Name>ideign:ideign_cobertura_carta_50000</Name>
+          <Title>Default polygon style</Title>
+          <Abstract>A sample style that just draws out a solid gray interior with a black 1px outline</Abstract>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://wms.ign.gob.ar:8080/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=ideign%3ACOBERTURA_CARTAS_ESCALA_50000"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>ideign:CUERPOS_DE_AGUA</Name>
+        <Title>cuerpos_de_agua</Title>
+        <Abstract>Son polígonos que representan la superficie de los principales espejos de agua permanentes y no permanentes, que para la escala 1:250.000 corresponde. Es importante esta consideración en particular cuando se trata la asignación del nombre en su base de datos. Puede darse el caso de un espejo de agua que no posea nombre o sea que se consignará como "SIN NOMBRE", pero que al buscar la misma referencia en otra escala de captura (1:100.000 ó 1:50.000) tenga asignado un cierto nombre.&#13;
+&#13;
+No se incluyen en la misma capa temática a los cursos de agua por merecer un tratamiento gráfico como arco.&#13;
+&#13;
+La digitalización y estructura topológica es de un conjunto de polígonos de los que se han de extraer las islas las que serán representadas en cobertura aparte (AGE).</Abstract>
+        <KeywordList>
+          <Keyword>CUERPOS_DE_AGUA</Keyword>
+          <Keyword>features</Keyword>
+          <Keyword>Aguas interiores</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="-74.01696509599998" miny="-73.728718017" maxx="-53.832086068000024" maxy="-22.150419235000015"/>
+        <BoundingBox SRS="EPSG:4326" minx="-74.01696509599998" miny="-73.728718017" maxx="-53.832086068000024" maxy="-22.150419235000015"/>
+        <Style>
+          <Name>ideign:ideign_cuerpos_de_agua</Name>
+          <Title>lag</Title>
+          <Abstract>Laguna</Abstract>
+          <LegendURL width="397" height="80">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://wms.ign.gob.ar:8080/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=ideign%3ACUERPOS_DE_AGUA"/>
+          </LegendURL>
+        </Style>
+        <ScaleHint min="0.0" max="5000000.0"/>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>ideign:CURSOS_DE_AGUA</Name>
+        <Title>cursos_de_agua</Title>
+        <Abstract>Son arcos que describen la traza de los cursos de agua permanentes y los intermitentes representables en la escala de referencia. Es importante esta consideración en particular cuando se trata la asignación del nombre en su base de datos. Puede darse el caso de un curso de agua que no posea nombre, o sea, que se consignará como "SIN NOMBRE", pero que al buscar la misma referencia en otra escala de captura (1:100.000 ó 1:50.000) tenga asignado un cierto nombre.&#13;
+No se incluyen en la misma capa temática a los espejos de agua por merecer un tratamiento gráfico como polígono.&#13;
+La digitalización y estructura topológica es de un conjunto de arcos entre intersecciones, o sea, que cada arco tiene su nodo final e inicial en una intersección o en la punta de la traza. Por lo cual la asignación de atributos será por arco reiterándose los mismos cuando se trate de un objeto con las mismas características.</Abstract>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>CURSOS_DE_AGUA</Keyword>
+          <Keyword>Aguas interiores</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="-73.40245056200001" miny="-55.05172729499998" maxx="-53.64107894900002" maxy="-21.778436661"/>
+        <BoundingBox SRS="EPSG:4326" minx="-73.40245056200001" miny="-55.05172729499998" maxx="-53.64107894900002" maxy="-21.778436661"/>
+        <Style>
+          <Name>ideign:ideign_cursos_de_agua</Name>
+          <Title>afl</Title>
+          <Abstract>Afluentes</Abstract>
+          <LegendURL width="299" height="60">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://wms.ign.gob.ar:8080/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=ideign%3ACURSOS_DE_AGUA"/>
+          </LegendURL>
+        </Style>
+        <ScaleHint min="0.0" max="5000000.0"/>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>ideign:DEPARTAMENTOS</Name>
+        <Title>DEPARTAMENTOS</Title>
+        <Abstract>Son polígonos que representan la división departamental de la república Argentina, correspondiente a la escala 1:250.000.</Abstract>
+        <KeywordList>
+          <Keyword>DEPARTAMENTOS</Keyword>
+          <Keyword>features</Keyword>
+          <Keyword>Límites</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="-74.02985395600001" miny="-90.00000011499998" maxx="-25.023144837000018" maxy="-21.77795117300002"/>
+        <BoundingBox SRS="EPSG:4326" minx="-74.02985395600001" miny="-90.00000011499998" maxx="-25.023144837000018" maxy="-21.77795117300002"/>
+        <Style>
+          <Name>ideign:ideign_departamentos</Name>
+          <Title>Default polygon style</Title>
+          <Abstract>A sample style that just draws out a solid gray interior with a black 1px outline</Abstract>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://wms.ign.gob.ar:8080/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=ideign%3ADEPARTAMENTOS"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>ideign:EJIDOS_URBANOS</Name>
+        <Title>ejidos_urbanos</Title>
+        <Abstract>Son polígonos que representan los ejidos y manzanas urbanas en aquellos sectores que a escala 1:250.000, corresponde que se represente de esta manera. La fuente es interpretación de imágenes.</Abstract>
+        <KeywordList>
+          <Keyword>EJIDOS_URBANOS</Keyword>
+          <Keyword>features</Keyword>
+          <Keyword>Sociedad</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="-72.88949585" miny="-54.83292388900003" maxx="-53.642578125" maxy="-21.940937041999973"/>
+        <BoundingBox SRS="EPSG:4326" minx="-72.88949585" miny="-54.83292388900003" maxx="-53.642578125" maxy="-21.940937041999973"/>
+        <Style>
+          <Name>ideign:ideign_ejidos_urbanos</Name>
+          <Title>Ejidos Urbanos</Title>
+          <Abstract>Ejidos Urbanos</Abstract>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://wms.ign.gob.ar:8080/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=ideign%3AEJIDOS_URBANOS"/>
+          </LegendURL>
+        </Style>
+        <ScaleHint min="100000.0" max="5000000.0"/>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>ideign:INFRAESTRUCTURA_DE_TRANSPORTE</Name>
+        <Title>INFRAESTRUCTURA_DE_TRANSPORTE</Title>
+        <Abstract>Son puntos que representan la infraestructura ferroviaria, hidrgráfica y aeroportuariacorrespondiente a la escala 1:250.000. De esta forma quedan así representados con un criterio cartográfico de uso general.</Abstract>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>INFRAESTRUCTURA_DE_TRANSPORTE</Keyword>
+          <Keyword>Transporte</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="-73.11830902100002" miny="-54.84382247899998" maxx="-53.65184783900003" maxy="-21.937763213999972"/>
+        <BoundingBox SRS="EPSG:4326" minx="-73.11830902100002" miny="-54.84382247899998" maxx="-53.65184783900003" maxy="-21.937763213999972"/>
+        <Style>
+          <Name>ideign:ideign_infraestructura_transporte</Name>
+          <Title>Default point</Title>
+          <Abstract>A sample style that just prints out a 6px wide red square</Abstract>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://wms.ign.gob.ar:8080/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=ideign%3AINFRAESTRUCTURA_DE_TRANSPORTE"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>ideign:LIMITE_COPLA</Name>
+        <Title>LIMITE_COPLA</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>LIMITE_COPLA</Keyword>
+          <Keyword>Límites</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="-73.99899673499999" miny="-70.69584274300001" maxx="-19.90741920499994" maxy="-37.844558715999824"/>
+        <BoundingBox SRS="EPSG:4326" minx="-73.99899673499999" miny="-70.69584274300001" maxx="-19.90741920499994" maxy="-37.844558715999824"/>
+        <Style>
+          <Name>line</Name>
+          <Title>1 px blue line</Title>
+          <Abstract>Default line style, 1 pixel wide blue</Abstract>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://wms.ign.gob.ar:8080/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=ideign%3ALIMITE_COPLA"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>ideign:LIMITE_POLITICO_ADMINISTRATIVO</Name>
+        <Title>limite_politico_administrativo</Title>
+        <Abstract>Son arcos cuya traza corresponde a los límites nacionales e internacionales.En observaciones se incorporará, la situación de los límites representados. (Por ejemplo: "sin aprobación definitiva", "en litigio", etc)</Abstract>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>LIMITE_POLITICO_ADMINISTRATIVO</Keyword>
+          <Keyword>Límites</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="-74.02985395600001" miny="-90.01923959999999" maxx="-24.988791252999988" maxy="-21.77795117300002"/>
+        <BoundingBox SRS="EPSG:4326" minx="-74.02985395600001" miny="-90.01923959999999" maxx="-24.988791252999988" maxy="-21.77795117300002"/>
+        <Style>
+          <Name>ideign:ideign_limite_politico_administrativo</Name>
+          <Title>Limites</Title>
+          <Abstract>Limites</Abstract>
+          <LegendURL width="401" height="460">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://wms.ign.gob.ar:8080/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=ideign%3ALIMITE_POLITICO_ADMINISTRATIVO"/>
+          </LegendURL>
+        </Style>
+        <ScaleHint min="0.0" max="2.5E8"/>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>ideign:PROVINCIAS</Name>
+        <Title>PROVINCIAS</Title>
+        <Abstract>Son polígonos que representan la superficie que abarcan las provisncias de la República Argentina, correspondiente a la escala 1:250.000.</Abstract>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>PROVINCIAS</Keyword>
+          <Keyword>Límites</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="-74.02985395600001" miny="-90.01923959999999" maxx="-25.023144837000018" maxy="-21.77795117300002"/>
+        <BoundingBox SRS="EPSG:4326" minx="-74.02985395600001" miny="-90.01923959999999" maxx="-25.023144837000018" maxy="-21.77795117300002"/>
+        <Style>
+          <Name>ideign:ideign_provincias</Name>
+          <Title>Default polygon style</Title>
+          <Abstract>A sample style that just draws out a solid gray interior with a black 1px outline</Abstract>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://wms.ign.gob.ar:8080/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=ideign%3APROVINCIAS"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>ideign:PUENTES</Name>
+        <Title>PUENTES</Title>
+        <Abstract>Son puntos que materializan la ubicación de los puentes, pasarelas, diques, represas, etc., representados en la cartografía de escala 1:250.000.&#13;
+Tanto la cantidad de puntos, como las características de los elementos y otras referencias; están limitadas, por el momento a la información disponible en la cartografía de base.</Abstract>
+        <KeywordList>
+          <Keyword>PUENTES</Keyword>
+          <Keyword>features</Keyword>
+          <Keyword>Transporte</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="-73.21969604499998" miny="-54.84724044799998" maxx="-53.65555954000001" maxy="-22.04592514000001"/>
+        <BoundingBox SRS="EPSG:4326" minx="-73.21969604499998" miny="-54.84724044799998" maxx="-53.65555954000001" maxy="-22.04592514000001"/>
+        <Style>
+          <Name>ideign:ideign_puentes</Name>
+          <Title>Default point</Title>
+          <Abstract>A sample style that just prints out a 6px wide red square</Abstract>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://wms.ign.gob.ar:8080/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=ideign%3APUENTES"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>ideign:RED_FERROVIARIA</Name>
+        <Title>red_ferroviaria</Title>
+        <Abstract>Son arcos que describen la traza de las líneas férreas; a su vez la definición gráfica se corresponde con la imagen satelitaria.&#13;
+La digitalización y estructura topológica es de un conjunto de arcos entre intersecciones, o sea, que cada arco tiene su nodo final e inicial en una intersección o en la punta de la traza. Por lo cual la asignación de atributos será por arco reiterándose los mismos cuando se trate de un objeto con las mismas características.</Abstract>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>RED_FERROVIARIA</Keyword>
+          <Keyword>Transporte</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="-72.308181763" miny="-51.88516235399999" maxx="-55.771717072" maxy="-22.03361892700002"/>
+        <BoundingBox SRS="EPSG:4326" minx="-72.308181763" miny="-51.88516235399999" maxx="-55.771717072" maxy="-22.03361892700002"/>
+        <Style>
+          <Name>ideign:ideign_red_ferroviaria</Name>
+          <Title>Red Ferroviaria desde 500.000</Title>
+          <LegendURL width="22" height="60">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://wms.ign.gob.ar:8080/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=ideign%3ARED_FERROVIARIA"/>
+          </LegendURL>
+        </Style>
+        <ScaleHint min="0.0" max="1.0E7"/>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>ideign:TOPONIMOS_OCEANO</Name>
+        <Title>TOPONIMOS_OCEANO</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>TOPONIMOS_OCEANO</Keyword>
+          <Keyword>Ubicación</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="-73.92004193799994" miny="-88.59341289099996" maxx="-25.090533710999935" maxy="-36.839047760999975"/>
+        <BoundingBox SRS="EPSG:4326" minx="-73.92004193799994" miny="-88.59341289099996" maxx="-25.090533710999935" maxy="-36.839047760999975"/>
+        <Style>
+          <Name>ideign:ideign_accidentes_terreno</Name>
+          <LegendURL width="177" height="40">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://wms.ign.gob.ar:8080/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=ideign%3ATOPONIMOS_OCEANO"/>
+          </LegendURL>
+        </Style>
+        <ScaleHint min="0.0" max="4.6E7"/>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>idera:aerodromo_a</Name>
+        <Title>Aeródromo</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>aerodromo_a</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="-72.23363149499994" miny="-51.60955886099998" maxx="-57.361687926999934" maxy="-22.14914682999995"/>
+        <BoundingBox SRS="EPSG:4326" minx="-72.23363149499994" miny="-51.60955886099998" maxx="-57.361687926999934" maxy="-22.14914682999995"/>
+        <Style>
+          <Name>polygon</Name>
+          <Title>Default polygon style</Title>
+          <Abstract>A sample style that just draws out a solid gray interior with a black 1px outline</Abstract>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://wms.ign.gob.ar:8080/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=idera%3Aaerodromo_a"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>idera:aerodromo_p</Name>
+        <Title>aerodromo_p</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>aerodromo_p</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="-73.11830902099996" miny="-54.87746867799996" maxx="-53.65184783899997" maxy="-21.937763213999972"/>
+        <BoundingBox SRS="EPSG:4326" minx="-73.11830902099996" miny="-54.87746867799996" maxx="-53.65184783899997" maxy="-21.937763213999972"/>
+        <Style>
+          <Name>idera:idera_aerodromo</Name>
+          <LegendURL width="22" height="40">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://wms.ign.gob.ar:8080/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=idera%3Aaerodromo_p"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>idera:asentamiento_humano</Name>
+        <Title>Asentamiento humano</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>asentamiento_humano</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="-72.26842673799996" miny="-54.81581730299996" maxx="-53.64705502099997" maxy="-21.94331651999994"/>
+        <BoundingBox SRS="EPSG:4326" minx="-72.26842673799996" miny="-54.81581730299996" maxx="-53.64705502099997" maxy="-21.94331651999994"/>
+        <Style>
+          <Name>point</Name>
+          <Title>Default point</Title>
+          <Abstract>A sample style that just prints out a 6px wide red square</Abstract>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://wms.ign.gob.ar:8080/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=idera%3Aasentamiento_humano"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>idera:bahra</Name>
+        <Title>bahra</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>bahra</Keyword>
+          <Keyword>features</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="-72.8916267088672" miny="-77.8740088546501" maxx="-34.6265601051448" maxy="-21.8172925482811"/>
+        <BoundingBox SRS="EPSG:4326" minx="-72.8916267088672" miny="-77.8740088546501" maxx="-34.6265601051448" maxy="-21.8172925482811"/>
+        <Style>
+          <Name>idera:idera_bahra</Name>
+          <Title>Capital cities</Title>
+          <LegendURL width="73" height="60">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://wms.ign.gob.ar:8080/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=idera%3Abahra"/>
+          </LegendURL>
+        </Style>
+        <Style>
+          <Name>idera:idera_bahra</Name>
+          <Title>Capital cities</Title>
+          <LegendURL width="73" height="60">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://wms.ign.gob.ar:8080/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=idera%3Abahra&amp;style=idera_bahra"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>ideign:barrera_hielo</Name>
+        <Title>Barrera de Hielo</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>barrera</Keyword>
+          <Keyword>features</Keyword>
+          <Keyword>Aguas interiores</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="-180.0" miny="-78.65864232740311" maxx="180.0" maxy="-64.14346357420821"/>
+        <BoundingBox SRS="EPSG:4326" minx="-180.0" miny="-78.65864232740311" maxx="180.0" maxy="-64.14346357420821"/>
+        <Style>
+          <Name>ideign:ideign_barrera_hielo</Name>
+          <Title>Limites</Title>
+          <Abstract>Limites</Abstract>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://wms.ign.gob.ar:8080/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=ideign%3Abarrera_hielo"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>ideign:batimetria</Name>
+        <Title>batimetria</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>batimetria</Keyword>
+          <Keyword>features</Keyword>
+          <Keyword>Elevación</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="-179.99999999999997" miny="-85.22198035579197" maxx="180.00000000000034" maxy="90.00000000000006"/>
+        <BoundingBox SRS="EPSG:4326" minx="-179.99999999999997" miny="-85.22198035579197" maxx="180.00000000000034" maxy="90.00000000000006"/>
+        <Style>
+          <Name>ideign:ideign_batimetria</Name>
+          <LegendURL width="138" height="240">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://wms.ign.gob.ar:8080/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=ideign%3Abatimetria"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>idera:calle</Name>
+        <Title>calle</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>calle</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="-1.0" miny="-1.0" maxx="0.0" maxy="0.0"/>
+        <BoundingBox SRS="EPSG:4326" minx="-1.0" miny="-1.0" maxx="0.0" maxy="0.0"/>
+        <Style>
+          <Name>line</Name>
+          <Title>1 px blue line</Title>
+          <Abstract>Default line style, 1 pixel wide blue</Abstract>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://wms.ign.gob.ar:8080/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=idera%3Acalle"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>idera:cerro</Name>
+        <Title>Cerro</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>cerro</Keyword>
+          <Keyword>features</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="-73.50515747099996" miny="-54.96800613399995" maxx="-54.69521331799996" maxy="-21.822454452999978"/>
+        <BoundingBox SRS="EPSG:4326" minx="-73.50515747099996" miny="-54.96800613399995" maxx="-54.69521331799996" maxy="-21.822454452999978"/>
+        <Style>
+          <Name>idera:idera_cerro</Name>
+          <LegendURL width="22" height="40">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://wms.ign.gob.ar:8080/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=idera%3Acerro"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>historico:chubut_3857_2</Name>
+        <Title>chubut_3857_2</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>WCS</Keyword>
+          <Keyword>GeoTIFF</Keyword>
+          <Keyword>chubut_3857</Keyword>
+        </KeywordList>
+        <SRS>EPSG:3857</SRS>
+        <LatLonBoundingBox minx="-179.13190835617493" miny="-72.78774933986479" maxx="179.13190835617493" maxy="72.76786577547638"/>
+        <BoundingBox SRS="EPSG:3857" minx="-1.9940872823036738E7" miny="-1.2043149729600819E7" maxx="1.9940872823036738E7" maxy="1.2035673901511947E7"/>
+        <Style>
+          <Name>raster</Name>
+          <Title>Raster</Title>
+          <Abstract>A sample style for rasters, good for displaying imagery</Abstract>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://wms.ign.gob.ar:8080/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=historico%3Achubut_3857_2"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>ign:ciudades_puntos_2015</Name>
+        <Title>ciudades_puntos_2015</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>ciudades_puntos_2015</Keyword>
+          <Keyword>Sociedad</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="-72.26842673800002" miny="-54.81582641599999" maxx="-58.259044646999996" maxy="-34.09710693400001"/>
+        <BoundingBox SRS="EPSG:4326" minx="-72.26842673800002" miny="-54.81582641599999" maxx="-58.259044646999996" maxy="-34.09710693400001"/>
+        <Style>
+          <Name>IGN:vuelos_punto_15</Name>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://wms.ign.gob.ar:8080/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=ign%3Aciudades_puntos_2015"/>
+          </LegendURL>
+        </Style>
+        <ScaleHint min="3000001.0" max="Infinity"/>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>idera:corriente_agua_a</Name>
+        <Title>Corrientes de agua</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>corriente_agua_a</Keyword>
+          <Keyword>features</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="-72.19404602099996" miny="-50.27703094499998" maxx="-53.83208606799997" maxy="-21.999982901999942"/>
+        <BoundingBox SRS="EPSG:4326" minx="-72.19404602099996" miny="-50.27703094499998" maxx="-53.83208606799997" maxy="-21.999982901999942"/>
+        <Style>
+          <Name>idera:idera_espejo_agua</Name>
+          <LegendURL width="101" height="40">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://wms.ign.gob.ar:8080/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=idera%3Acorriente_agua_a"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>idera:corriente_agua_l</Name>
+        <Title>Corriente de agua</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>corriente_agua_l</Keyword>
+          <Keyword>dato_fundamtental</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="-73.40245056199996" miny="-55.05172729499998" maxx="-53.64107894899996" maxy="-21.66666666699996"/>
+        <BoundingBox SRS="EPSG:4326" minx="-73.40245056199996" miny="-55.05172729499998" maxx="-53.64107894899996" maxy="-21.66666666699996"/>
+        <Style>
+          <Name>idera:idera_corriente_agua</Name>
+          <LegendURL width="101" height="40">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://wms.ign.gob.ar:8080/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=idera%3Acorriente_agua_l"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>idera:curva_batimetrica</Name>
+        <Title>Curva batimétrica</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>curva_batimetrica</Keyword>
+          <Keyword>features</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="-1.0" miny="-1.0" maxx="0.0" maxy="0.0"/>
+        <BoundingBox SRS="EPSG:4326" minx="-1.0" miny="-1.0" maxx="0.0" maxy="0.0"/>
+        <Style>
+          <Name>line</Name>
+          <Title>1 px blue line</Title>
+          <Abstract>Default line style, 1 pixel wide blue</Abstract>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://wms.ign.gob.ar:8080/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=idera%3Acurva_batimetrica"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>idera:curva_nivel</Name>
+        <Title>Curva de nivel</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>curva_nivel</Keyword>
+          <Keyword>features</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="-73.56195806799997" miny="-55.055183452999984" maxx="-53.63927459699994" maxy="-21.780910491999975"/>
+        <BoundingBox SRS="EPSG:4326" minx="-73.56195806799997" miny="-55.055183452999984" maxx="-53.63927459699994" maxy="-21.780910491999975"/>
+        <Style>
+          <Name>idera_curva_de_nivel</Name>
+          <LegendURL width="140" height="120">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://wms.ign.gob.ar:8080/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=idera%3Acurva_nivel"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>idera:departamento</Name>
+        <Title>Departamento</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>departamento</Keyword>
+          <Keyword>features</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="-74.02985395599995" miny="-89.99999999999994" maxx="-25.02314483699996" maxy="-21.781134793999968"/>
+        <BoundingBox SRS="EPSG:4326" minx="-74.02985395599995" miny="-89.99999999999994" maxx="-25.02314483699996" maxy="-21.781134793999968"/>
+        <Style>
+          <Name>idera:idera_departamento</Name>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://wms.ign.gob.ar:8080/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=idera%3Adepartamento"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>ideign:equipamientos_osm</Name>
+        <Title>equipamientos_osm</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>equipamientos_osm</Keyword>
+          <Keyword>features</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="-72.3469774" miny="-54.9019677" maxx="-53.6489147" maxy="-21.7572445"/>
+        <BoundingBox SRS="EPSG:4326" minx="-72.3469774" miny="-54.9019677" maxx="-53.6489147" maxy="-21.7572445"/>
+        <Style>
+          <Name>ideign:equipamientos_osm</Name>
+          <Title>A cyan polygon style</Title>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://wms.ign.gob.ar:8080/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=ideign%3Aequipamientos_osm"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>ideign:espacios_maritimos</Name>
+        <Title>espacios_maritimos</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>espacios_maritimos</Keyword>
+          <Keyword>features</Keyword>
+          <Keyword>Océanos</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="-74.02985395599995" miny="-83.46778015499996" maxx="-19.907419204999957" maxy="-33.985412597999975"/>
+        <BoundingBox SRS="EPSG:4326" minx="-74.02985395599995" miny="-83.46778015499996" maxx="-19.907419204999957" maxy="-33.985412597999975"/>
+        <Style>
+          <Name>polygon</Name>
+          <Title>Default polygon style</Title>
+          <Abstract>A sample style that just draws out a solid gray interior with a black 1px outline</Abstract>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://wms.ign.gob.ar:8080/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=ideign%3Aespacios_maritimos"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>idera:espejo_agua</Name>
+        <Title>Espejo de agua</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>espejo_agua</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="-73.45678710899995" miny="-54.938331603999984" maxx="-55.58519744899996" maxy="-21.995446321999964"/>
+        <BoundingBox SRS="EPSG:4326" minx="-73.45678710899995" miny="-54.938331603999984" maxx="-55.58519744899996" maxy="-21.995446321999964"/>
+        <Style>
+          <Name>idera:idera_espejo_agua</Name>
+          <LegendURL width="101" height="40">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://wms.ign.gob.ar:8080/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=idera%3Aespejo_agua"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>idera:estacion_ferroviaria</Name>
+        <Title>Estacion ferroviaria</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>estacion_ferroviaria</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="-72.31802368199999" miny="-54.83319942799994" maxx="-55.78462219199997" maxy="-22.058650969999974"/>
+        <BoundingBox SRS="EPSG:4326" minx="-72.31802368199999" miny="-54.83319942799994" maxx="-55.78462219199997" maxy="-22.058650969999974"/>
+        <Style>
+          <Name>idera:idera_estacion_ferroviaria</Name>
+          <LegendURL width="22" height="40">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://wms.ign.gob.ar:8080/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=idera%3Aestacion_ferroviaria"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>ideign:estaciones_ferrocarril</Name>
+        <Title>estaciones_ferrocarril</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>estaciones_ferrocarril</Keyword>
+          <Keyword>features</Keyword>
+          <Keyword>Transporte</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="-72.31802368199999" miny="-51.68537902799994" maxx="-55.78462219199997" maxy="-22.058650969999974"/>
+        <BoundingBox SRS="EPSG:4326" minx="-72.31802368199999" miny="-51.68537902799994" maxx="-55.78462219199997" maxy="-22.058650969999974"/>
+        <Style>
+          <Name>point</Name>
+          <Title>Default point</Title>
+          <Abstract>A sample style that just prints out a 6px wide red square</Abstract>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://wms.ign.gob.ar:8080/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=ideign%3Aestaciones_ferrocarril"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>idera:ferrocarril</Name>
+        <Title>ferrocarril</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>ferrocarril</Keyword>
+          <Keyword>features</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="-72.30818176299994" miny="-51.88516235399993" maxx="-55.771717071999944" maxy="-22.033618926999964"/>
+        <BoundingBox SRS="EPSG:4326" minx="-72.30818176299994" miny="-51.88516235399993" maxx="-55.771717071999944" maxy="-22.033618926999964"/>
+        <Style>
+          <Name>idera:idera_ferrocarril</Name>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://wms.ign.gob.ar:8080/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=idera%3Aferrocarril"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>idera:gavimetria_int</Name>
+        <Title>gavimetria_int</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>gavimetria_int</Keyword>
+          <Keyword>features</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="-72.858822444722" miny="-54.816666666667" maxx="61.841388888889" maxy="37.268055555556"/>
+        <BoundingBox SRS="EPSG:4326" minx="-72.858822444722" miny="-54.816666666667" maxx="61.841388888889" maxy="37.268055555556"/>
+        <Style>
+          <Name>point</Name>
+          <Title>Default point</Title>
+          <Abstract>A sample style that just prints out a 6px wide red square</Abstract>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://wms.ign.gob.ar:8080/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=idera%3Agavimetria_int"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>idera:gravimetria_bacara</Name>
+        <Title>gravimetria_bacara</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>v_geodesia_gravimetria_shp</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="-72.957298" miny="-54.816666666667" maxx="-53.646805555556" maxy="-22.096627652778"/>
+        <BoundingBox SRS="EPSG:4326" minx="-72.957298" miny="-54.816666666667" maxx="-53.646805555556" maxy="-22.096627652778"/>
+        <Style>
+          <Name>idera:geodesia_posgar07</Name>
+          <LegendURL width="86" height="60">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://wms.ign.gob.ar:8080/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=idera%3Agravimetria_bacara"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>idera:gravimetria_igsn71</Name>
+        <Title>gravimetria_igsn71</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>v_geodesia_gravimetria_shp</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="-72.957298" miny="-54.816666666667" maxx="-53.646805555556" maxy="-22.096627652778"/>
+        <BoundingBox SRS="EPSG:4326" minx="-72.957298" miny="-54.816666666667" maxx="-53.646805555556" maxy="-22.096627652778"/>
+        <Style>
+          <Name>idera:geodesia_posgar07</Name>
+          <LegendURL width="86" height="60">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://wms.ign.gob.ar:8080/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=idera%3Agravimetria_igsn71"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>idera:gravimetria_raga</Name>
+        <Title>gravimetria_raga</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>v_geodesia_gravimetria_shp</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="-72.957298" miny="-54.816666666667" maxx="-53.646805555556" maxy="-22.096627652778"/>
+        <BoundingBox SRS="EPSG:4326" minx="-72.957298" miny="-54.816666666667" maxx="-53.646805555556" maxy="-22.096627652778"/>
+        <Style>
+          <Name>idera:geodesia_posgar07</Name>
+          <LegendURL width="86" height="60">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://wms.ign.gob.ar:8080/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=idera%3Agravimetria_raga"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>idera:gravimetria_rpo</Name>
+        <Title>gravimetria_rpo</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>v_geodesia_gravimetria_shp</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="-72.957298" miny="-54.816666666667" maxx="-53.646805555556" maxy="-22.096627652778"/>
+        <BoundingBox SRS="EPSG:4326" minx="-72.957298" miny="-54.816666666667" maxx="-53.646805555556" maxy="-22.096627652778"/>
+        <Style>
+          <Name>idera:geodesia_posgar07</Name>
+          <LegendURL width="86" height="60">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://wms.ign.gob.ar:8080/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=idera%3Agravimetria_rpo"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>idera:gravimetria_rso</Name>
+        <Title>gravimetria_rso</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>v_geodesia_gravimetria_shp</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="-72.957298" miny="-54.816666666667" maxx="-53.646805555556" maxy="-22.096627652778"/>
+        <BoundingBox SRS="EPSG:4326" minx="-72.957298" miny="-54.816666666667" maxx="-53.646805555556" maxy="-22.096627652778"/>
+        <Style>
+          <Name>idera:geodesia_posgar07</Name>
+          <LegendURL width="86" height="60">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://wms.ign.gob.ar:8080/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=idera%3Agravimetria_rso"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>idera:gravimetria_rto</Name>
+        <Title>gravimetria_rto</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>v_geodesia_gravimetria_shp</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="-72.957298" miny="-54.816666666667" maxx="-53.646805555556" maxy="-22.096627652778"/>
+        <BoundingBox SRS="EPSG:4326" minx="-72.957298" miny="-54.816666666667" maxx="-53.646805555556" maxy="-22.096627652778"/>
+        <Style>
+          <Name>idera:geodesia_posgar07</Name>
+          <LegendURL width="86" height="60">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://wms.ign.gob.ar:8080/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=idera%3Agravimetria_rto"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>ideign:hielo_marino</Name>
+        <Title>Hielo Marino</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>hielo</Keyword>
+          <Keyword>features</Keyword>
+          <Keyword>aguas interiores</Keyword>
+          <Keyword>Océanos</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="-180.0" miny="-85.41203151243747" maxx="180.0000000000001" maxy="-64.10420590257138"/>
+        <BoundingBox SRS="EPSG:4326" minx="-180.0" miny="-85.41203151243747" maxx="180.0000000000001" maxy="-64.10420590257138"/>
+        <Style>
+          <Name>ideign:ideign_hielo_marino</Name>
+          <Title>Ejidos Urbanos</Title>
+          <Abstract>Ejidos Urbanos</Abstract>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://wms.ign.gob.ar:8080/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=ideign%3Ahielo_marino"/>
+          </LegendURL>
+        </Style>
+        <Style>
+          <Name>ideign:ideign_hielo_marino</Name>
+          <Title>Ejidos Urbanos</Title>
+          <Abstract>Ejidos Urbanos</Abstract>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://wms.ign.gob.ar:8080/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=ideign%3Ahielo_marino&amp;style=ideign_hielo_marino"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>idera:isla_a</Name>
+        <Title>Isla</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>isla_a</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="-76.00308469799995" miny="-81.12296068999996" maxx="-26.277576892999946" maxy="-23.059455871999944"/>
+        <BoundingBox SRS="EPSG:4326" minx="-76.00308469799995" miny="-81.12296068999996" maxx="-26.277576892999946" maxy="-23.059455871999944"/>
+        <Style>
+          <Name>idera:idera_isla</Name>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://wms.ign.gob.ar:8080/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=idera%3Aisla_a"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>idera:isla_p</Name>
+        <Title>Isla</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>isla_p</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="-74.04490837191537" miny="-80.57707547505981" maxx="-26.36103937855654" maxy="-23.060796551316912"/>
+        <BoundingBox SRS="EPSG:4326" minx="-74.04490837191537" miny="-80.57707547505981" maxx="-26.36103937855654" maxy="-23.060796551316912"/>
+        <Style>
+          <Name>point</Name>
+          <Title>Default point</Title>
+          <Abstract>A sample style that just prints out a 6px wide red square</Abstract>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://wms.ign.gob.ar:8080/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=idera%3Aisla_p"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>ideign:islas</Name>
+        <Title>islas</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>islas</Keyword>
+          <Keyword>Aguas interiores</Keyword>
+          <Keyword>Océanos</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="-74.02985395599995" miny="-80.96043830499997" maxx="-26.252069711999944" maxy="-23.05945587199996"/>
+        <BoundingBox SRS="EPSG:4326" minx="-74.02985395599995" miny="-80.96043830499997" maxx="-26.252069711999944" maxy="-23.05945587199996"/>
+        <Style>
+          <Name>ideign:ideign_islas</Name>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://wms.ign.gob.ar:8080/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=ideign%3Aislas"/>
+          </LegendURL>
+        </Style>
+        <ScaleHint min="0.0" max="5000000.0"/>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>idera:limite_gobierno_local</Name>
+        <Title>Límite gobierno local</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>limite_gobierno_local</Keyword>
+          <Keyword>features</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="-71.86710842099995" miny="-45.999792929999956" maxx="-53.69897030899995" maxy="-21.933470141999976"/>
+        <BoundingBox SRS="EPSG:4326" minx="-71.86710842099995" miny="-45.999792929999956" maxx="-53.69897030899995" maxy="-21.933470141999976"/>
+        <Style>
+          <Name>idera:idera_limite_de_gobierno_local</Name>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://wms.ign.gob.ar:8080/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=idera%3Alimite_gobierno_local"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>idera:limite_interdepartamental_partido</Name>
+        <Title>Límite interdepartamental o de partido</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>limite_interdepartamental_partido</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="-72.56541942699994" miny="-54.55868530299995" maxx="-53.69897030899995" maxy="-21.999329124999974"/>
+        <BoundingBox SRS="EPSG:4326" minx="-72.56541942699994" miny="-54.55868530299995" maxx="-53.69897030899995" maxy="-21.999329124999974"/>
+        <Style>
+          <Name>idera:idera_limite_interdepartamental</Name>
+          <LegendURL width="96" height="80">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://wms.ign.gob.ar:8080/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=idera%3Alimite_interdepartamental_partido"/>
+          </LegendURL>
+        </Style>
+        <ScaleHint min="24999.0" max="999999.0"/>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>idera:limite_internacional</Name>
+        <Title>Límite internacional</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>limite_internacional</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="-74.02985395599995" miny="-90.01923959999993" maxx="-24.98879125299993" maxy="-21.781134793999968"/>
+        <BoundingBox SRS="EPSG:4326" minx="-74.02985395599995" miny="-90.01923959999993" maxx="-24.98879125299993" maxy="-21.781134793999968"/>
+        <Style>
+          <Name>idera:idera_limite_internacional</Name>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://wms.ign.gob.ar:8080/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=idera%3Alimite_internacional"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>idera:limite_interprovincial</Name>
+        <Title>Límite interprovincial</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>limite_interprovincial</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="-71.86098726899996" miny="-45.99979470699998" maxx="-55.62023666599998" maxy="-22.08534968799995"/>
+        <BoundingBox SRS="EPSG:4326" minx="-71.86098726899996" miny="-45.99979470699998" maxx="-55.62023666599998" maxy="-22.08534968799995"/>
+        <Style>
+          <Name>idera:idera_limite_interprovincial</Name>
+          <LegendURL width="198" height="60">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://wms.ign.gob.ar:8080/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=idera%3Alimite_interprovincial"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>idera:limite_lateral_maritimo</Name>
+        <Title>Límite lateral marítimo</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>limite_lateral_maritimo</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="-68.60966731899998" miny="-58.36417007399996" maxx="-52.66190910299997" maxy="-35.63333333299994"/>
+        <BoundingBox SRS="EPSG:4326" minx="-68.60966731899998" miny="-58.36417007399996" maxx="-52.66190910299997" maxy="-35.63333333299994"/>
+        <Style>
+          <Name>idera:idera_limite_lateral_maritimo</Name>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://wms.ign.gob.ar:8080/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=idera%3Alimite_lateral_maritimo"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>idera:limite_lecho_subsuelo</Name>
+        <Title>Límite del lecho y subsuelo</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>limite_lecho_subsuelo</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="-58.423586339999986" miny="-35.63333333299994" maxx="-55.86666666699995" maxy="-33.91631774799998"/>
+        <BoundingBox SRS="EPSG:4326" minx="-58.423586339999986" miny="-35.63333333299994" maxx="-55.86666666699995" maxy="-33.91631774799998"/>
+        <Style>
+          <Name>idera:idera_limite_de_lecho_y_subsuelo</Name>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://wms.ign.gob.ar:8080/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=idera%3Alimite_lecho_subsuelo"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>idera:limite_mar_territorial_argentino</Name>
+        <Title>Límite mar territorial argentino</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>limite_mar_territorial_argentino</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="-68.83091749999994" miny="-59.655080097999985" maxx="-25.90430379999998" maxy="-35.78059819799995"/>
+        <BoundingBox SRS="EPSG:4326" minx="-68.83091749999994" miny="-59.655080097999985" maxx="-25.90430379999998" maxy="-35.78059819799995"/>
+        <Style>
+          <Name>idera:idera_limite_mar_territorial_argentino</Name>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://wms.ign.gob.ar:8080/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=idera%3Alimite_mar_territorial_argentino"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>idera:limite_plataforma_continental</Name>
+        <Title>Límite de la plataforma continental</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>limite_plataforma_continental</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="-73.99899673499993" miny="-70.96159006199997" maxx="-19.90741920499994" maxy="-39.25189399699997"/>
+        <BoundingBox SRS="EPSG:4326" minx="-73.99899673499993" miny="-70.96159006199997" maxx="-19.90741920499994" maxy="-39.25189399699997"/>
+        <Style>
+          <Name>idera:idera_limite_de_la_plataforma_continental</Name>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://wms.ign.gob.ar:8080/geoserver/wms?request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=idera%3Alimite_plataforma_continental"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>idera:limite_zona_contigua_argentina</Name>
+        <Title>Límite de la Zona Contigua Argentina</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>limite_zona_contigua_argentina</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="-68.50021299999997" miny="-59.861289597999985" maxx="-25.526226099999974" maxy="-35.925151497999934"/>
+        <BoundingBox SRS="EPSG:4326" minx="-68.50021299999997" miny="-59.861289597999985" maxx="-25.526226099999974" maxy="-35.925151497999934"/>
+        <Style>
+          <Name>idera:idera_limite_de_la_zona_contigua</Name>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineRe<?xml version="1.0" encoding="UTF-8" standalone="no"?><!DOCTYPE ServiceExceptionReport SYSTEM "http://wms.ign.gob.ar:8080/geoserver/schemas/wms/1.1.1/WMS_exception_1_1_1.dtd"> <ServiceExceptionReport version="1.1.1" >   <ServiceException>
+      javax.xml.transform.TransformerException: org.geoserver.platform.ServiceException: Error occurred trying to write out metadata for layer: mde
+org.geoserver.platform.ServiceException: Error occurred trying to write out metadata for layer: mde
+Error occurred trying to write out metadata for layer: mde
+java.io.IOException: No such resource: generic.sld
+No such resource: generic.sld
+</ServiceException></ServiceExceptionReport>
